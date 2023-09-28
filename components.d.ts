@@ -14,6 +14,7 @@ declare module 'vue' {
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     Login: typeof import('./src/components/users/login.vue')['default']
+    Navbar: typeof import('./src/components/navbar/navbar.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     RouterLink: typeof import('vue-router')['RouterLink']
