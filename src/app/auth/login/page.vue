@@ -67,13 +67,8 @@
           No account?
           <a class="underline" href="">Sign up</a>
         </p>
-
-        <button
-          type="submit"
-          class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-medium text-white"
-        >
-          Sign in
-        </button>
+        <n-button type="success"> Submit
+        </n-button>
       </div>
     </form>
   </div>

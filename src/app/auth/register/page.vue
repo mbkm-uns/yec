@@ -104,13 +104,8 @@
 
           <div class="col-span-6">
             <label for="MarketingAccept" class="flex gap-4">
-              <input
-                type="checkbox"
-                id="MarketingAccept"
-                name="marketing_accept"
-                class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-              />
-
+              <n-checkbox>
+              </n-checkbox>
               <span class="text-sm text-gray-700">
                 Saya Menyetujui Kebijakan dan Privasi Serta Syarat & Ketentuan Oleh Tim YEC.
               </span>
@@ -118,12 +113,8 @@
           </div>
 
           <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-            <button
-              class="inline-block shrink-0 rounded-md border border-orange-600 bg-orange-600 px-12 py-3 text-sm font-medium"
-            >
-              Create an account
-            </button>
-
+            <n-button type="success">Create an account
+            </n-button>
             <p class="mt-4 text-sm text-gray-500 sm:mt-0">
               Already have an account?
               <a href="#" class="text-gray-700 underline">Log in</a>.
