@@ -1,23 +1,24 @@
 <template>
 
-<footer class="bg-white">
+<footer class="bg-white py-3" >
   <div
-    class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
+    class="mx-auto max-w-screen-xl space-y-10 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
   >
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
         <div class="text-teal-900">
           <img src="@/assets/images/landingpage/logo-dash.png" class="h-10">
         </div>
-
-        <p class="mt-7 max-w-xs text-gray-700 lg:grid-cols-2">
+        <div class="pe-5">
+        <p class="fs-16 fs-xs-14">
           Sertifikasi dan Kelas Bahasa Inggris Online.
           Mengembangkan kelas bahasa Inggris inklusif untuk semua orang, serta kelas pengembangan diri lainnya
         </p>
-        <p class="mt-4 max-w-xs text-gray-500">
+        <p class="fs-16 fs-xs-14 mb-0">
           Lembaga Pelatihan YEC CO ID juga tergabung dalam program Kartu Prakerja
           dan berafiliasi dengan Digital Platform seperti Karier.mu, Tokopedia, Pintar, Pijar Mahir, dan Bukalapak.
         </p>
+        </div>
       </div>
 
       <div
