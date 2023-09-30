@@ -3,78 +3,108 @@
 </script>
 
 <template>
-<section class="relative flex flex-wrap lg:h-screen lg:items-center">
-  <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
-    <div class="mx-auto max-w-lg text-center">
-      <h1 class="text-2xl font-bold sm:text-3xl">Selamat Datang Di YEC CO ID</h1>
-
-      <p class="mt-4 text-gray-500">
-        Silahkan masukkan e-mail dan password terlebih dahulu
-      </p>
-    </div>
-
-    <form action="" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
-      <div>
-        <label for="email" class="sr-only">Email</label>
-
-        <div class="relative">
-          <input
-            type="email"
-            class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-            placeholder="Enter email"
-          />
-
+<n-card :class="$style.container" :content-style="$style.container">
+    <n-space justify="center" align="center" :class="$style.container">
+      <div :class="$style.card__wrapper">
+        <img src="@/assets/images/landingpage/logo-dash.png" width="200" class="mx-auto">
+        <n-space justify="center">
+          <n-text> Dashboard YEC CO ID </n-text>
+        </n-space>
+        <div
+          style="position: relative; width: fit-content; margin-inline: auto"
+        >
+          <n-card :class="$style.card" size="medium">
+            <n-h2>Login ke Akun Anda </n-h2>
+            <n-text
+              >Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda
+            </n-text>
+            <div :class="$style.form__wrapper">
+              <n-form
+                ref="formRef"
+              
+              >
+                <n-form-item path="phone" label="No Whattsap">
+                  <n-input  placeholder="No Whattsap" />
+                </n-form-item>
+                <n-form-item path="password" label="Password">
+                  <n-input
+                    
+                    show-password-on="click"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </n-form-item>
+                <n-row :gutter="[0, 24]">
+                  <n-col :span="24"> </n-col>
+                </n-row>
+                <n-form-item>
+                  <n-space vertical :size="20" :class="$style.form__action">
+                    <n-checkbox>
+                      Ingat Saya
+                    </n-checkbox>
+                    <n-button
+                      attr-type="submit"
+                      type="primary"
+                      block
+                    >
+                      Login
+                    </n-button>
+                  </n-space>
+                </n-form-item>
+              </n-form>
+            </div>
+          </n-card>
         </div>
       </div>
-
-      <div>
-        <label for="password" class="sr-only">Password</label>
-
-        <div class="relative">
-          <input
-            type="password"
-            class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-            placeholder="Enter password"
-          />
-
-          <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4 text-gray-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-              />
-            </svg>
-          </span>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between">
-        <p class="text-sm text-gray-500">
-          No account?
-          <a class="underline" href="">Sign up</a>
-        </p>
-        <n-button type="success"> Submit
-        </n-button>
-      </div>
-    </form>
-  </div>
-
-  <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
-  <img src="@/assets/images/landingpage/cover3.jpg" class="w-full py-40">
-  </div>
-</section>
+    </n-space>
+  </n-card>
 </template>
+
+<style scoped module>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .card {
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+  }
+  .card__brand {
+    margin: auto;
+    pointer-events: none;
+    user-select: none;
+  }
+  .card__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .form__wrapper {
+    margin-top: 1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  .form__action {
+    width: 100%;
+  }
+  .branding {
+    height: 2rem;
+    width: 5rem;
+  }
+  .branding__wrapper {
+    height: 2rem;
+    width: 10rem;
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+  }
+</style>
+
+<route lang="yaml">
+meta:
+  requiresAuth: false
+</route>

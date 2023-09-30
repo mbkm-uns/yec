@@ -1,128 +1,110 @@
 <script setup lang="ts">
 
 </script>
+
 <template>
-<section class="bg-white-500 relative flex-wrap lg:items-start">
-  <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-    <aside
-      class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6"
-    >
-  <img src="@/assets/images/landingpage/cover3.jpg" class="w-full py-72">
-    </aside>
-
-    <main
-      class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
-    >
-      <div class="max-w-xl lg:max-w-3xl">
-        <h1
-          class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
+<n-card :class="$style.container" :content-style="$style.container">
+    <n-space justify="center" align="center" :class="$style.container">
+      <div :class="$style.card__wrapper">
+        <img src="@/assets/images/landingpage/logo-dash.png" width="200" class="mx-auto">
+        <n-space justify="center">
+          <n-text> Dashboard YEC CO ID </n-text>
+        </n-space>
+        <div
+          style="position: relative; width: fit-content; margin-inline: auto"
         >
-          Selamat Datang Di YEC CO ID
-        </h1>
-        <p class="mt-4 text-gray-500">
-        Silahkan masukkan e-mail dan password terlebih dahulu
-      </p>
-
-      <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="FirstName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              First Name
-            </label>
-
-            <input
-              type="text"
-              id="FirstName"
-              name="first_name"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="LastName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Last Name
-            </label>
-
-            <input
-              type="text"
-              id="LastName"
-              name="last_name"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6">
-            <label for="Email" class="block text-sm font-medium text-gray-700">
-              Email
-            </label>
-
-            <input
-              type="email"
-              id="Email"
-              name="email"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="Password"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Password
-            </label>
-
-            <input
-              type="password"
-              id="Password"
-              name="password"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="PasswordConfirmation"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Password Confirmation
-            </label>
-
-            <input
-              type="password"
-              id="PasswordConfirmation"
-              name="password_confirmation"
-              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-
-          <div class="col-span-6">
-            <label for="MarketingAccept" class="flex gap-4">
-              <n-checkbox>
-              </n-checkbox>
-              <span class="text-sm text-gray-700">
-                Saya Menyetujui Kebijakan dan Privasi Serta Syarat & Ketentuan Oleh Tim YEC.
-              </span>
-            </label>
-          </div>
-
-          <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-            <n-button type="success">Create an account
-            </n-button>
-            <p class="mt-4 text-sm text-gray-500 sm:mt-0">
-              Already have an account?
-              <a href="#" class="text-gray-700 underline">Log in</a>.
-            </p>
-          </div>
-        </form>
+          <n-card :class="$style.card" size="medium">
+            <n-h2>Daftar Akun Terlebih Dahulu </n-h2>
+            <n-text
+              >Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda
+            </n-text>
+            <div :class="$style.form__wrapper">
+              <n-form
+                ref="formRef"
+              
+              >
+                <n-form-item path="phone" label="No Whattsap">
+                  <n-input  placeholder="No Whattsap" />
+                </n-form-item>
+                <n-form-item path="password" label="Password">
+                  <n-input
+                    
+                    show-password-on="click"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </n-form-item>
+                <n-row :gutter="[0, 24]">
+                  <n-col :span="24"> </n-col>
+                </n-row>
+                <n-form-item>
+                  <n-space vertical :size="20" :class="$style.form__action">
+                    <n-checkbox>
+                      Ingat Saya
+                    </n-checkbox>
+                    <n-button
+                      attr-type="submit"
+                      type="primary"
+                      block
+                    >
+                      Login
+                    </n-button>
+                  </n-space>
+                </n-form-item>
+              </n-form>
+            </div>
+          </n-card>
+        </div>
       </div>
-    </main>
-  </div>
-</section>
+    </n-space>
+  </n-card>
 </template>
+
+<style scoped module>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .card {
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+  }
+  .card__brand {
+    margin: auto;
+    pointer-events: none;
+    user-select: none;
+  }
+  .card__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .form__wrapper {
+    margin-top: 1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  .form__action {
+    width: 100%;
+  }
+  .branding {
+    height: 2rem;
+    width: 5rem;
+  }
+  .branding__wrapper {
+    height: 2rem;
+    width: 10rem;
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+  }
+</style>
+
+<route lang="yaml">
+meta:
+  requiresAuth: false
+</route>
