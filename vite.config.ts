@@ -9,7 +9,8 @@ import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import VueDevTools from 'vite-plugin-vue-devtools'
-
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -37,7 +38,7 @@ export default defineConfig({
         })
       }
     }),
-    Components({ resolvers: [NaiveUiResolver()] }),
+    Components({ resolvers: [NaiveUiResolver(), IconsResolver()] }),
     AutoImport({
       include: [
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
@@ -55,6 +56,10 @@ export default defineConfig({
     Layouts({
       layoutsDirs: 'src/layouts',
       defaultLayout: 'default.layout'
+    }),
+    Icons({
+      // experimental
+      autoInstall: true
     })
   ],
   resolve: {

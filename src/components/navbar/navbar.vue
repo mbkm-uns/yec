@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white fixed z-10 w-full">
+  <header class="bg-white sticky z-10 w-full top-0">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <div class="flex-1 md:flex md:items-center md:gap-12">
@@ -10,33 +10,39 @@
           <nav aria-label="Global" class="hidden md:block">
             <ul class="flex items-center gap-6 text-sm">
               <li>
-                <a class="text-orange-500 transition hover:text-orange-500/75" href="/">
+                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
                   Beranda
-                </a>
+                </router-link>
               </li>
 
               <li>
-                <a class="text-orange-500 transition hover:text-orange-500/75" href="/beranda">
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/beranda"
+                >
                   Kelas Prakerja
-                </a>
+                </router-link>
               </li>
 
               <li>
-                <a class="text-orange-500 transition hover:text-orange-500/75" href="/auth/login">
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/auth/login"
+                >
                   Masuk
-                </a>
+                </router-link>
               </li>
             </ul>
           </nav>
 
           <div class="flex items-center gap-4">
             <div class="sm:flex sm:gap-2">
-              <a
+              <router-link
                 class="rounded-md bg-orange-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="/auth/register"
+                to="/auth/register"
               >
                 Daftar
-              </a>
+              </router-link>
               <div class="block md:hidden">
                 <button
                   class="rounded bg-gray-100 p-2 text-orange-600 transition hover:text-orange-600/75"
