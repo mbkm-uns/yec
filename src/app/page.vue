@@ -6,7 +6,7 @@
   <n-carousel autoplay mx-auto>
     <img
       class="carousel-img mx-auto w-full rounded-lg"
-      src="@/assets/images/landingpage/tutor redeem.png"
+      src="@/assets/images/landingpage/tutor_redeem.png"
     >
     <img
       class="carousel-img mx-auto w-full rounded-lg"
@@ -28,7 +28,7 @@
   </div> 
 
   <div class=" rounded-lg overflow-hidden flex justify-center items-center relative h-60">
-  <img class="absolute right-0 z-0 w-full h-full object-cover" src="https://bakat.prakerja.yurekadev.com/public/img/bg-login.f83502e8.png" alt="">
+  <img class="absolute right-0 z-0 w-full h-full object-cover" src="@/assets/images/landingpage/bg-login.png" alt="">
  <div class="px-20 z-10 relative text-center">
     <div class="text-white text-2xl">
      Mau redeem kelas Prakerja?
