@@ -1,75 +1,66 @@
 <template>
- <header class="bg-white">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between">
-      <div class="flex-1 md:flex md:items-center md:gap-12">
-        <img src="@/assets/images/landingpage/logo-dash.png" class="h-8" justify-left>
-      </div>
+  <header class="bg-white fixed z-10 w-full">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex-1 md:flex md:items-center md:gap-12">
+          <img src="@/assets/images/landingpage/logo-dash.png" class="h-8" justify-left />
+        </div>
 
-      <div class="md:flex md:items-center md:gap-16">
-        <nav aria-label="Global" class="hidden md:block">
-          <ul class="flex items-center gap-6 text-sm">
-            <li>
+        <div class="md:flex md:items-center md:gap-16">
+          <nav aria-label="Global" class="hidden md:block">
+            <ul class="flex items-center gap-6 text-sm">
+              <li>
+                <a class="text-orange-500 transition hover:text-orange-500/75" href="/">
+                  Beranda
+                </a>
+              </li>
+
+              <li>
+                <a class="text-orange-500 transition hover:text-orange-500/75" href="/beranda">
+                  Kelas Prakerja
+                </a>
+              </li>
+
+              <li>
+                <a class="text-orange-500 transition hover:text-orange-500/75" href="/auth/login">
+                  Masuk
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <div class="sm:flex sm:gap-2">
               <a
-                class="text-orange-500 transition hover:text-orange-500/75"
-                href="/"
+                class="rounded-md bg-orange-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                href="/auth/register"
               >
-                Beranda
+                Daftar
               </a>
-            </li>
-
-            <li>
-              <a
-                class="text-orange-500 transition hover:text-orange-500/75"
-                href="/"
-              >
-                Kelas Prakerja
-              </a>
-            </li>
-
-            <li>
-              <a
-                class="text-orange-500 transition hover:text-orange-500/75"
-                href="/"
-              >
-                Masuk
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="flex items-center gap-4">
-          <div class="sm:flex sm:gap-2">
-            <a
-              class="rounded-md bg-orange-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-              href="/"
-            >
-              Daftar
-            </a>
-          <div class="block md:hidden">
-            <button
-              class="rounded bg-gray-100 p-2 text-orange-600 transition hover:text-orange-600/75"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+              <div class="block md:hidden">
+                <button
+                  class="rounded bg-gray-100 p-2 text-orange-600 transition hover:text-orange-600/75"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 </template>
