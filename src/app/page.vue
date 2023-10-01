@@ -211,14 +211,11 @@
               nambah waktu pelatihannya biar lebih lama belajarnya
             </p>
           </blockquote>
-
-          <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-            <div class="flex items-center gap-4">
-              <img
-                alt="Man"
-                src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                class="h-14 w-14 rounded-full object-cover"
-              />
+        <p class="mt-4 text-gray-700">
+          Sangat menyenangkan,materinya yang diberikan sangat menarik.
+          Saking serunya,pengen nambah waktu pelatihannya biar lebih lama belajarnya
+        </p>
+      </blockquote>
 
               <div>
                 <div class="flex justify-center gap-0.5 text-green-500">
