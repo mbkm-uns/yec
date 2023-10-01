@@ -7,6 +7,7 @@
     <img
       class="carousel-img mx-auto w-full rounded-lg"
       src="@/assets/images/landingpage/tutor_redeem.png"
+      a href link="https://www.youtube.com/watch?v=1rp8royyiQ8"
     >
     <img
       class="carousel-img mx-auto w-full rounded-lg"
@@ -221,10 +222,8 @@
         </div>
 
         <p class="mt-4 text-gray-700">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
-          rerum incidunt, a consequuntur recusandae ab saepe illo est quia
-          obcaecati neque quibusdam eius accusamus error officiis atque
-          voluptates magnam!
+          Sangat menyenangkan,materinya yang diberikan sangat menarik.
+          Saking serunya,pengen nambah waktu pelatihannya biar lebih lama belajarnya
         </p>
       </blockquote>
 
@@ -295,10 +294,8 @@
         </div>
 
         <p class="mt-4 text-gray-700">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
-          rerum incidunt, a consequuntur recusandae ab saepe illo est quia
-          obcaecati neque quibusdam eius accusamus error officiis atque
-          voluptates magnam!
+          Materinya lengkap dan membantu aku banget buat belajar tentang menggunakan
+          Bahasa Inggris,mentornya juga super asik jadi suasana belajarnya ga ngebosenin dan nyenengin
         </p>
       </blockquote>
 
@@ -369,10 +366,9 @@
         </div>
 
         <p class="mt-4 text-gray-700">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit
-          rerum incidunt, a consequuntur recusandae ab saepe illo est quia
-          obcaecati neque quibusdam eius accusamus error officiis atque
-          voluptates magnam!
+          Alhamdullilah,menyenang sekali kegiatan pelatihannya selain materi yang bervariatif dan
+          sangat bermanfaat sekali digunakan untuk menghadapi dunia kerja nanti, pematerinya juga menyampaikan
+          materi dengan sangat komunikatif sehingga mudah diterima oleh peserta.
         </p>
       </blockquote>
     </div>

@@ -73,7 +73,7 @@
       class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
     >
       <h2 class="font-medium">
-        Lorem ipsum dolor sit amet consectetur adipisicing?
+      B.Persyaratan Pendaftaran Kartu Prakerja
       </h2>
 
       <svg
@@ -93,12 +93,97 @@
     </summary>
 
     <p class="mt-4 px-4 leading-relaxed text-gray-700">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis
-      molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt
-      voluptate dicta quo officiis explicabo consequuntur distinctio corporis
-      earum similique!
+      1.WNI berusia paling rendah 18 tahun dan paling tinggi 64 tahun
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      2.Tidak sedang menempuh pendidikan formal.
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      3.Sedang mencari kerja,pekerja/buruh yang terkena PHK, atau pekerja/buruh
+      yang membutuhkan peningkatan kompetensi kerja,seperti pekerja/buruh yang dirumahkan
+      dan pekerja bukan menerima upah, termasuk pelaku usaha & kecil.
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      4.Bukan Pejabat Negara, Pimpinan dan Anggota DPRD,Aparatur Sipil Negara,Prajurit TNI,
+      Anggota Polri,Kepala Desa dan perangkat desa dan Direksi/Komisaris/Dewan Pengawas pada BUMN atau BUMD
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      5.Maksimal 2 NIK dalam 1 KK yang menjadi Penerima Kartu Prakerja
     </p>
   </details>
+
+  <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+    <summary
+      class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
+    >
+      <h2 class="font-medium">
+        C.Langkah Pendaftaran Kartu Prakerja
+      </h2>
+
+      <svg
+        class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </summary>
+
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      1.Daftar
+    </p>
+    <p class="px-4 leading-relaxed text-gray-700">
+      Buat akun Prakerja dengan data diri kamu.Siapkan e-mail,NIK,nomor KK,
+      nomor HP yang masih aktif dan selesaikan tes kemampuan dasar untuk menyelesaikan proses pendaftaran
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      2.Gabung Gelombang
+    </p>
+    <p class="px-4 leading-relaxed text-gray-700">
+     Ikut seleksi dengan gabung gelombang.Tunggu pengumuman hasil seleksinya
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      3.Pilih Pelatihan
+    </p>
+    <p class="px-4 leading-relaxed text-gray-700">
+      Gunakan saldo pelatihan sebesar Rp 3,5 juta, pilih yang kamu butuhkan di Mitra
+      Platform Digital dan bayar dengan nomor Kartu Prakerjamu. Pastikan rekening bank/e-wallet kamu
+      sudah tersambung sebelum membeli pelatihan
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      4.Ikuti Pelatihan
+    </p>
+    <p class="px-4 leading-relaxed text-gray-700">
+     Kerjakan pre-test,post-test dan unjuk keterampilan.Selesaikan pelatihan dan dapatkan sertifikat.
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      5.Beri Rating dan Ulasan
+    </p>
+    <p class="px-4 leading-relaxed text-gray-700">
+     Berikan rating dan ulasan terhadap pelatihan yang telah kamu selesaikan didashboard Prakerjamu
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      6.Dapatkan Insentif
+    </p>
+    <p class="px-4 leading-relaxed text-gray-700">
+      Tunggu beberapa hari,kamu akan menerima insentif Rp.600.000 direkening bank/e-walletmu.
+    </p>
+    <p class="mt-4 px-4 leading-relaxed text-gray-700">
+      7. Isi Survey Evaluasi
+    </p>
+    <p class="px-4 leading-relaxed text-gray-700">
+      Jawab 2 survei evaluasi di dashboard Prakerjamu dan dapatkan insentif Rp.50.000 untuk setiap survei
+    </p>
+  </details>
+
+  
 </div>
   </n-list>
   </n-card>
