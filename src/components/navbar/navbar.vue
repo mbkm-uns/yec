@@ -37,12 +37,12 @@
 
           <div class="flex items-center gap-4">
             <div class="sm:flex sm:gap-2">
-              <router-link
-                class="rounded-md bg-orange-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                to="/auth/register"
+              <n-button
+                @click="$router.push('/auth/register')"
+                type="primary"
               >
                 Daftar
-              </router-link>
+            </n-button>
               <div class="block md:hidden">
                 <button
                   class="rounded bg-gray-100 p-2 text-orange-600 transition hover:text-orange-600/75"
