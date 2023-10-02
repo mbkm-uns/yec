@@ -16,10 +16,10 @@ const priceCurrency = computed(() => {
 
 <template>
   <div class="block overflow-hidden group">
-    <img :src="image" :alt="`${title} image`" />
+    <n-image class="h-40 object-cover" object-fit="cover" :src="image" :alt="`${title} image`" />
 
     <div class="relative pt-3 bg-white space-y-3">
-      <n-text>{{ title }}</n-text>
+      <p class="h-10 w-full truncate">{{ title }}</p>
       <p class="mt-2">
         <n-gradient-text type="info"> {{ priceCurrency }}</n-gradient-text>
       </p>

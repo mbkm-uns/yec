@@ -10,10 +10,15 @@ import axios from 'axios'
 import { Env } from '@/config'
 
 export const http = axios.create({
-  baseURL: Env().API_BASE_URL
+  baseURL: Env().API_BASE_URL,
+  headers: {
+    'Access-Key': Env().API_ACCESS_KEY,
+    Accept: 'application/json',
+    "Content-Type": "application/json"
+  },
 })
 
-type Config<TData = any, TError = any> = {
+export type Config<TData = any, TError = any> = {
   keys?: any[]
   params?: Ref
   httpOptions?: AxiosRequestConfig

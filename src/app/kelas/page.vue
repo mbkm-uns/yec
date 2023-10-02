@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useHttp } from '@/composables/http/http'
 import { ProductCard } from './components'
+
+const { data } = useHttp('/users/v1/public/program/list')
 
 const fieldOfStudies = [
   'Bahasa Asing / Inggris',
@@ -92,12 +95,12 @@ const programTypes = [
       </n-card>
       <div class="md:pl-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <template v-for="product in 100" :key="product">
+          <template v-for="product in data?.data?.list" :key="product">
             <product-card
-              :id="product.toString()"
-              title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              image="https://sgp1.vultrobjects.com/prakerja/company/60dd42e4ba82458c8b28896d/images/1673700750670082651-cover.jpg"
-              :price="1500000"
+              :id="product.id"
+              :title="product.title"
+              :image="product.program_information.cover.url"
+              :price="product.program_information.selling_price"
             />
           </template>
         </div>
