@@ -4,6 +4,14 @@
 
 <template>
 <n-card :class="$style.container" :content-style="$style.container">
+  <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
+      <template #icon>
+        <n-icon>
+          <i-mdi-arrow-left />
+        </n-icon>
+      </template>
+      Kembali
+    </n-button>
     <n-space justify="center" align="center" :class="$style.container">
       <div :class="$style.card__wrapper">
         <img src="@/assets/images/landingpage/logo-dash.png" width="200" class="mx-auto">
@@ -24,14 +32,22 @@
               
               >
                 <n-form-item path="phone" label="No Whattsap">
-                  <n-input  placeholder="No Whattsap" />
+                  <n-input  placeholder="Masukkan No Telepon" />
                 </n-form-item>
                 <n-form-item path="password" label="Password">
                   <n-input
                     
                     show-password-on="click"
                     type="password"
-                    placeholder="Password"
+                    placeholder="Min 8 karakter"
+                  />
+                </n-form-item>
+                <n-form-item path="konfirmasi password" label="Konfirmasi Password">
+                  <n-input
+                    
+                    show-password-on="click"
+                    type="password"
+                    placeholder="Min 8 karakter"
                   />
                 </n-form-item>
                 <n-row :gutter="[0, 24]">
@@ -49,6 +65,12 @@
                     >
                       Login
                     </n-button>
+                    <div class="text-center text-decoration-none">
+                      Sudah mempunyai akun?
+                      <a href="/auth/login" class="font-weight-medium text-decoration-none" color="primary">
+                      <span class="text-orange-500">Login</span>
+                      </a>
+                    </div>
                   </n-space>
                 </n-form-item>
               </n-form>
