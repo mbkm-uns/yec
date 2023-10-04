@@ -1,31 +1,23 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="p-10 pr-10 mt-5 px-10 md:px-20 space-y-5">
-    <nav class="flex items-center space-x-2 px-80">
+  <div class="p-2 mt-5 md:px-20 space-y-5">
+    <nav class="flex items-center space-x-2">
       <router-link class="text-amber-600 text-lg" to="/beranda">Beranda</router-link>
       <span class="text-gray-400 text-lg">/</span>
       <span class="text-gray-600 text-lg">Setting</span>
     </nav>
 
-    <div class="flex px-80">
+    <div class="md:flex md:px-10 lg:px-40 sm:px-5 flex-auto">
       <n-tabs size="large" :tabs-padding="20" pane-style="padding: 20px;">
         <n-tab-pane name="Data Diri" class="ml-auto">
           <section class="flex flex-col">
-            <n-card class="justify-center text-left px-20">
-              <div
-                class="flex px-10 p-10 rounded-md"
-                style="background-color: rgba(212, 229, 254, 1)"
-              >
-                <n-icon class="mr-4 pt-1 w-10 h-10 text-blue" size="30">
-                  <i-ion:alert-circle-sharp />
-                </n-icon>
-                <p class="text-blue text-lg">
-                  Akun ini hanya dapat digunakan untuk 1 peserta pelatihan, pastikan nama Anda
-                  sesuai dengan nama yang terdaftar pada akun prakerja.go.id (perhatikan penggunaan
-                  huruf dan tanda baca, wajib sama dengan nama akun di prakerja.go.id). Hal ini akan
-                  berpengaruh pada sertifikat Kartu Prakerja Anda
-                </p>
-              </div>
+            <n-card class="justify-center text-left px-2 md:px-20">
+              <n-alert title="Perhatian" type="info">
+                Akun ini hanya dapat digunakan untuk 1 peserta pelatihan, pastikan nama Anda sesuai
+                dengan nama yang terdaftar pada akun prakerja.go.id (perhatikan penggunaan huruf dan
+                tanda baca, wajib sama dengan nama akun di prakerja.go.id). Hal ini akan berpengaruh
+                pada sertifikat Kartu Prakerja Anda
+              </n-alert>
               <n-form class="mt-5">
                 <n-form-item path="name" type="text">
                   <template v-slot:label>
@@ -49,7 +41,7 @@
                   <template v-slot:label>
                     <span class="text-lg font-semibold">Tanggal Lahir</span>
                   </template>
-                  <n-input placeholder="Tanggal Lahir"> </n-input>
+                  <n-date-picker class="w-full" type="date" />
                 </n-form-item>
               </n-form>
             </n-card>
