@@ -29,7 +29,7 @@
     <n-card class="flex flex-col gap-4 rounded-lg border border-gray-100 bg-white p-6">
         <n-list role="list">
             <div class="space-y-4">
-                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
                     <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                         <h2 class="font-medium text-xl">
                             A. Program Kartu Prakerja
@@ -87,7 +87,7 @@
                     </p>
                 </details>
 
-                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
                     <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                         <h2 class="font-medium text-xl">
                             C. Langkah Pendaftaran Kartu Prakerja
@@ -144,7 +144,7 @@
                         Jawab 2 survei evaluasi di dashboard Prakerjamu dan dapatkan insentif Rp.50.000 untuk setiap survei
                     </p>
                 </details>
-                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
                     <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                         <h2 class="font-medium text-xl">
                             D. Cara Tukar Kode Redeem dan Kode Voucher Kelas Prakerja
@@ -187,7 +187,7 @@
                     </p>
                 </details>
 
-                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
                     <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                         <h2 class="font-medium text-xl">
                             E. Cara Pembelian Pelatihan
@@ -223,7 +223,7 @@
                     </p>
                 </details>
 
-                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
                     <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                         <h2 class="font-medium text-xl">
                             F. Mengapa Harus Memilih Kelas Pelatihan di YEC.CO.ID ?
@@ -260,7 +260,7 @@
                     </div>
                 </details>
 
-                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                <details class="group [&_summary::-webkit-details-marker]:hidden">
                     <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                         <h2 class="font-medium text-xl">
                             G. Kelas-kelas Yang Dirancang oleh YEC.CO.ID
@@ -480,7 +480,7 @@
 
                             </div>
                             <div class="space-y-4">
-                                <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <details class="group [&_summary::-webkit-details-marker]:hidden">
                                     <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                         <h2 class="font-medium text-xl">
                                             Apakah ada batas waktu penggunaan saldo pelatihan?
@@ -550,7 +550,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana jika saldo pelatihan saya tidak cukup untuk membeli pelatihan yang saya mau?
@@ -567,7 +567,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana jika saya gagal menggunakan saldo pelatihan di Platform Digital?
@@ -600,7 +600,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana jika pembelian pelatihan saya bermasalah?
@@ -634,7 +634,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah pelatihan yang sudah saya beli namun belum diikuti bisa diganti?
@@ -651,7 +651,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana saya bisa redeem pelatihan?
@@ -698,7 +698,7 @@
                                     5. Ikuti semua aktivitas yang tersedia hingga progressnya 100 persen hingga mendapatkan sertifikat
                                 </p>
                             </details>
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana jika redeem pelatihan saya bermasalah?
@@ -736,7 +736,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah ada tes yang hatus saya ikuti sebelum memulai pelatihan?
@@ -754,7 +754,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah selama pelatihan daring wajib on cam?
@@ -770,7 +770,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana format penamaan zoom bagi peserta yang hadir dalam sesi pelatihan daring (saat live webinar) tersebut?
@@ -792,7 +792,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana jika saya tidak dapat melanjutkan pelatihan karena kendala divideo/webinar saya?
@@ -809,7 +809,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Saya sudah menyelesaikan pelatihan, kok sertifikat belum muncul didashboard Prakerja?
@@ -826,7 +826,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Mengapa nama disertifikat tidak sesuai dengan nama saya?
@@ -844,7 +844,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apa yang harus saya lakukan setelah menyelesaikan pelatihan ?
@@ -861,7 +861,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana cara mengisi rating dan ulasan didashboard saya?
@@ -890,7 +890,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Jika nilai tes akhir pelatihan saya tidak memuaskan, apakah saya tetap bisa menerima insentif ?
@@ -907,7 +907,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Siapa saja yang bisa mendapatkan intensif ?
@@ -923,7 +923,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apa saja jenis intensif dan berapa jumlahnya?
@@ -945,7 +945,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Kapan saya mendapatkan insentif?
@@ -988,7 +988,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Kapan paling lambat saya harus menyelesaikan pelatihan untuk mendapatkan intensif?
@@ -1006,7 +1006,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah saya bisa mendapatkan intensif jika belum menjadi Penerima Kartu Prakerja?
@@ -1022,7 +1022,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Dimana saya bisa mengecek jumlah intensif yang akan saya terima?
@@ -1038,7 +1038,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apa saja yang membuat intensif saya gagal dicairkan?
@@ -1072,7 +1072,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah intensif diberikan secara tunai atau non-tunai?
@@ -1088,7 +1088,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana intensif saya akan disalurkan?
@@ -1104,7 +1104,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Berapa lama proses pencairan insetif ke rekening atau e-money saya?
@@ -1120,7 +1120,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Mengapa pencairan intensif saya belum terjadwal?
@@ -1136,7 +1136,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana jika saya belum menerima intensif padahal sudah ada jadwal pencairan intensif didashboard saya?
@@ -1152,7 +1152,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah saya mendapatkan intensif lain setelah mendapatkan intensif biaya mencari kerja?
@@ -1168,7 +1168,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Mengapa saya tidak mendapatkan jadwal pengisian survei evaluasi?
@@ -1184,7 +1184,7 @@
                                 </p>
                             </details>
 
-                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Kontak Admin YEC Prakerja
