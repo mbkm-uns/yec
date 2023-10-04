@@ -9,7 +9,8 @@ COPY . .
 
 RUN pnpm install
 
-ENV VITE_BASE_URL="{{ VITE_BASE_URL }}"
+ENV VITE_API_BASE_URL="{{ VITE_API_BASE_URL }}"
+ENV VITE_API_ACCESS_KEY="{{ VITE_API_ACCESS_KEY }}"
 
 RUN NODE_OPTIONS="--max-old-space-size=8192" pnpm build
 
