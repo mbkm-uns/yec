@@ -234,19 +234,29 @@
                         </svg>
                     </summary>
                     <div role="list">
-                        <div role="listitem">
-                            <p class="mt-4 px-4 leading-relaxed text-gray-700 flex-initial w-64 flex">
-                                <img src="@/assets/images/landingpage/kelas_prakerja/lampu.png" class="h-28">
-                                <span class="font-semibold no-underline">Instruktur Berkompeten</span>
-                                <span>Instruktur kelas berupa putra-putri daerah yang berkompeten dibidangnya</span>
+                        <div role="listitem flex">
+                            <p class="mt-4 px-4 leading-relaxed text-gray-700  flex-initial w-64">
+                                <img src="@/assets/images/landingpage/kelas_prakerja/lampu.png" class="h-28 flex">
+                                <span class="font-semibold no-underline flex">Instruktur Berkompeten</span>
+                                <span>Instruktur kelas berupa putra-putri daerah yang berkompeten dibidangnya.</span>
                             </p>
                         </div>
-                        <p class="mt-4 px-4 leading-relaxed text-gray-700">
-                            <img src="@/assets/images/landingpage/kelas_prakerja/grup.png" class="h-28">
-                        </p>
-                        <p class="mt-4 px-4 leading-relaxed text-gray-700">
-                            <img src="@/assets/images/landingpage/kelas_prakerja/admin.png" class="h-28">
-                        </p>
+
+                        <div role="listitem flex">
+                            <p class="mt-4 px-4 leading-relaxed text-gray-700  flex-initial w-64">
+                              <img src="@/assets/images/landingpage/kelas_prakerja/grup.png" class="h-28">
+                                <span class="font-semibold no-underline flex">Grup Eksklusif</span>
+                                <span>Grup Pengembangan Karir GRATIS dengan webinar eksklusif secara berkala.</span>
+                            </p>
+                        </div>
+
+                        <div role="listitem flex">
+                            <p class="mt-4 px-4 leading-relaxed text-gray-700  flex-initial w-64">
+                              <img src="@/assets/images/landingpage/kelas_prakerja/admin.png" class="h-28">
+                                <span class="font-semibold no-underline flex">Admin</span>
+                                <span>Admin cepat tanggap di semua media sosial.</span>
+                            </p>
+                        </div>
                     </div>
                 </details>
 
@@ -265,7 +275,7 @@
                         1. Menggunakan Bahasa Inggris Bagi Calon Sekretaris
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover3.jpg" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover3.jpg" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Menggunakan Bahasa Inggris Bagi Calon Sekretaris adalah kelas yang disusun khusus untuk
@@ -284,7 +294,7 @@
                         2. Menggunakan Bahasa Inggris Bagi Calon Tenaga Perkantoran Umum
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover5.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover5.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Menggunakan Bahasa Inggris Bagi Calon Tenaga Perkantoran Umum adalah kelas yang disusun untuk peserta yang
@@ -320,7 +330,7 @@
                         4. Melakukan Riset Kata Kunci Dan Optimasi SEO Website Untuk Menjadi Manajer Pemasaran
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover1.jpg" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover1.jpg" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Melakukan Riset Kata Kunci dan Optimasi SEO Website Untuk Menjadi Manajer Pemasaran adalah kelas yang dikhususkan untuk peserta yang ingin belajar riset kata kunci dan optimasi SEO website. Pelatihan ini menggunakan
@@ -335,7 +345,7 @@
                         5. Menyusun Surat Perjanjian Bahasa Inggris Bagi Calon Staff Legal
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover6.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover6.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Menyusun Surat Perjanjian Bahasa Inggris bagi Calon Staf Legal adalah kelas yang disusun untuk peserta yang ingin belajar Bahasa Inggris khususnya bagi yang berprofesi sebagai Staf Legal. Pelatihan ini menggunakan metode ajar webinar.
@@ -350,7 +360,7 @@
                         6. Mengolah Data Penjualan Dengan Microsoft Excel Untuk Menjadi Admin Input Data
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover4.jpg" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover4.jpg" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Mengolah Data Penjualan dengan Microsoft Excel untuk Menjadi Admin Input Data adalah kelas yang disusun khusus untuk peserta yang ingin belajar Data Entry khususnya bagi yang berprofesi sebagai Admin Input Data.
@@ -364,7 +374,7 @@
                         7. Menyusun Laporan Keuangan Dengan Microsoft Excel Untuk Menjadi Staff Akuntan
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover7.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover7.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Menyusun Laporan Keuangan dengan Microsoft Excel untuk Menjadi Staf Akuntan adalah kelas yang disusun untuk peserta yang ingin belajar menyusun laporan keuangan menggunakan microsoft excel khususnya bagi yang berprofesi sebagai Staf Akuntan. Pelatihan ini menggunakan metode ajar webinar.
@@ -378,7 +388,7 @@
                         8. Mengelola Gaji Karyawan Dengan Microsoft Excel Untuk Menjadi Staff Personalia
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover8.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover8.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Mengelola Gaji Karyawan dengan Microsoft Excel Untuk Menjadi Staf Personalia adalah kelas yang disusun untuk peserta yang ingin belajar tentang mengelola gaji karyawan khususnya bagi yang berprofesi sebagai Staff Personalia. Pelatihan ini menggunakan metode ajar webinar. Kelas ini merujuk pada
@@ -391,7 +401,7 @@
                         9. Menyusun Surat Bisnis Dalam Bahasa Inggris Bagi Calon Sekretaris
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover9.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover9.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Menyusun Surat Bisnis dalam Bahasa Inggris Bagi Calon Sekretaris adalah kelas yang disusun untuk peserta yang ingin belajar tentang menyusun surat bisnis khususnya bagi yang berprofesi sebagai sekretaris. Pelatihan ini menggunakan metode ajar webinar. Kelas ini merujuk pada SKKNI Nomor
@@ -405,7 +415,7 @@
                         10. Mengembangkan Konten Di Media Sosial Untuk Menjadi Spesialis Pemasaran Digital
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover10.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover10.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Mengembangkan Konten di Media Sosial Untuk Menjadi Spesialis Pemasaran Digital adalah kelas yang disusun khusus untuk peserta yang ingin belajar mengembangkan konten di media sosial khususnya bagi yang berprofesi sebagai spesialis pemasaran digital. Pelatihan ini menggunakan metode ajar webinar.
@@ -418,7 +428,7 @@
                         11. Merencankan Strategi Pemasangan Iklan Di Media Sosial Untuk Menjadi Manajer Periklanan
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover11.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover11.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Merencanakan Strategi Pemasangan Iklan di Media Sosial Untuk Menjadi Manajer Periklanan adalah kelas yang disusun khusus untuk peserta yang ingin belajar Profesional Pemasaran khususnya bagi yang berprofesi sebagai Manajer Periklanan. Pelatihan ini menggunakan metode ajar webinar. Kelas ini merujuk pada SKKNI Nomor 389 Tahun 2013.
@@ -430,7 +440,7 @@
                         12. Mengelola Kinerja Karyawan Untuk Menjadi Manajer Sumber Daya Manusia
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover6.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover6.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Mengelola Kinerja Karyawan Untuk Menjadi Manajer Sumber Daya Manusia adalah kelas yang disusun untuk peserta yang ingin belajar mengelola kinerja karyawan khususnya bagi yang berprofesi sebagai manajer sumber daya manusia. Pelatihan ini menggunakan metode ajar webinar. Kelas ini merujuk pada SKKNI Nomor 149 Tahun 2020 Tentang Manajemen Sumber Daya Manusia.
@@ -442,7 +452,7 @@
                         13. Merumuskan Kebijakan Organisasi Dan Strategi Pengelolaan SDM Untuk Menjadi Manajer Sumber Daya Manusia
                     </p>
                     <p class="px-4 leading-relaxed text-gray-700">
-                        <img src="@/assets/images/landingpage/kelas_prakerja/cover12.png" class="w-full">
+                        <img src="@/assets/images/landingpage/kelas_prakerja/cover12.png" class="w-full rounded-lg">
                     </p>
                     <p class="mt-4 px-4 leading-relaxed text-gray-700 text-lg">
                         Merumuskan Kebijakan Organisasi dan Strategi Pengelolaan SDM Untuk Menjadi Manajer Sumber Daya Manusia adalah kelas yang disusun untuk peserta yang ingin belajar merumuskan kebijakan organisasi dan strategi pengelolaan SDM bagi yang ingin berprofesi sebagai Manajer Sumber Daya Manusia. Pelatihan ini menggunakan metode ajar webinar. Kelas ini merujuk pada SKKNI Nomor 149 Tahun 2020 Tentang Manajemen Sumber Daya Manusia.
@@ -460,7 +470,7 @@
 
             <section class="bg-white">
                 <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-                    <section class="relative flex h-32 items-end  lg:col-span-5 lg:h-full xl:col-span-6">
+                    <section class="relative flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center w-403px h-404px">
                         <img src="@/assets/images/landingpage/faq.jpg" />
                     </section>
 
@@ -977,6 +987,232 @@
                                   Akan diterima jika Penerima Kartu Prakerja telah mengisi survei evaluasi pada dashboard akun kamu di situs www.prakerja.go.id untuk mengetahui evaluasi efektivitas Program Kartu Prakerja.
                                 </p>
                             </details> 
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Kapan paling lambat saya harus menyelesaikan pelatihan untuk mendapatkan intensif?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Untuk mendapatkan insentif, kamu harus segera menyelesaikan pelatihan pertama dan memberikan rating dan review pelatihan paling lambat di bulan Desember di tahun yang sama. Kamu juga harus ingat 
+                                  bahwa untuk menerima insentif, kamu harus menyelesaikan pelatihan pertama kamu paling lambat tanggal 4 Desember pada tahun anggaran berjalan. Jadi, pastikan kamu menyelesaikan pelatihan pertama dan 
+                                  berikan rating dan review secepatnya agar insentif kamu tidak hangus, ya!
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Apakah saya bisa mendapatkan intensif jika belum menjadi Penerima Kartu Prakerja?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Tidak, kamu hanya bisa mendapatkan insentif ketika kamu telah menjadi Penerima Kartu Prakerja yang sah, telah menyelesaikan pelatihan pertama kamu dan memenuhi persyaratan sebagaimana disebutkan di atas.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Dimana saya bisa mengecek jumlah intensif yang akan saya terima?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Kamu bisa cek pada akun dashboard kamu. Pastikan kamu cek statusnya secara berkala, ya.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Apa saja yang membuat intensif saya gagal dicairkan?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Insentif kamu bisa gagal dicairkan apabila:
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  1. Belum mengisi ulasan (review) pelatihan di dashboard kamu.
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  2. Belum memberikan penilaian (rating) pelatihan di dashboard kamu
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  3. Nomor rekening bank atau akun e-money yang kamu daftarkan pada Kartu Prakerja tidak aktif atau bermasalah.
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  4. Akun e-money kamu belum di-upgrade atau melakukan KYC (verifikasi KTP dan swafoto).
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  5. Batas transaksi dalam 1 (satu) bulan dan saldo akun e-money kamu melebihi batas maksimum yang diperbolehkan oleh penyelenggara e-money atau ketentuan peraturan perundang-undangan.
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  6. Data diri yang didaftarkan pada e-money tidak sesuai dengan yang didaftarkan pada akun Kartu Prakerja.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Apakah intensif diberikan secara tunai atau non-tunai?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Insentif kamu akan diberikan non-tunai dengan cara ditransfer ke rekening bank atau akun e-wallet yang telah kamu daftarkan.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Bagaimana intensif saya akan disalurkan?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Insentif akan disalurkan melalui akun e-wallet atau rekening bank yang telah kamu daftarkan di akun kamu melalui situs www.prakerja.go.id
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Berapa lama proses pencairan insetif ke rekening atau e-money saya?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Pencairan insentif ke rekening atau e-wallet kamu membutuhkan waktu 3-5 hari kerja sejak tanggal penjadwalan insentif muncul di dashboard akun kamu. Jika lebih dari 5 (lima) hari kerja kamu masih belum menerima insentif, silakan hubungi kami melalui Call Center Prakerja di 08001503001
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Mengapa pencairan intensif saya belum terjadwal?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Jika belum ada jadwal pencairan insentif di dashboard kamu, pastikan kembali bahwa kamu sudah menyelesaikan pelatihan serta memberikan rating dan ulasan pelatihan. Silakan menunggu 1x24 jam untuk sinkronisasi jadwal pencairan insentif kamu.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Bagaimana jika saya belum menerima intensif padahal sudah ada jadwal pencairan intensif didashboard saya?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Pencairan insentif dilakukan secara bertahap. Oleh karena itu, pastikan kamu sudah memenuhi seluruh syarat dan ketentuan yang berlaku untuk mendapatkan insentif. Lakukan juga pengecekan berkala di dashboard akun kamu dan riwayat rekening bank/e-wallet yang telah terhubung dengan akun Prakerja. Jika dalam waktu 5 hari kerja kamu masih belum menerima insentif, silakan hubungi Call Center Prakerja di 08001503001.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                        Apakah saya mendapatkan intensif lain setelah mendapatkan intensif biaya mencari kerja?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Setelah mendapat insentif biaya mencari kerja, kamu juga dapat memperoleh insentif pengisian survei evaluasi dengan mengisi survei evaluasi sesuai jadwal yang tersedia di dashboard kamu. Insentif ini hanya diberikan kepada penerima Kartu Prakerja yang mengisi survei evaluasi paling lambat tanggal 10 Desember tahun anggaran berjalan. Ingat ya, isi survei evaluasi kamu dengan jujur sesuai dengan keadaan kamu!.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                      Mengapa saya tidak mendapatkan jadwal pengisian survei evaluasi?
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  Jadwal pengisian survei evaluasi hanya diberikan kepada Penerima Kartu Prakerja yang telah menerima insentif biaya mencari kerja. Pastikan kamu sudah menerima insentif tersebut dan cek terus dashboard kamu untuk mengetahui jadwal terbaru.
+                                </p>
+                            </details>
+
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+                                    <h2 class="font-medium text-xl">
+                                      Kontak Admin YEC Prakerja
+                                    </h2>
+
+                                    <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </summary>
+
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  1. Group FB Panduan Kartu Prakerja
+                                </p>
+                                <a class="px-4 leading-relaxe text-lg text-orange-500" href="https://www.facebook.com/groups/prakerja.yec"> https://www.facebook.com/groups/prakerja.yec</a>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  2. Group Telegram Panduan Prakerja by YEC
+                                </p>
+                                <a class="px-4 leading-relaxe text-lg text-orange-500" href="https://t.me/joinchat/A9ea-qrWsoozZDE1">https://t.me/joinchat/A9ea-qrWsoozZDE1</a>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  3. Email : prakerja@yec.co.id
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  4. Instagram : @bakat.yec
+                                </p>
+                                <p class="px-4 leading-relaxed text-gray-700 text-lg">
+                                  5. CS WhatsApp : +62 853-3584-9962 (Hanya Chat)
+                                </p>
+                             </details>
                         </div>
                     </main>
                 </div>
