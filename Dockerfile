@@ -1,6 +1,8 @@
 FROM node:20-slim AS builder
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
+ENV VITE_API_BASE_URL="{{ VITE_API_BASE_URL }}"
+ENV VITE_API_ACCESS_KEY="{{ VITE_API_ACCESS_KEY }}"
 
 RUN corepack enable
 
@@ -9,8 +11,6 @@ COPY . .
 
 RUN pnpm install
 
-ENV VITE_API_BASE_URL="{{ VITE_API_BASE_URL }}"
-ENV VITE_API_ACCESS_KEY="{{ VITE_API_ACCESS_KEY }}"
 
 RUN NODE_OPTIONS="--max-old-space-size=8192" pnpm build
 
