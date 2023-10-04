@@ -1,3 +1,9 @@
+
+<route lang="yaml">
+  meta:
+    layout: authenticated.layout
+  </route>
+  
 <script setup lang="ts">
 import { useHttp } from '@/composables/http/http'
 import { ProductCard } from './kelas/components'
