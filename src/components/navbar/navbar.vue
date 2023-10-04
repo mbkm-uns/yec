@@ -2,7 +2,7 @@
   <header class="bg-white sticky z-10 w-full top-0">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
-        <div class="flex-1 md:flex md:items-center md:gap-12">
+        <div class="flex-1 md:flex md:items-center md:gap-16">
           <img src="@/assets/images/landingpage/logo-dash.png" class="h-8" justify-left />
         </div>
 
@@ -37,12 +37,12 @@
 
           <div class="flex items-center gap-4">
             <div class="sm:flex sm:gap-2">
-              <router-link
-                class="rounded-md bg-orange-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-                to="/auth/register"
+              <n-button
+                @click="$router.push('/auth/register')"
+                type="primary"
               >
                 Daftar
-              </router-link>
+            </n-button>
               <div class="block md:hidden">
                 <button
                   class="rounded bg-gray-100 p-2 text-orange-600 transition hover:text-orange-600/75"

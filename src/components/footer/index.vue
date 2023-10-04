@@ -6,7 +6,10 @@
   >
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-        <div class="text-teal-900">
+        <div class="flex-1 md:flex md:items-center md:gap-2">
+          <img src="@/assets/images/landingpage/uns.png" class="h-12" justify-left />
+          <img src="@/assets/images/landingpage/sv.png" class="h-12" justify-left />
+          <img src="@/assets/images/landingpage/d3ti.png" class="h-12" justify-left />
           <img src="@/assets/images/landingpage/logo-dash.png" class="h-10">
         </div>
         <div class="pe-5">
