@@ -988,7 +988,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Kapan paling lambat saya harus menyelesaikan pelatihan untuk mendapatkan intensif?
@@ -1006,7 +1010,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah saya bisa mendapatkan intensif jika belum menjadi Penerima Kartu Prakerja?
@@ -1022,7 +1030,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Dimana saya bisa mengecek jumlah intensif yang akan saya terima?
@@ -1038,7 +1050,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apa saja yang membuat intensif saya gagal dicairkan?
@@ -1072,7 +1088,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah intensif diberikan secara tunai atau non-tunai?
@@ -1088,7 +1108,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana intensif saya akan disalurkan?
@@ -1104,7 +1128,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Berapa lama proses pencairan insetif ke rekening atau e-money saya?
@@ -1120,7 +1148,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Mengapa pencairan intensif saya belum terjadwal?
@@ -1136,7 +1168,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Bagaimana jika saya belum menerima intensif padahal sudah ada jadwal pencairan intensif didashboard saya?
@@ -1152,7 +1188,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Apakah saya mendapatkan intensif lain setelah mendapatkan intensif biaya mencari kerja?
@@ -1168,7 +1208,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Mengapa saya tidak mendapatkan jadwal pengisian survei evaluasi?
@@ -1184,7 +1228,11 @@
                                 </p>
                             </details>
 
+<<<<<<< HEAD
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
+=======
+                            <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+>>>>>>> 0306f452fb94f9236e55e1d1f6dde72c78289d75
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
                                         Kontak Admin YEC Prakerja
