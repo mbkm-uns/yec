@@ -244,7 +244,7 @@
 
                         <div role="listitem flex">
                             <p class="mt-4 px-4 leading-relaxed text-gray-700  flex-initial w-64">
-                              <img src="@/assets/images/landingpage/kelas_prakerja/grup.png" class="h-28">
+                                <img src="@/assets/images/landingpage/kelas_prakerja/grup.png" class="h-28">
                                 <span class="font-semibold no-underline flex">Grup Eksklusif</span>
                                 <span>Grup Pengembangan Karir GRATIS dengan webinar eksklusif secara berkala.</span>
                             </p>
@@ -252,7 +252,7 @@
 
                         <div role="listitem flex">
                             <p class="mt-4 px-4 leading-relaxed text-gray-700  flex-initial w-64">
-                              <img src="@/assets/images/landingpage/kelas_prakerja/admin.png" class="h-28">
+                                <img src="@/assets/images/landingpage/kelas_prakerja/admin.png" class="h-28">
                                 <span class="font-semibold no-underline flex">Admin</span>
                                 <span>Admin cepat tanggap di semua media sosial.</span>
                             </p>
@@ -935,15 +935,15 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Insentif terdiri dari 2 (dua) jenis:
+                                    Insentif terdiri dari 2 (dua) jenis:
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  1. Insentif biaya mencari kerja sebanyak 1 (satu) kali sebesar Rp600.000 (enam ratus ribu Rupiah)
+                                    1. Insentif biaya mencari kerja sebanyak 1 (satu) kali sebesar Rp600.000 (enam ratus ribu Rupiah)
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  2. Insentif pengisian survei evaluasi sebesar Rp50.000 (lima puluh ribu Rupiah) yang diberikan paling banyak 2 (dua) kali.
+                                    2. Insentif pengisian survei evaluasi sebesar Rp50.000 (lima puluh ribu Rupiah) yang diberikan paling banyak 2 (dua) kali.
                                 </p>
-                            </details> 
+                            </details>
 
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
@@ -956,37 +956,37 @@
                                     </svg>
                                 </summary>
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
-                                <h2 class="font-medium text-xl">
-                                  Insentif biaya cari kerja
-                                </h2>
+                                    <h2 class="font-medium text-xl">
+                                        Insentif biaya cari kerja
+                                    </h2>
                                 </summary>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Jika kamu lolos menjadi Penerima Kartu Prakerja, kamu akan menerima insentif biaya mencari kerja setelah:
+                                    Jika kamu lolos menjadi Penerima Kartu Prakerja, kamu akan menerima insentif biaya mencari kerja setelah:
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  1. Telah menyelesaikan Pelatihan yang ditandai dengan adanya sertifikat
+                                    1. Telah menyelesaikan Pelatihan yang ditandai dengan adanya sertifikat
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  2. Telah memberikan ulasan (review) dan penilaian (rating) terhadap pelatihan di dashboard kamu.
+                                    2. Telah memberikan ulasan (review) dan penilaian (rating) terhadap pelatihan di dashboard kamu.
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  3. Jika Penerima Kartu Prakerja mengikuti lebih dari satu pelatihan, insentif biaya mencari kerja hanya diberikan pada saat penyelesaian pelatihan yang pertama. Tidak ada insentif untuk pelatihan kedua dan seterusnya.
+                                    3. Jika Penerima Kartu Prakerja mengikuti lebih dari satu pelatihan, insentif biaya mencari kerja hanya diberikan pada saat penyelesaian pelatihan yang pertama. Tidak ada insentif untuk pelatihan kedua dan seterusnya.
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  4. Telah berhasil menyambungkan nomor rekening bank atau e-money di akun situs www.prakerja.go.id
+                                    4. Telah berhasil menyambungkan nomor rekening bank atau e-money di akun situs www.prakerja.go.id
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  5. Nomor rekening bank atau e-money yang didaftarkan telah tervalidasi (menggunakan NIK yang sama dengan NIK terdaftar di Kartu Prakerja dan sudah KYC atau akun e-money sudah premium/upgrade) oleh bank/perusahaan e-money terkait.
+                                    5. Nomor rekening bank atau e-money yang didaftarkan telah tervalidasi (menggunakan NIK yang sama dengan NIK terdaftar di Kartu Prakerja dan sudah KYC atau akun e-money sudah premium/upgrade) oleh bank/perusahaan e-money terkait.
                                 </p>
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
-                                <h2 class="font-medium text-xl">
-                                  Insentif pengisian survei evaluasi
-                                </h2>
+                                    <h2 class="font-medium text-xl">
+                                        Insentif pengisian survei evaluasi
+                                    </h2>
                                 </summary>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Akan diterima jika Penerima Kartu Prakerja telah mengisi survei evaluasi pada dashboard akun kamu di situs www.prakerja.go.id untuk mengetahui evaluasi efektivitas Program Kartu Prakerja.
+                                    Akan diterima jika Penerima Kartu Prakerja telah mengisi survei evaluasi pada dashboard akun kamu di situs www.prakerja.go.id untuk mengetahui evaluasi efektivitas Program Kartu Prakerja.
                                 </p>
-                            </details> 
+                            </details>
 
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
@@ -1000,9 +1000,9 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Untuk mendapatkan insentif, kamu harus segera menyelesaikan pelatihan pertama dan memberikan rating dan review pelatihan paling lambat di bulan Desember di tahun yang sama. Kamu juga harus ingat 
-                                  bahwa untuk menerima insentif, kamu harus menyelesaikan pelatihan pertama kamu paling lambat tanggal 4 Desember pada tahun anggaran berjalan. Jadi, pastikan kamu menyelesaikan pelatihan pertama dan 
-                                  berikan rating dan review secepatnya agar insentif kamu tidak hangus, ya!
+                                    Untuk mendapatkan insentif, kamu harus segera menyelesaikan pelatihan pertama dan memberikan rating dan review pelatihan paling lambat di bulan Desember di tahun yang sama. Kamu juga harus ingat
+                                    bahwa untuk menerima insentif, kamu harus menyelesaikan pelatihan pertama kamu paling lambat tanggal 4 Desember pada tahun anggaran berjalan. Jadi, pastikan kamu menyelesaikan pelatihan pertama dan
+                                    berikan rating dan review secepatnya agar insentif kamu tidak hangus, ya!
                                 </p>
                             </details>
 
@@ -1018,7 +1018,7 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Tidak, kamu hanya bisa mendapatkan insentif ketika kamu telah menjadi Penerima Kartu Prakerja yang sah, telah menyelesaikan pelatihan pertama kamu dan memenuhi persyaratan sebagaimana disebutkan di atas.
+                                    Tidak, kamu hanya bisa mendapatkan insentif ketika kamu telah menjadi Penerima Kartu Prakerja yang sah, telah menyelesaikan pelatihan pertama kamu dan memenuhi persyaratan sebagaimana disebutkan di atas.
                                 </p>
                             </details>
 
@@ -1034,7 +1034,7 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Kamu bisa cek pada akun dashboard kamu. Pastikan kamu cek statusnya secara berkala, ya.
+                                    Kamu bisa cek pada akun dashboard kamu. Pastikan kamu cek statusnya secara berkala, ya.
                                 </p>
                             </details>
 
@@ -1050,25 +1050,25 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Insentif kamu bisa gagal dicairkan apabila:
+                                    Insentif kamu bisa gagal dicairkan apabila:
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  1. Belum mengisi ulasan (review) pelatihan di dashboard kamu.
+                                    1. Belum mengisi ulasan (review) pelatihan di dashboard kamu.
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  2. Belum memberikan penilaian (rating) pelatihan di dashboard kamu
+                                    2. Belum memberikan penilaian (rating) pelatihan di dashboard kamu
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  3. Nomor rekening bank atau akun e-money yang kamu daftarkan pada Kartu Prakerja tidak aktif atau bermasalah.
+                                    3. Nomor rekening bank atau akun e-money yang kamu daftarkan pada Kartu Prakerja tidak aktif atau bermasalah.
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  4. Akun e-money kamu belum di-upgrade atau melakukan KYC (verifikasi KTP dan swafoto).
+                                    4. Akun e-money kamu belum di-upgrade atau melakukan KYC (verifikasi KTP dan swafoto).
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  5. Batas transaksi dalam 1 (satu) bulan dan saldo akun e-money kamu melebihi batas maksimum yang diperbolehkan oleh penyelenggara e-money atau ketentuan peraturan perundang-undangan.
+                                    5. Batas transaksi dalam 1 (satu) bulan dan saldo akun e-money kamu melebihi batas maksimum yang diperbolehkan oleh penyelenggara e-money atau ketentuan peraturan perundang-undangan.
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  6. Data diri yang didaftarkan pada e-money tidak sesuai dengan yang didaftarkan pada akun Kartu Prakerja.
+                                    6. Data diri yang didaftarkan pada e-money tidak sesuai dengan yang didaftarkan pada akun Kartu Prakerja.
                                 </p>
                             </details>
 
@@ -1084,7 +1084,7 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Insentif kamu akan diberikan non-tunai dengan cara ditransfer ke rekening bank atau akun e-wallet yang telah kamu daftarkan.
+                                    Insentif kamu akan diberikan non-tunai dengan cara ditransfer ke rekening bank atau akun e-wallet yang telah kamu daftarkan.
                                 </p>
                             </details>
 
@@ -1100,7 +1100,7 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Insentif akan disalurkan melalui akun e-wallet atau rekening bank yang telah kamu daftarkan di akun kamu melalui situs www.prakerja.go.id
+                                    Insentif akan disalurkan melalui akun e-wallet atau rekening bank yang telah kamu daftarkan di akun kamu melalui situs www.prakerja.go.id
                                 </p>
                             </details>
 
@@ -1116,7 +1116,7 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Pencairan insentif ke rekening atau e-wallet kamu membutuhkan waktu 3-5 hari kerja sejak tanggal penjadwalan insentif muncul di dashboard akun kamu. Jika lebih dari 5 (lima) hari kerja kamu masih belum menerima insentif, silakan hubungi kami melalui Call Center Prakerja di 08001503001
+                                    Pencairan insentif ke rekening atau e-wallet kamu membutuhkan waktu 3-5 hari kerja sejak tanggal penjadwalan insentif muncul di dashboard akun kamu. Jika lebih dari 5 (lima) hari kerja kamu masih belum menerima insentif, silakan hubungi kami melalui Call Center Prakerja di 08001503001
                                 </p>
                             </details>
 
@@ -1132,7 +1132,7 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Jika belum ada jadwal pencairan insentif di dashboard kamu, pastikan kembali bahwa kamu sudah menyelesaikan pelatihan serta memberikan rating dan ulasan pelatihan. Silakan menunggu 1x24 jam untuk sinkronisasi jadwal pencairan insentif kamu.
+                                    Jika belum ada jadwal pencairan insentif di dashboard kamu, pastikan kembali bahwa kamu sudah menyelesaikan pelatihan serta memberikan rating dan ulasan pelatihan. Silakan menunggu 1x24 jam untuk sinkronisasi jadwal pencairan insentif kamu.
                                 </p>
                             </details>
 
@@ -1148,7 +1148,7 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Pencairan insentif dilakukan secara bertahap. Oleh karena itu, pastikan kamu sudah memenuhi seluruh syarat dan ketentuan yang berlaku untuk mendapatkan insentif. Lakukan juga pengecekan berkala di dashboard akun kamu dan riwayat rekening bank/e-wallet yang telah terhubung dengan akun Prakerja. Jika dalam waktu 5 hari kerja kamu masih belum menerima insentif, silakan hubungi Call Center Prakerja di 08001503001.
+                                    Pencairan insentif dilakukan secara bertahap. Oleh karena itu, pastikan kamu sudah memenuhi seluruh syarat dan ketentuan yang berlaku untuk mendapatkan insentif. Lakukan juga pengecekan berkala di dashboard akun kamu dan riwayat rekening bank/e-wallet yang telah terhubung dengan akun Prakerja. Jika dalam waktu 5 hari kerja kamu masih belum menerima insentif, silakan hubungi Call Center Prakerja di 08001503001.
                                 </p>
                             </details>
 
@@ -1164,14 +1164,14 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Setelah mendapat insentif biaya mencari kerja, kamu juga dapat memperoleh insentif pengisian survei evaluasi dengan mengisi survei evaluasi sesuai jadwal yang tersedia di dashboard kamu. Insentif ini hanya diberikan kepada penerima Kartu Prakerja yang mengisi survei evaluasi paling lambat tanggal 10 Desember tahun anggaran berjalan. Ingat ya, isi survei evaluasi kamu dengan jujur sesuai dengan keadaan kamu!.
+                                    Setelah mendapat insentif biaya mencari kerja, kamu juga dapat memperoleh insentif pengisian survei evaluasi dengan mengisi survei evaluasi sesuai jadwal yang tersedia di dashboard kamu. Insentif ini hanya diberikan kepada penerima Kartu Prakerja yang mengisi survei evaluasi paling lambat tanggal 10 Desember tahun anggaran berjalan. Ingat ya, isi survei evaluasi kamu dengan jujur sesuai dengan keadaan kamu!.
                                 </p>
                             </details>
 
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
-                                      Mengapa saya tidak mendapatkan jadwal pengisian survei evaluasi?
+                                        Mengapa saya tidak mendapatkan jadwal pengisian survei evaluasi?
                                     </h2>
 
                                     <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1180,14 +1180,14 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  Jadwal pengisian survei evaluasi hanya diberikan kepada Penerima Kartu Prakerja yang telah menerima insentif biaya mencari kerja. Pastikan kamu sudah menerima insentif tersebut dan cek terus dashboard kamu untuk mengetahui jadwal terbaru.
+                                    Jadwal pengisian survei evaluasi hanya diberikan kepada Penerima Kartu Prakerja yang telah menerima insentif biaya mencari kerja. Pastikan kamu sudah menerima insentif tersebut dan cek terus dashboard kamu untuk mengetahui jadwal terbaru.
                                 </p>
                             </details>
 
                             <details class="group [&_summary::-webkit-details-marker]:hidden">
                                 <summary class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
                                     <h2 class="font-medium text-xl">
-                                      Kontak Admin YEC Prakerja
+                                        Kontak Admin YEC Prakerja
                                     </h2>
 
                                     <svg class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1196,23 +1196,23 @@
                                 </summary>
 
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  1. Group FB Panduan Kartu Prakerja
+                                    1. Group FB Panduan Kartu Prakerja
                                 </p>
                                 <a class="px-4 leading-relaxe text-lg text-orange-500" href="https://www.facebook.com/groups/prakerja.yec"> https://www.facebook.com/groups/prakerja.yec</a>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  2. Group Telegram Panduan Prakerja by YEC
+                                    2. Group Telegram Panduan Prakerja by YEC
                                 </p>
                                 <a class="px-4 leading-relaxe text-lg text-orange-500" href="https://t.me/joinchat/A9ea-qrWsoozZDE1">https://t.me/joinchat/A9ea-qrWsoozZDE1</a>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  3. Email : prakerja@yec.co.id
+                                    3. Email : prakerja@yec.co.id
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  4. Instagram : @bakat.yec
+                                    4. Instagram : @bakat.yec
                                 </p>
                                 <p class="px-4 leading-relaxed text-gray-700 text-lg">
-                                  5. CS WhatsApp : +62 853-3584-9962 (Hanya Chat)
+                                    5. CS WhatsApp : +62 853-3584-9962 (Hanya Chat)
                                 </p>
-                             </details>
+                            </details>
                         </div>
                     </main>
                 </div>
