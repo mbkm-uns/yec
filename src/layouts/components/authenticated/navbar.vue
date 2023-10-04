@@ -54,7 +54,7 @@ const options = [
               <li>
                 <router-link
                   class="text-orange-500 transition hover:text-orange-500/75"
-                  to="/beranda"
+                  to="/"
                 >
                   <n-space>
                     <svg
@@ -74,7 +74,7 @@ const options = [
                 </router-link>
               </li>
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
+                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/beranda">
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
