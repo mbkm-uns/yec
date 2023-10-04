@@ -4,13 +4,13 @@
 
 <template>
 <n-card :class="$style.container" :content-style="$style.container">
-  <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
+  <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/auth/login')">
       <template #icon>
         <n-icon>
           <i-mdi-arrow-left />
         </n-icon>
       </template>
-      Kembali
+      Kembali Login
     </n-button>
     <n-space justify="center" align="center" :class="$style.container">
       <div :class="$style.card__wrapper">
@@ -22,9 +22,8 @@
           style="position: relative; width: fit-content; margin-inline: auto"
         >
           <n-card :class="$style.card" size="medium">
-            <n-h2>Login ke Akun Anda </n-h2>
             <n-text
-              >Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda
+              >Masukan nomor handphone anda dan kami akan mengirimkan kode verifikasi untuk memperbarui password anda
             </n-text>
             <div :class="$style.form__wrapper">
               <n-form
@@ -34,40 +33,15 @@
                 <n-form-item path="phone" label="No Telepon">
                   <n-input  placeholder="Masukkan No Telepon" />
                 </n-form-item>
-                <n-form-item path="password" label="Password">
-                  <n-input
-                    
-                    show-password-on="click"
-                    type="password"
-                    placeholder="Min 8 karakter"
-                  />
-                </n-form-item>
-                <div class="float-right text-decoration-none text-orange-500">
-                  <a href="/auth/forgot-password">Lupa Password?</a>
-                </div>
-                <n-row :gutter="[0, 24]">
-                  <n-col :span="24"> </n-col>
-                </n-row>
-                <n-form-item>
                   <n-space vertical :size="20" :class="$style.form__action">
-                    <n-checkbox>
-                      Ingat Saya
-                    </n-checkbox>
                     <n-button
                       attr-type="submit"
                       type="primary"
                       block
                     >
-                      Login
+                      Lanjut
                     </n-button>
-                    <div class="text-center">
-                      Belum mempunyai akun?
-                      <a href="/auth/register" class="font-weight-medium text-decoration-none" color="primary">
-                      <span class="text-orange-500">Daftar Sekarang</span>
-                      </a>
-                    </div>
                   </n-space>
-                </n-form-item>
               </n-form>
             </div>
           </n-card>
@@ -87,7 +61,7 @@
   .card {
     max-width: 500px;
     margin: auto;
-    position: relative;
+    position: static;
   }
   .card__brand {
     margin: auto;

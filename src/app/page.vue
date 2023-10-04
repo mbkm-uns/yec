@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useHttp } from '@/composables/http/http'
 import { ProductCard } from './kelas/components'
+const { data: classes } = useHttp('users/v1/public/program/study_group')
 </script>
 
 <template>
@@ -55,12 +57,12 @@ import { ProductCard } from './kelas/components'
         </header>
 
         <div class="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
-          <template v-for="product in 16" :key="product">
+          <template v-for="product in classes?.data[0]?.programs" :key="product">
             <product-card
-              id="1"
-              title="Menggunakan Bahasa Inggris Bagi Calon Sekretaris"
-              :price="1500000"
-              image="https://sgp1.vultrobjects.com/prakerja/company/60dd42e4ba82458c8b28896d/images/1673700750670082651-cover.jpg"
+              :id="product.id"
+              :title="product.title"
+              :price="product.program_information.selling_price"
+              :image="product.program_information.cover.url"
             />
           </template>
         </div>
