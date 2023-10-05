@@ -3,40 +3,34 @@
     layout: blank.layout
   </route>
 <script setup lang="ts">
-// import { useHttpMutation } from '@/composables/http/http';
-// import { reactive, ref } from 'vue';
-// import { useRouter } from 'vue-router';
-// import {  type UseMutationOptions } 
+import { useHttpMutation } from '@/composables/http/http';
+import { ref } from 'vue';
 
-// const router = useRouter();
 
-// const formData = ref({
-//   no_whaatsapp: "",
-//   password: "",
-//   konfirmasi_password: "",
-// });
+const formData = ref({
+  no_whaatsapp: "",
+  password: "",
+  konfirmasi_password: "",
+});
 
-// const state = reactive({
-//   isLoading:false,
-// })
 
-// const {mutate, isLoading, isError, error} = useHttpMutation<ToData, TError>('todos/:id', {
-//   method: 'POST',
-//   httpOptions: {
-//     timeout: 30000,
-//   },
-//   queryOptions: {
-//     onSuccess: function (data) {
-//       console.log(data);
-//     },
-//     onError: function (data) {
-//       console.log(data);
-//     },
-//   },
-// })
-// const onSubmitFrom = (data) => {
-//   mutate(data)
-// }
+const {mutate, isLoading,} =  useHttpMutation('todos/:id', {
+    method: 'POST',
+    httpOptions: { // axios options
+      timeout: 30000,
+    },
+    queryOptions: { // vue-query options
+      onSuccess: function (data) {
+        console.log(data);
+      },
+      onError: function (data) {
+        console.log(data);
+      },
+    },
+    })
+const onSubmit = (data:FormData) => {
+  mutate(data)
+}
 
 
 </script>
@@ -63,17 +57,17 @@
             </n-text>
             <div :class="$style.form__wrapper">
               <n-form
-                ref="formRef"
+                ref="formRef" @cli="onSubmit"
               
               >
                 <n-form-item path="phone" label="No Telepon">
-                  <n-input  placeholder="Masukkan No Telepon" />
+                  <n-input  placeholder="Masukkan No Telepon" v-model:value="formData.no_whaatsapp" />
                 </n-form-item>
                 <n-form-item path="password" label="Password">
-                  <n-input show-password-on="click" type="password" placeholder="Min 8 karakter" />
+                  <n-input show-password-on="click" type="password" placeholder="Min 8 karakter" v-model:value="formData.password"/>
                 </n-form-item>
                   <n-form-item path="konfirmasi password" label="Konfirmasi Password">
-                    <n-input show-password-on="click" type="password" placeholder="Min 8 karakter" />
+                    <n-input show-password-on="click" type="password" placeholder="Min 8 karakter"  v-model:value="formData.konfirmasi_password" />
                   </n-form-item>
                     <n-row :gutter="[0, 24]">
                       <n-col :span="24"> </n-col>
@@ -86,7 +80,7 @@
                     <n-checkbox>
                       Ingat Saya
                     </n-checkbox>
-                    <n-button
+                    <n-button :loading="isLoading"
                       attr-type="submit"
                       type="primary"
                       block
