@@ -1,3 +1,7 @@
+<route lang="yaml">
+  meta:
+    layout: blank.layout
+  </route>
 <script setup lang="ts">
 // import { useHttpMutation } from '@/composables/http/http';
 // import { reactive, ref } from 'vue';

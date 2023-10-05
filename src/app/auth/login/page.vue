@@ -1,3 +1,7 @@
+<route lang="yaml">
+  meta:
+    layout: blank.layout
+  </route>
 <script setup lang="ts">
 
 </script>
