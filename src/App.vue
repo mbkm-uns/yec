@@ -16,7 +16,9 @@ const themeOverrides: GlobalThemeOverrides = {
 
 <template>
   <n-config-provider preflight-style-disabled :theme-overrides="themeOverrides">
-    <n-message-provider> <router-view /></n-message-provider>
+    <n-message-provider>
+      <router-view />
+    </n-message-provider>
   </n-config-provider>
 </template>
 

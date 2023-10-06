@@ -1,3 +1,7 @@
+<route lang="yaml">
+  meta:
+    layout: blank.layout
+  </route>
 <script setup lang="ts">
 // import axios from 'axios'
 import { useHttpMutation } from '@/composables/http/http'
@@ -103,6 +107,20 @@ const rules: FormRules = {
         </n-space>
         <div style="position: relative; width: fit-content; margin-inline: auto">
           <n-card :class="$style.card" size="medium">
+            <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
+              <template #icon>
+                  <n-icon>
+                  <i-mdi-arrow-left />
+                  </n-icon>
+              </template>
+                Kembali
+            </n-button>
+            <n-space justify="center" align="center" :class="$style.container">
+            <div :class="$style.card__wrapper">
+                <img src="@/assets/images/landingpage/logo-dash.png" width="200" class="mx-auto space-y-4">
+            <n-space justify="center">
+              <n-text> Dashboard YEC CO ID </n-text>
+            </n-space>
             <n-h2>Login ke Akun Anda </n-h2>
             <n-text>Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda </n-text>
             <div :class="$style.form__wrapper">
@@ -149,12 +167,10 @@ const rules: FormRules = {
                   </n-space>
                 </n-form-item>
               </n-form>
-            </div>
+              </div>
+              </div>
+            </n-space>
           </n-card>
-        </div>
-      </div>
-    </n-space>
-  </n-card>
 </template>
 
 <style scoped module>
