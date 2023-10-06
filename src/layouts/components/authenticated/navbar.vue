@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { h, defineComponent } from 'vue'
+import { h } from 'vue'
 import type { Component } from 'vue'
 import { NIcon } from 'naive-ui'
 import {
@@ -17,11 +17,17 @@ function renderIcon(icon: Component) {
   }
 }
 
-const options = [
+const router = useRouter()
+
+const handleSelect = (key: string) => {
+  router.push(key)
+}
+
+const options = [ 
   {
     label: 'Setting Profile',
-    key: 'Setting Profile',
-    icon: renderIcon(SettingProfile)
+    key: '/setting',
+    icon: renderIcon(SettingProfile),
   },
   {
     label: 'Bimbingan Prakerja',
@@ -35,7 +41,7 @@ const options = [
   },
   {
     label: 'Logout',
-    key: 'Logout',
+    key: '/auth/logout',
     icon: renderIcon(LogoutIcon)
   }
 ]
@@ -135,50 +141,48 @@ const options = [
                 </router-link>
               </li>
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
-                  <n-space>
-                    <n-dropdown trigger="hover" :options="options">
-                      <n-space>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="21"
-                          viewBox="0 0 20 21"
-                          fill="none"
-                        >
-                          <circle cx="10" cy="10.5" r="10" fill="#3771C8" />
-                        </svg>
-                        <n-text>User</n-text>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="18"
-                          height="19"
-                          viewBox="0 0 18 19"
-                          fill="none"
-                        >
-                          <g clip-path="url(#clip0_219_289)">
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M9.53026 12.2803C9.38962 12.4209 9.19889 12.4999 9.00001 12.4999C8.80114 12.4999 8.61041 12.4209 8.46976 12.2803L4.22701 8.03751C4.15538 7.96833 4.09824 7.88557 4.05894 7.79407C4.01963 7.70256 3.99894 7.60415 3.99808 7.50456C3.99721 7.40498 4.01619 7.30622 4.0539 7.21405C4.09161 7.12188 4.1473 7.03814 4.21772 6.96772C4.28814 6.8973 4.37188 6.84161 4.46405 6.8039C4.55622 6.76619 4.65498 6.74721 4.75456 6.74808C4.85415 6.74894 4.95256 6.76963 5.04407 6.80894C5.13557 6.84824 5.21833 6.90538 5.28751 6.97701L9.00001 10.6895L12.7125 6.97701C12.854 6.84039 13.0434 6.7648 13.2401 6.76651C13.4367 6.76822 13.6248 6.84709 13.7639 6.98615C13.9029 7.1252 13.9818 7.31331 13.9835 7.50996C13.9852 7.70661 13.9096 7.89606 13.773 8.03751L9.53026 12.2803Z"
-                              fill="#8492A6"
+                <n-space>
+                  <n-dropdown trigger="hover" :options="options" @select="handleSelect">
+                    <n-space>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="21"
+                        viewBox="0 0 20 21"
+                        fill="none"
+                      >
+                        <circle cx="10" cy="10.5" r="10" fill="#3771C8" />
+                      </svg>
+                      <n-text>User</n-text>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="19"
+                        viewBox="0 0 18 19"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_219_289)">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M9.53026 12.2803C9.38962 12.4209 9.19889 12.4999 9.00001 12.4999C8.80114 12.4999 8.61041 12.4209 8.46976 12.2803L4.22701 8.03751C4.15538 7.96833 4.09824 7.88557 4.05894 7.79407C4.01963 7.70256 3.99894 7.60415 3.99808 7.50456C3.99721 7.40498 4.01619 7.30622 4.0539 7.21405C4.09161 7.12188 4.1473 7.03814 4.21772 6.96772C4.28814 6.8973 4.37188 6.84161 4.46405 6.8039C4.55622 6.76619 4.65498 6.74721 4.75456 6.74808C4.85415 6.74894 4.95256 6.76963 5.04407 6.80894C5.13557 6.84824 5.21833 6.90538 5.28751 6.97701L9.00001 10.6895L12.7125 6.97701C12.854 6.84039 13.0434 6.7648 13.2401 6.76651C13.4367 6.76822 13.6248 6.84709 13.7639 6.98615C13.9029 7.1252 13.9818 7.31331 13.9835 7.50996C13.9852 7.70661 13.9096 7.89606 13.773 8.03751L9.53026 12.2803Z"
+                            fill="#8492A6"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_219_289">
+                            <rect
+                              width="18"
+                              height="18"
+                              fill="white"
+                              transform="translate(0 0.5)"
                             />
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_219_289">
-                              <rect
-                                width="18"
-                                height="18"
-                                fill="white"
-                                transform="translate(0 0.5)"
-                              />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </n-space>
-                    </n-dropdown>
-                  </n-space>
-                </router-link>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </n-space>
+                  </n-dropdown>
+                </n-space>
               </li>
             </ul>
           </nav>
