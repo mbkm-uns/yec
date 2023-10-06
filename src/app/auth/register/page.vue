@@ -7,7 +7,9 @@ import { useHttpMutation } from '@/composables/http/http'
 import { ref } from 'vue'
 import { Env } from '@/config'
 import { useRouter } from 'vue-router';
+import { useMessage } from 'naive-ui'
 
+const message = useMessage()
 const router = useRouter()
 
 const formData = ref({
@@ -30,7 +32,7 @@ const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', 
       console.log(data)
     },
     onError: function (data) {
-      console.log(data)
+      message.warning('Silahkan isi terlebih dahulu')
     }
   }
 })
@@ -60,7 +62,7 @@ const onSubmit = (data: FormData) => {
           <n-text> Dashboard YEC CO ID </n-text>
         </n-space>
         <n-h2 class="space-y-4">Register akun anda </n-h2>
-        <n-text>Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda </n-text>
+        <n-text>Silahkan masukkan No W hatsApp & kata sandi untuk masuk ke akun Anda </n-text>
         <div :class="$style.form__wrapper">
           <n-form ref="formRef" @click="onSubmit">
             <n-form-item path="phone" label="No Telepon">
