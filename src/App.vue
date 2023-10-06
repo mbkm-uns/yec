@@ -17,7 +17,10 @@ import { NConfigProvider, type GlobalThemeOverrides } from 'naive-ui'
 
 <template>
   <n-config-provider preflight-style-disabled :theme-overrides="themeOverrides">
-    <router-view />
+    <n-message-provider>
+      <router-view />
+    </n-message-provider>
+    
   </n-config-provider>
 </template>
 

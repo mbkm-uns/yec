@@ -1,55 +1,77 @@
+<route lang="yaml">
+  meta:
+    layout: blank.layout
+  </route>
 <script setup lang="ts">
+import { useHttpMutation } from '@/composables/http/http';
+import { ref } from 'vue';
+
+
+const formData = ref({
+  no_whaatsapp: "",
+  password: "",
+  konfirmasi_password: "",
+});
+
+
+const {mutate, isLoading,} =  useHttpMutation('todos/:id', {
+    method: 'POST',
+    httpOptions: { // axios options
+      timeout: 30000,
+    },
+    queryOptions: { // vue-query options
+      onSuccess: function (data) {
+        console.log(data);
+      },
+      onError: function (data) {
+        console.log(data);
+      },
+    },
+    })
+const onSubmit = (data:FormData) => {
+  mutate(data)
+}
+
 
 </script>
 
 <template>
-<n-card :class="$style.container" :content-style="$style.container">
-  <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
-      <template #icon>
-        <n-icon>
-          <i-mdi-arrow-left />
-        </n-icon>
-      </template>
-      Kembali
-    </n-button>
-    <n-space justify="center" align="center" :class="$style.container">
-      <div :class="$style.card__wrapper">
-        <img src="@/assets/images/landingpage/logo-dash.png" width="200" class="mx-auto">
-        <n-space justify="center">
-          <n-text> Dashboard YEC CO ID </n-text>
-        </n-space>
-        <div
-          style="position: relative; width: fit-content; margin-inline: auto"
-        >
           <n-card :class="$style.card" size="medium">
-            <n-h2>Daftar Akun Terlebih Dahulu </n-h2>
+          <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
+             <template #icon>
+                <n-icon>
+                  <i-mdi-arrow-left />
+                  </n-icon>
+                </template>
+                   Kembali
+            </n-button>
+            <n-space justify="center" align="center" :class="$style.container">
+              <div :class="$style.card__wrapper ">
+                <img src="@/assets/images/landingpage/logo-dash.png" width="200" class="mx-auto space-y-4 ">
+            <n-space justify="center">
+              <n-text> Dashboard YEC CO ID </n-text>
+            </n-space>
+            <n-h2 class="space-y-4">Register akun anda </n-h2>
             <n-text
               >Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda
             </n-text>
             <div :class="$style.form__wrapper">
               <n-form
-                ref="formRef"
+                ref="formRef" @cli="onSubmit"
               
               >
-                <n-form-item path="phone" label="No Whattsap">
-                  <n-input  placeholder="Masukkan No Telepon" />
+                <n-form-item path="phone" label="No Telepon">
+                  <n-input  placeholder="Masukkan No Telepon" v-model:value="formData.no_whaatsapp" />
                 </n-form-item>
                 <n-form-item path="password" label="Password">
-                  <n-input
-                    
-                    show-password-on="click"
-                    type="password"
-                    placeholder="Min 8 karakter"
-                  />
+                  <n-input show-password-on="click" type="password" placeholder="Min 8 karakter" v-model:value="formData.password"/>
                 </n-form-item>
-                <n-form-item path="konfirmasi password" label="Konfirmasi Password">
-                  <n-input
-                    
-                    show-password-on="click"
-                    type="password"
-                    placeholder="Min 8 karakter"
-                  />
-                </n-form-item>
+                  <n-form-item path="konfirmasi password" label="Konfirmasi Password">
+                    <n-input show-password-on="click" type="password" placeholder="Min 8 karakter"  v-model:value="formData.konfirmasi_password" />
+                  </n-form-item>
+                    <n-row :gutter="[0, 24]">
+                      <n-col :span="24"> </n-col>
+                    </n-row>
                 <n-row :gutter="[0, 24]">
                   <n-col :span="24"> </n-col>
                 </n-row>
@@ -58,7 +80,7 @@
                     <n-checkbox>
                       Ingat Saya
                     </n-checkbox>
-                    <n-button
+                    <n-button :loading="isLoading"
                       attr-type="submit"
                       type="primary"
                       block
@@ -68,17 +90,15 @@
                     <div class="text-center text-decoration-none">
                       Sudah mempunyai akun?
                       <a href="/auth/login" class="font-weight-medium text-decoration-none" color="primary">
-                      <span class="text-orange-500">Login</span>
+                        <span class="text-orange-500">Login</span>
                       </a>
                     </div>
                   </n-space>
                 </n-form-item>
               </n-form>
-            </div>
-          </n-card>
-        </div>
-      </div>
-    </n-space>
+              </div>
+              </div>
+            </n-space> 
   </n-card>
 </template>
 
