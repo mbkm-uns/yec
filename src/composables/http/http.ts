@@ -14,8 +14,8 @@ export const http = axios.create({
   headers: {
     'Access-Key': Env().API_ACCESS_KEY,
     Accept: 'application/json',
-    "Content-Type": "application/json"
-  },
+    'Content-Type': 'application/json'
+  }
 })
 
 export type Config<TData = any, TError = any> = {
