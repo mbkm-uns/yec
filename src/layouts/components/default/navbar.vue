@@ -18,7 +18,7 @@
               <li>
                 <router-link
                   class="text-orange-500 transition hover:text-orange-500/75"
-                  to="/beranda"
+                  to="/prakerja"
                 >
                   Kelas Prakerja
                 </router-link>

@@ -1,11 +1,35 @@
-
 <script setup lang="ts">
 import { useHttp } from '@/composables/http/http'
 import { ProductCard } from './kelas/components'
 const { data: classes } = useHttp('users/v1/public/program/study_group')
+
+const route = useRoute()
+const showModal = ref(!!route.query.loggedIn)
 </script>
 
 <template>
+  <n-modal v-model:show="showModal">
+    <n-card style="width: 600px">
+      <p class="text-center text-2xl font-bold mb-6">PERHATIAN</p>
+      <p class="text-center mb-4 text-xl">
+        Bagi kamu pengguna Kartu Prakerja, pastikan data diri kamu terutama nama sesuai dengan akun
+        Kartu Prakerja. Perbedaan identitas dapat menyebabkan sertifikat tidak keluar.
+      </p>
+      <div class="text-center flex justify-center items-center">
+        <p class="text-center text-xl mb-4 inline">
+          <n-icon class="inline" size="25">
+            <i-ion:alert-circle-outline />
+          </n-icon>
+          Untuk akses pelatihan lebih mudah, kami sarankan menggunakan perangkat Android, Laptop,
+          atau PC. Apabila ada kendala silahkan hubungi CS kami.
+        </p>
+      </div>
+
+      <div class="flex justify-center mt-3">
+        <n-button size="large" type="primary" @click="showModal = false">Oke</n-button>
+      </div>
+    </n-card>
+  </n-modal>
   <div class="space-y-10 px-20">
     <div class="flex justify-center">
       <n-carousel autoplay mx-auto>
