@@ -1,3 +1,7 @@
+<route lang="yaml">
+meta:
+layout: users
+</route>
 <script setup lang="ts"></script>
 <template>
   <div class="p-2 mt-5 md:px-20 space-y-5">
