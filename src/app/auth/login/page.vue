@@ -171,6 +171,10 @@ const rules: FormRules = {
               </div>
             </n-space>
           </n-card>
+          </div>
+          </div>
+        </n-space>
+      </n-card>
 </template>
 
 <style scoped module>
