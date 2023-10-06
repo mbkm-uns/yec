@@ -58,10 +58,7 @@ const options = [
           <nav aria-label="Global" class="hidden md:block">
             <ul class="flex items-center gap-6 text-sm">
               <li>
-                <router-link
-                  class="text-orange-500 transition hover:text-orange-500/75"
-                  to="/"
-                >
+                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +77,10 @@ const options = [
                 </router-link>
               </li>
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/beranda">
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/prakerja2"
+                >
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
