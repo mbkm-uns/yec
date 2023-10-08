@@ -35,12 +35,18 @@ const { mutate: login, isLoading: isLoggingIn } = useHttpMutation('/users/v1/mem
   },
   queryOptions: {
     onSuccess: function (data) {
+      const token = data?.data.token;
+      if (!token ){
+        message.warning('Akun anda belum di aktifkan')
+        return token
+      }
       message.success('Login berhasil')
       Cookies.set('token', data?.data.token)
       router.push('/beranda?loggedIn=true') // Redirect to the dashboard after successful login
     },
     onError: function (data) {
-      console.log(data)
+    console.log(data)
+      message.error(data?.data.message)
     }
   }
 })
