@@ -8,6 +8,7 @@ import {
 import type { ComputedRef, Ref } from 'vue'
 import axios from 'axios'
 import { Env } from '@/config'
+import Cookie from 'js-cookie'
 
 export const http = axios.create({
   baseURL: Env().API_BASE_URL,
@@ -17,6 +18,28 @@ export const http = axios.create({
     'Content-Type': 'application/json'
   }
 })
+
+http.interceptors.request.use(
+  (config) => {
+    const token = Cookie.get('token')
+    if (token && config.headers) {
+      config.headers['Authorization'] = `Bearer ${token}`
+    }
+    return config
+  },
+  (error) => {
+    return Promise.reject(error)
+  }
+)
+http.interceptors.response.use(
+  (response) => {
+    return response
+  },
+  (error) => {
+    
+    return Promise.reject(error)
+  }
+)
 
 export type Config<TData = any, TError = any> = {
   keys?: any[]

@@ -9,6 +9,10 @@ import {
   LogOutOutline as LogoutIcon
 } from '@vicons/ionicons5'
 
+const props = defineProps<{
+  fullName: string
+}>()
+
 function renderIcon(icon: Component) {
   return () => {
     return h(NIcon, null, {
@@ -153,7 +157,7 @@ const options = [
                       >
                         <circle cx="10" cy="10.5" r="10" fill="#3771C8" />
                       </svg>
-                      <n-text>User</n-text>
+                      <n-text>{{ fullName }}</n-text>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"
