@@ -1,7 +1,7 @@
 <route lang="yaml">
-  meta:
-    layout: authenticated.layout
-  </route>
+meta:
+  layout: authenticated.layout
+</route>
 <script setup lang="ts"></script>
 <template>
   <div class="p-2 mt-5 md:px-20 space-y-5">
@@ -16,11 +16,14 @@
         <n-tab-pane name="Data Diri" class="ml-auto">
           <section class="flex flex-col">
             <n-card class="justify-center text-left px-2 md:px-20">
-              <n-alert title="Perhatian" type="info">
-                Akun ini hanya dapat digunakan untuk 1 peserta pelatihan, pastikan nama Anda sesuai
-                dengan nama yang terdaftar pada akun prakerja.go.id (perhatikan penggunaan huruf dan
-                tanda baca, wajib sama dengan nama akun di prakerja.go.id). Hal ini akan berpengaruh
-                pada sertifikat Kartu Prakerja Anda
+              <n-alert type="info">
+                <div class="text-blue">
+                  <h2 class="text-sm font-bold">PERHATIAN!</h2>
+                  Akun ini hanya dapat digunakan untuk 1 peserta pelatihan, pastikan nama Anda
+                  sesuai dengan nama yang terdaftar pada akun prakerja.go.id (perhatikan penggunaan
+                  huruf dan tanda baca, wajib sama dengan nama akun di prakerja.go.id). Hal ini akan
+                  berpengaruh pada sertifikat Kartu Prakerja Anda
+                </div>
               </n-alert>
               <n-form class="mt-5">
                 <n-form-item path="name" type="text">

@@ -7,7 +7,6 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Footer: typeof import('./src/components/footer/index.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
@@ -17,13 +16,12 @@ declare module 'vue' {
     'IIon:alertCircleOutline': typeof import('~icons/ion/alert-circle-outline')['default']
     'IMdi:alertCircleOutline': typeof import('~icons/mdi/alert-circle-outline')['default']
     IMdiArrowLeft: typeof import('~icons/mdi/arrow-left')['default']
-    Navbar: typeof import('./src/components/navbar/navbar.vue')['default']
+    NAlert: typeof import('naive-ui')['NAlert']
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
     NCarousel: typeof import('naive-ui')['NCarousel']
     NCheckbox: typeof import('naive-ui')['NCheckbox']
     NCol: typeof import('naive-ui')['NCol']
-    NContainer: typeof import('naive-ui')['NContainer']
     NDatePicker: typeof import('naive-ui')['NDatePicker']
     NDropdown: typeof import('naive-ui')['NDropdown']
     NForm: typeof import('naive-ui')['NForm']
