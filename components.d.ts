@@ -15,6 +15,7 @@ declare module 'vue' {
     IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     'IIon:alertCircleOutline': typeof import('~icons/ion/alert-circle-outline')['default']
+    'IMdi:alertCircleOutline': typeof import('~icons/mdi/alert-circle-outline')['default']
     IMdiArrowLeft: typeof import('~icons/mdi/arrow-left')['default']
     Navbar: typeof import('./src/components/navbar/navbar.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
