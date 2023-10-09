@@ -1,5 +1,4 @@
 <route lang="yaml">
-  name: "Login"
 meta:
   layout: blank.layout
   requiresAuth: false
