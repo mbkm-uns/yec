@@ -314,6 +314,16 @@ const showModal = ref(!!route.query.loggedIn)
               peserta.
             </p>
           </blockquote>
+          <div class="rounded-lg overflow-hidden flex justify-center items-center relative h-60">
+            <img
+            class="absolute right-0 z-0 w-full h-full object-cover"
+            src="@/assets/images/landingpage/faq.jpg"
+             alt=""
+            />
+           <div class="px-20 z-10 relative text-center">
+            <n-button @click="$router.push('/faq')" type="primary">FaQ </n-button>
+          </div>
+    </div>
         </div>
       </div>
     </section>
