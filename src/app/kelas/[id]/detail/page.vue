@@ -17,42 +17,64 @@ const showFullText = ref(false)
         </h2>
       </div>
     </section>
-    <section class="md:flex space-y-5 md:space-y-0">
-      <n-card class="w-1/2" style="width: 856px">
-        <div class="relative">
-          <img src="@/assets/images/landingpage/detail_kelas/cover.png" class="rounded-lg" />
+
+    <div class="flex justify-between">
+      <section class="md:flex space-y-5 md:space-y-0">
+        <n-card class="w-1/2" style="width: 856px">
+          <div class="relative">
+            <img src="@/assets/images/landingpage/detail_kelas/cover.png" class="rounded-lg" />
+          </div>
+          <n-tabs size="large" :tabs-padding="10" pane-style="padding: 20px;">
+            <n-tab-pane name="Dekripsi">
+              <div class="h-16 overflow-hidden" :class="{ 'h-auto': showFullText }">
+                <p>
+                  Mengelola Kinerja Karyawan Untuk Menjadi Manajer Sumber Daya Manusia adalah kelas
+                  yang disusun untuk peserta yang ingin belajar mengelola kinerja karyawan khususnya
+                  bagi yang berprofesi sebagai manajer sumber daya manusia. Pelatihan ini
+                  menggunakan metode ajar webinar. Kelas ini merujuk pada SKKNI Nomor 149 Tahun 2020
+                  Tentang Manajemen Sumber Daya Manusia. Peserta akan mendapatkan pengetahuan
+                  tentang Memahami dasar-dasar manajemen kinerja karyawan, merancang indikator
+                  kinerja karyawan, merancang proses monitoring kinerja karyawan, merancang proses
+                  evaluasi kinerja karyawan, menyusun perencanaan peningkatan kinerja karyawan
+                  Kompetensi yang disasar dalam program ini adalah peserta mampu memahami
+                  dasar-dasar manajemen kinerja karyawan, merancang indikator kinerja karyawan,
+                  bersikap teliti dan cermat dalam menyusun indikator kinerja karyawan, mampu
+                  merancang proses monitoring kinerja karyawan, merancang proses evaluasi kinerja
+                  karyawan, menyusun perencanaan peningkatan kinerja karyawan ...
+                  <button
+                    v-if="!showFullText"
+                    @click="showFullText = true"
+                    class="text-blue-500 hover:underline focus:outline-none"
+                  >
+                    Lihat Selengkapnya
+                  </button>
+                </p>
+              </div>
+            </n-tab-pane>
+            <n-tab-pane name="Ulasan"></n-tab-pane>
+          </n-tabs>
+        </n-card>
+      </section>
+      <section>
+        <div class="flex w-494 h-20">
+          <n-collapse display-directive="show">
+            <n-collapse-item title="right" name="1">
+              <n-collapse>
+                <n-collapse-item title="right" name="1">
+                  <div>good</div>
+                </n-collapse-item>
+                <n-collapse-item title="right" name="2">
+                  <div>good</div>
+                </n-collapse-item>
+              </n-collapse>
+            </n-collapse-item>
+            <n-collapse-item title="right" name="2">
+              <div>good</div>
+            </n-collapse-item>
+          </n-collapse>
         </div>
-        <n-tabs size="large" :tabs-padding="10" pane-style="padding: 20px;">
-          <n-tab-pane name="Dekripsi">
-            <div class="h-16 overflow-hidden" :class="{ 'h-auto': showFullText }">
-              <p>
-                Mengelola Kinerja Karyawan Untuk Menjadi Manajer Sumber Daya Manusia adalah kelas
-                yang disusun untuk peserta yang ingin belajar mengelola kinerja karyawan khususnya
-                bagi yang berprofesi sebagai manajer sumber daya manusia. Pelatihan ini menggunakan
-                metode ajar webinar. Kelas ini merujuk pada SKKNI Nomor 149 Tahun 2020 Tentang
-                Manajemen Sumber Daya Manusia. Peserta akan mendapatkan pengetahuan tentang Memahami
-                dasar-dasar manajemen kinerja karyawan, merancang indikator kinerja karyawan,
-                merancang proses monitoring kinerja karyawan, merancang proses evaluasi kinerja
-                karyawan, menyusun perencanaan peningkatan kinerja karyawan Kompetensi yang disasar
-                dalam program ini adalah peserta mampu memahami dasar-dasar manajemen kinerja
-                karyawan, merancang indikator kinerja karyawan, bersikap teliti dan cermat dalam
-                menyusun indikator kinerja karyawan, mampu merancang proses monitoring kinerja
-                karyawan, merancang proses evaluasi kinerja karyawan, menyusun perencanaan
-                peningkatan kinerja karyawan ...
-                <button
-                  v-if="!showFullText"
-                  @click="showFullText = true"
-                  class="text-blue-500 hover:underline focus:outline-none"
-                >
-                  Lihat Selengkapnya
-                </button>
-              </p>
-            </div>
-          </n-tab-pane>
-          <n-tab-pane name="Ulasan"></n-tab-pane>
-        </n-tabs>
-      </n-card>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 
