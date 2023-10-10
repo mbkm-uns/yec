@@ -15,8 +15,7 @@
  <div>
   <p class="text-center"> Kode verifikasi telah dikirim melalui WA ke 0881080140000034034</p>
  </div>
-
-  <otp class="flex w-20" />
+  <!-- <otp></otp> -->
 
 </n-card>
 </template>
