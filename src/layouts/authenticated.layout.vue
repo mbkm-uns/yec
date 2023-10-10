@@ -27,7 +27,6 @@ if(!data.value?.data.fullname) router.push('/setting')
 </script>
 
 <template>
-  {{ data }}
   <main>
     <navbar :full-name="data?.data.fullname" @click:notification="showNotification = true"></navbar>
     <n-drawer v-model:show="showNotification" :width="454">
