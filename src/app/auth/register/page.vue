@@ -12,6 +12,8 @@ import { useMessage } from 'naive-ui'
 const message = useMessage()
 const router = useRouter()
 
+const tab = ref('register')
+
 const formData = ref({
   provider: 'whatsapp',
   access_key: Env().API_ACCESS_KEY,
@@ -19,7 +21,31 @@ const formData = ref({
   password: ''
 })
 
+const formVerify = ref({
+  provider: 'whatsapp',
+  access_key: Env().API_ACCESS_KEY,
+  otp: ''
+})
+
 const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', {
+  method: 'POST',
+  httpOptions: {
+    // axios options
+    timeout: 30000
+  },
+  queryOptions: {
+    // vue-query options
+    onSuccess: function (data) {
+      tab.value='otp',
+      console.log(data)
+    },
+    onError: function (data) {
+      message.warning('Silahkan isi terlebih dahulu')
+    }
+  }
+})
+
+const { mutate:verifyOtp, isLoading:isLoadingVerifyOtp } = useHttpMutation('/users/v1/member/auth/verify_otp', {
   method: 'POST',
   httpOptions: {
     // axios options
@@ -36,8 +62,17 @@ const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', 
     }
   }
 })
+
 const onSubmit = (data: FormData) => {
   mutate(formData.value)
+}
+
+const onSubmitOtp = () => {
+  verifyOtp({
+    "access_key":formVerify.value.access_key,
+    "phone":formData.value.phone,
+    "otp":formVerify.value.otp
+  })
 }
 </script>
 
@@ -52,7 +87,11 @@ const onSubmit = (data: FormData) => {
       Kembali
     </n-button>
     <n-space justify="center" align="center" :class="$style.container">
-      <div :class="$style.card__wrapper">
+      <div v-if="tab=='otp'">
+        <otp v-model:value="formVerify.otp" :length="6"></otp>
+        <n-button @click="onSubmitOtp">Submit</n-button>
+      </div>
+      <div v-else :class="$style.card__wrapper">
         <img
           src="@/assets/images/landingpage/logo-dash.png"
           width="200"

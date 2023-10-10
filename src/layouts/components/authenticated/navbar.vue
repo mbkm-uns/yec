@@ -158,7 +158,7 @@ const options = [
                       >
                         <circle cx="10" cy="10.5" r="10" fill="#3771C8" />
                       </svg>
-                      <n-text>{{ fullName }}</n-text>
+                      <n-text>{{ props.fullName }}</n-text>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="18"

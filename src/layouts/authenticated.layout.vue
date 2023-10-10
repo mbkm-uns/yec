@@ -4,11 +4,13 @@ import navbar from '../layouts/components/authenticated/navbar.vue'
 import Footer from './components/default/footer.vue'
 import { useHttp } from '@/composables/http/http'
 import { defineComponent, ref } from 'vue'
+import {useRouter} from 'vue-router'
 
 const { data } = useHttp('/users/v1/member/detail')
 const showNotification = ref(false)
 const page = ref(1)
 const value = ref()
+const router = useRouter()
 const options = [
   {
     label: 'Terbaru',
@@ -19,13 +21,16 @@ const options = [
     value: 'asc'
   }
 ]
+watch(data, () => {
+if(!data.value?.data.fullname) router.push('/setting')
+})
 </script>
 
 <template>
+  {{ data }}
   <main>
     <navbar :full-name="data?.data.fullname" @click:notification="showNotification = true"></navbar>
-    <router-view>
-      <n-drawer v-model:show="showNotification" :width="454">
+    <n-drawer v-model:show="showNotification" :width="454">
         <n-drawer-content>
           <template #header>
             <n-space>
@@ -94,6 +99,7 @@ const options = [
           </template>
         </n-drawer-content>
       </n-drawer>
+    <router-view>
     </router-view>
     <Footer></Footer>
   </main>

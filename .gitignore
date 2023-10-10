@@ -15,6 +15,7 @@ coverage
 *.local
 
 .env
+components.d.ts
 
 /cypress/videos/
 /cypress/screenshots/

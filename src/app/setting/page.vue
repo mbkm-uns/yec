@@ -2,7 +2,55 @@
 meta:
   layout: authenticated.layout
 </route>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useHttpMutation } from '@/composables/http/http'
+import { ref } from 'vue'
+import { Env } from '@/config'
+import { useRouter } from 'vue-router';
+import { useMessage } from 'naive-ui'
+
+const message = useMessage()
+const router = useRouter()
+
+const settingData = ref({
+  fullname:'',
+  date_of_birth:'',
+  phone:'',
+  email:'',
+})
+
+
+
+const { mutate:userSetting, isLoading:isLoadinguserSetting } = useHttpMutation('users/v1/member/update', {
+  method: 'PUT',
+  httpOptions: {
+    // axios options
+    timeout: 30000
+  },
+  queryOptions: {
+    // vue-query options
+    onSuccess: function (data) {
+      router.push('/beranda'),
+      console.log(data)
+    },
+    onError: function (data) {
+      // console.log(data)
+      message.error(data.data.message)
+    }
+  }
+})
+const onSubmitSetting = () => {
+  userSetting({
+    "fullname": settingData.value.fullname,
+    "date_of_birth":settingData.value.date_of_birth,
+    "phone":settingData.value.phone,
+    "email":settingData.value.email,
+    "meta":{"code":"12345"}
+  })
+
+}
+
+</script>
 <template>
   <div class="p-2 mt-5 md:px-20 space-y-5">
     <nav class="flex items-center space-x-2">
@@ -51,6 +99,8 @@ meta:
                   <n-date-picker class="w-full" type="date" />
                 </n-form-item>
               </n-form>
+              <div class="flex justify-center"> <n-button block :loading="isLoadinguserSetting" @click="onSubmitSetting" type="primary">Submit</n-button></div>
+             
             </n-card>
           </section>
         </n-tab-pane>

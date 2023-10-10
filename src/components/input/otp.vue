@@ -1,13 +1,13 @@
 <script setup lang="ts">
   import type { InputInst } from 'naive-ui'
 
-  const { length = 6 } = defineProps<{
-    length: number
-    otp: string
+  const props = defineProps<{
+    length?: number
+    otp?: string
   }>()
   const emit = defineEmits(['update:value'])
 
-  const otp = ref<string[]>(new Array(length).fill(0).map(() => '') as string[])
+  const otp = ref<string[]>(new Array(props.length).fill(0).map(() => '') as string[])
   const otpRef = ref<InputInst[]>()
 
   const handleKeyDown = function (event: KeyboardEvent, index: number) {
