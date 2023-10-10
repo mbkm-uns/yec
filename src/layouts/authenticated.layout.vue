@@ -9,7 +9,7 @@ const { data } = useHttp('/users/v1/member/detail')
 const showNotification = ref(false)
 const page = ref(1)
 const value = ref()
-const options = [ 
+const options = [
   {
     label: 'Terbaru',
     value: 'desc'
@@ -19,7 +19,6 @@ const options = [
     value: 'asc'
   }
 ]
-
 </script>
 
 <template>
@@ -35,22 +34,25 @@ const options = [
             <n-space vertical> </n-space>
           </template>
           <n-space vertical>
-            <n-select v-model:value="value" :options="options"/>
+            <n-select v-model:value="value" :options="options" />
           </n-space>
           &nbsp;
           <n-card>
             <h8 class="font-bold"> Redeem Voucher Kelas </h8>
             <p>Redeem Kelas Satuan Berhasil !!</p>
             &nbsp;
-            <p>3/10/2023  13:39 </p>
+            <p>3/10/2023 13:39</p>
           </n-card>
           &nbsp;
 
           <n-card>
             <h8 class="font-bold"> Beli Kelas Berhasil </h8>
-            <p>Anda berhasil masuk ke Kelas Program Mengolah Data Penjualan dengan Microsoft Excel untuk Menjadi Admin Input Data</p>
+            <p>
+              Anda berhasil masuk ke Kelas Program Mengolah Data Penjualan dengan Microsoft Excel
+              untuk Menjadi Admin Input Data
+            </p>
             &nbsp;
-            <p>4/10/2023  10:10 </p>
+            <p>4/10/2023 10:10</p>
           </n-card>
           &nbsp;
 
@@ -58,30 +60,36 @@ const options = [
             <h8 class="font-bold"> Redeem Voucher Kelas</h8>
             <p>Redeem Voucher Kelas Satuan berhasil !!</p>
             &nbsp;
-            <p>3/10/2023  13:39  </p>
+            <p>3/10/2023 13:39</p>
           </n-card>
           &nbsp;
 
           <n-card>
             <h8 class="font-bold"> Beli Kelas Berhasil </h8>
-            <p>Anda berhasil masuk ke Kelas Program Mengolah Data Penjualan dengan Microsoft Excel untuk Menjadi Admin Input Data</p>
+            <p>
+              Anda berhasil masuk ke Kelas Program Mengolah Data Penjualan dengan Microsoft Excel
+              untuk Menjadi Admin Input Data
+            </p>
             &nbsp;
-            <p>4/10/2023  10:10 </p>
+            <p>4/10/2023 10:10</p>
           </n-card>
           &nbsp;
           <n-card>
             <h8 class="font-bold"> Beli Kelas Berhasil </h8>
-            <p>Anda berhasil masuk ke Kelas Program Mengolah Data Penjualan dengan Microsoft Excel untuk Menjadi Admin Input Data</p>
+            <p>
+              Anda berhasil masuk ke Kelas Program Mengolah Data Penjualan dengan Microsoft Excel
+              untuk Menjadi Admin Input Data
+            </p>
             &nbsp;
-            <p>4/10/2023  10:10 </p>
+            <p>4/10/2023 10:10</p>
           </n-card>
           &nbsp;
           <template #footer>
-            <n-pagination v-model:page="page" :page-count="100"  class="display: flex;
-padding: 10px;
-justify-content: center;
-align-items: center;
-gap: 15px;"/>
+            <n-pagination
+              v-model:page="page"
+              :page-count="100"
+              class="display: flex; padding: 10px; justify-content: center; align-items: center; gap: 15px;"
+            />
             <!-- <n-button @click="showNotification = true">Footer</n-button> -->
           </template>
         </n-drawer-content>
