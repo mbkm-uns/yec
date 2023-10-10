@@ -8,7 +8,7 @@ import {
   Newspaper as Subskripsi,
   LogOutOutline as LogoutIcon
 } from '@vicons/ionicons5'
-
+defineEmits(['click:notification'])
 const props = defineProps<{
   fullName: string
 }>()
@@ -127,7 +127,8 @@ const options = [
               </li>
 
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
+                <n-button 
+                tertiary round class="text-orange-500 transition hover:text-orange-500/75" @click="$emit('click:notification')">
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +143,7 @@ const options = [
                       />
                     </svg>
                   </n-space>
-                </router-link>
+                </n-button>
               </li>
               <li>
                 <n-space>
