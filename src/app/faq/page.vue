@@ -9,7 +9,7 @@
       <!-- Bagiann FAQ -->
 
             <section
-              class="relative flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50"
+              class="max-w-full flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50"
             >
               <img src="@/assets/images/landingpage/faq1.png" />
             </section>
@@ -17,7 +17,7 @@
             <main
               class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
             >
-              <div class="max-w-xl lg:max-w-3xl">
+              <div class="max-w-full">
                 <div class="relative -mt-16 block lg:hidden"></div>
                 <div class="space-y-4">
                   <details class="group [&_summary::-webkit-details-marker]:hidden">
@@ -89,6 +89,7 @@
                   </details>
                 </div>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -134,6 +135,7 @@
                     5. Pintar: https://pintar.co/kartuprakerja#/
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -166,6 +168,7 @@
                     kamu mau.
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -212,6 +215,7 @@
                   </p>
                   <p class="px-2 leading-relaxed text-gray-700 text-lg">5. Pintar: www.pintar.co</p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -259,6 +263,7 @@
                   </p>
                   <p class="px-2 leading-relaxed text-gray-700 text-lg">5. Pintar: www.pintar.co</p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -289,6 +294,7 @@
                     Kamu harus mengikuti pelatihan tersebut sampai selesai.
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -360,6 +366,7 @@
                     mendapatkan sertifikat
                   </p>
                 </details>
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -411,6 +418,7 @@
                     Prakerja di 08001503001
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -443,6 +451,7 @@
                     awal ini hanya bertujuan untuk melihat pengetahuan awal kamu, kok!
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -473,6 +482,7 @@
                     dapat terecord
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -511,6 +521,7 @@
                     2. Untuk Peserta Non Kartu Prakerja: “Nama Lengkap”
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -544,6 +555,7 @@
                     853-3584-9962 (WhatsApp chat)
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -577,6 +589,7 @@
                     muncul di dashboard lebih dari 7 (tujuh) hari kerja.
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -611,6 +624,7 @@
                     melakukan pembelian pelatihan dari YEC.CO.ID)
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -642,6 +656,7 @@
                     rating dan ulasan dengan jujur sesuai pengalaman pelatihan kamu
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -688,6 +703,7 @@
                     dengan pengalaman kamu selama mengikuti pelatihan! Jika sudah sesuai, klik Kirim
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -721,6 +737,7 @@
                     digunakan untuk menilai pemahaman kamu terhadap pelatihan yang telah diikuti.
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -750,6 +767,7 @@
                     telah menyambungkan rekening bank atau e-money.
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -787,6 +805,7 @@
                     yang diberikan paling banyak 2 (dua) kali.
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -850,6 +869,7 @@
                     efektivitas Program Kartu Prakerja.
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -885,6 +905,7 @@
                     berikan rating dan review secepatnya agar insentif kamu tidak hangus, ya!
                   </p>
                 </details>
+                <br>
 
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
@@ -918,6 +939,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -948,6 +970,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1000,6 +1023,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1030,6 +1054,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1058,6 +1083,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1090,6 +1116,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1122,6 +1149,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1157,6 +1185,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1192,6 +1221,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
@@ -1223,6 +1253,7 @@
                   </p>
                 </details>
 
+                <br>
                 <details class="group [&_summary::-webkit-details-marker]:hidden">
                   <summary
                     class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
