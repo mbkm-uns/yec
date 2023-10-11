@@ -18,7 +18,8 @@ const formData = ref({
   provider: 'whatsapp',
   access_key: Env().API_ACCESS_KEY,
   phone: '',
-  password: ''
+  password: '',
+  passwordConfirm: ''
 })
 
 const formVerify = ref({
@@ -44,6 +45,7 @@ const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', 
     }
   }
 })
+
 
 const { mutate:verifyOtp, isLoading:isLoadingVerifyOtp } = useHttpMutation('/users/v1/member/auth/verify_otp', {
   method: 'POST',
@@ -115,12 +117,13 @@ const onSubmitOtp = () => {
                 v-model:value="formData.password"
               />
             </n-form-item>
-            <n-form-item path="konfirmasi password" label="Konfirmasi Password">
+            <n-form-item path="passwordConfirm" label="Konfirmasi Password">
               <n-input
+              
                 show-password-on="click"
                 type="password"
                 placeholder="Min 8 karakter"
-                v-model:value="formData.password"
+                v-model:value="formData.passwordConfirm"
               />
             </n-form-item>
             <n-row :gutter="[0, 24]">
