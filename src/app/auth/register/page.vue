@@ -127,17 +127,17 @@ const rules: FormRules = {
   passwordConfirm: [
     {
       required: true,
-      message: 'Re-entered password is required',
+      message: 'Konfirmasi password diperlukan',
       trigger: ['input', 'blur']
     },
     {
       validator: validatePasswordStartWith,
-      message: 'Password is not same as re-entered password!',
+      message: 'Password tidak sama!',
       trigger: 'input'
     },
     {
       validator: validatePasswordSame,
-      message: 'Password is not same as re-entered password!',
+      message: 'Password tidak sama!',
       trigger: ['blur', 'password-input']
     }
   ]
