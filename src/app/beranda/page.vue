@@ -222,7 +222,7 @@ const showModal = ref(!!route.query.loggedIn)
                   </svg>
                 </div>
 
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Appip</p>
+                <p class="mt-0.5 text-lg font-medium text-gray-900">Apip</p>
               </div>
             </div>
 
@@ -308,6 +308,11 @@ const showModal = ref(!!route.query.loggedIn)
         </div>
       </div>
     </section>
+    <router-link to="/faq">
+    <div class="rounded-lg overflow-hidden flex justify-center items-center relative  w-full">
+      <img class="" src="@/assets/images/landingpage/faq1.png" />
+    </div>
+    </router-link>
   </div>
 </template>
 <style scoped>

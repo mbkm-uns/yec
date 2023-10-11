@@ -1,3 +1,7 @@
+<route lang="yaml">
+meta:
+  layout: authenticated.layout
+</route>
 <script setup lang="ts"></script>
 
 <template>
@@ -670,7 +674,6 @@
         </div>
       </n-list>
       <!-- Bagiann FAQ -->
-     
     </n-card>
   </div>
 </template>

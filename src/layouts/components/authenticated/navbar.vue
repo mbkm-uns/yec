@@ -8,6 +8,7 @@ import {
   Newspaper as Subskripsi,
   LogOutOutline as LogoutIcon
 } from '@vicons/ionicons5'
+import Cookies from 'js-cookie'
 defineEmits(['click:notification'])
 const props = defineProps<{
   fullName: string
@@ -27,20 +28,29 @@ const handleSelect = (key: string) => {
   router.push(key)
 }
 
-const options = [ 
+const options = [
   {
     label: 'Setting Profile',
     key: '/setting',
-    icon: renderIcon(SettingProfile),
+    icon: renderIcon(SettingProfile)
   },
   {
-    label: 'Bimbingan Prakerja',
+    label: () =>
+      h(
+        'a',
+        {
+          href: 'https://chat.whatsapp.com/087700537898',
+          target: '_blank',
+          rel: 'noopenner noreferrer'
+        },
+        'Bimbingan Prakerja'
+      ),
     key: 'Bimbingan Prakerja',
     icon: renderIcon(BimbinganPrakerja)
   },
   {
     label: 'Subskripsi',
-    key: 'Subskripsi',
+    key: '/kelas_subkripsi',
     icon: renderIcon(Subskripsi)
   },
   {
@@ -49,6 +59,10 @@ const options = [
     icon: renderIcon(LogoutIcon)
   }
 ]
+
+const auth = computed(() => {
+  return !!Cookies.get('token')
+})
 </script>
 <template>
   <header class="bg-white sticky z-10 w-full top-0">
@@ -60,9 +74,12 @@ const options = [
 
         <div class="md:flex md:items-center md:gap-16">
           <nav aria-label="Global" class="hidden md:block">
-            <ul class="flex items-center gap-6 text-sm">
+            <ul v-if="auth" class="flex items-center gap-6 text-sm">
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/beranda"
+                >
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +124,10 @@ const options = [
               </li>
 
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/kelas_saya"
+                >
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -127,8 +147,12 @@ const options = [
               </li>
 
               <li>
-                <n-button 
-                tertiary round class="text-orange-500 transition hover:text-orange-500/75" @click="$emit('click:notification')">
+                <n-button
+                  tertiary
+                  round
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  @click="$emit('click:notification')"
+                >
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -188,6 +212,41 @@ const options = [
                     </n-space>
                   </n-dropdown>
                 </n-space>
+              </li>
+            </ul>
+            <ul v-else class="flex items-center gap-6 text-sm">
+              <li>
+                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
+                  Beranda
+                </router-link>
+              </li>
+
+              <li>
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/prakerja"
+                >
+                  Kelas Prakerja
+                </router-link>
+              </li>
+
+              <li>
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/auth/login"
+                >
+                  Masuk
+                </router-link>
+              </li>
+
+              <li>
+                <n-button
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  @click="$router.push('/auth/register')"
+                  type="primary"
+                >
+                  Daftar
+                </n-button>
               </li>
             </ul>
           </nav>

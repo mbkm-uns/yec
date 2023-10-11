@@ -1,3 +1,9 @@
+<route lang="yaml">
+meta:
+  layout: authenticated.layout
+</route>
+
+<script setup lang="ts"></script>
 <template>
   <div class="px-4 max-w-screen-xl mx-auto">
     <div class="space-y-10">
