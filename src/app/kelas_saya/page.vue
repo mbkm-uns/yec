@@ -1,3 +1,9 @@
+<route lang="yaml">
+meta:
+  layout: authenticated.layout
+</route>
+
+<script setup lang="ts"></script>
 <template>
   <div class="px-4 md:px-20 lg:px-32">
     <div class="space-y-10">
@@ -9,7 +15,7 @@
           <p class="text-sm">Dengan akun <b>Doni (62881080140000)</b></p>
           <div class="flex p-5 items-start gap-5 rounded-lg bg-orange-200">
             <n-icon>
-              <i-mdi:alert-circle-outline class="text-[#F05326]"/>
+              <i-mdi:alert-circle-outline class="text-[#F05326]" />
             </n-icon>
 
             <div class="space-y-3 text-sm font-poppins text-gray-700">
@@ -34,10 +40,14 @@
 
         <div class="md:w-1/2 p-5">
           <div class="flex flex-col gap-4">
-            <n-input type="text" placeholder="Masukkan kode redeem (khusus user Kartu Prakerja)" class="w-full p-2" />
+            <n-input
+              type="text"
+              placeholder="Masukkan kode redeem (khusus user Kartu Prakerja)"
+              class="w-full p-2"
+            />
             <div class="flex gap-4">
-              <n-input type="text" placeholder="Masukkan kode voucher" class="w-full p-2"/>
-              <n-button color="#F05326"> Redeem </n-button>
+              <n-input type="text" placeholder="Masukkan kode voucher" class="w-full p-2" />
+              <n-button color="#F05326" size="large"> Redeem </n-button>
             </div>
           </div>
         </div>
@@ -48,7 +58,7 @@
           <n-tab-pane name="satuan" tab="Kelas Satuan">
             <div class="space-y-2">
               <div class="flex justify-center items-center">
-                <img src="@/assets/images/stationary.png" alt="">
+                <img src="@/assets/images/stationary.png" alt="" />
               </div>
               <p class="text-sm font-bold text-center">Belum ada kelas yang di ikuti</p>
             </div>

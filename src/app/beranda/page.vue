@@ -222,7 +222,7 @@ const showModal = ref(!!route.query.loggedIn)
                   </svg>
                 </div>
 
-                <p class="mt-0.5 text-lg font-medium text-gray-900">Appip</p>
+                <p class="mt-0.5 text-lg font-medium text-gray-900">Apip</p>
               </div>
             </div>
 

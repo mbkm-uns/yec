@@ -27,11 +27,11 @@ const handleSelect = (key: string) => {
   router.push(key)
 }
 
-const options = [ 
+const options = [
   {
     label: 'Setting Profile',
     key: '/setting',
-    icon: renderIcon(SettingProfile),
+    icon: renderIcon(SettingProfile)
   },
   {
     label: 'Bimbingan Prakerja',
@@ -62,7 +62,10 @@ const options = [
           <nav aria-label="Global" class="hidden md:block">
             <ul class="flex items-center gap-6 text-sm">
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/beranda"
+                >
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +110,10 @@ const options = [
               </li>
 
               <li>
-                <router-link class="text-orange-500 transition hover:text-orange-500/75" to="/">
+                <router-link
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  to="/kelas_saya"
+                >
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -127,8 +133,12 @@ const options = [
               </li>
 
               <li>
-                <n-button 
-                tertiary round class="text-orange-500 transition hover:text-orange-500/75" @click="$emit('click:notification')">
+                <n-button
+                  tertiary
+                  round
+                  class="text-orange-500 transition hover:text-orange-500/75"
+                  @click="$emit('click:notification')"
+                >
                   <n-space>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
