@@ -6,8 +6,8 @@ meta:
 import { useHttpMutation } from '@/composables/http/http'
 import { ref } from 'vue'
 import { Env } from '@/config'
-import { useRouter } from 'vue-router';
-import { useMessage } from 'naive-ui'
+import { useRouter } from 'vue-router'
+import { useMessage, type FormRules, type FormItemRule, type FormInst } from 'naive-ui'
 
 const message = useMessage()
 const router = useRouter()
@@ -18,7 +18,8 @@ const formData = ref({
   provider: 'whatsapp',
   access_key: Env().API_ACCESS_KEY,
   phone: '',
-  password: ''
+  password: '',
+  passwordConfirm: ''
 })
 
 const formVerify = ref({
@@ -26,6 +27,18 @@ const formVerify = ref({
   access_key: Env().API_ACCESS_KEY,
   otp: ''
 })
+const formRef = ref<FormInst>()
+
+function validatePasswordStartWith(rule: FormItemRule, value: string): boolean {
+  return (
+    !!formData.value.password &&
+    formData.value.password.startsWith(value) &&
+    formData.value.password.length >= value.length
+  )
+}
+function validatePasswordSame(rule: FormItemRule, value: string): boolean {
+  return value === formData.value.password
+}
 
 const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', {
   method: 'POST',
@@ -35,44 +48,99 @@ const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', 
   },
   queryOptions: {
     // vue-query options
-    onSuccess: function (data) {
-      tab.value='otp',
-      console.log(data)
+    onSuccess: function () {
+      tab.value = 'otp'
     },
     onError: function (data) {
-      message.warning('Silahkan isi terlebih dahulu')
+      message.warning(data.data.message)
     }
   }
 })
 
-const { mutate:verifyOtp, isLoading:isLoadingVerifyOtp } = useHttpMutation('/users/v1/member/auth/verify_otp', {
-  method: 'POST',
-  httpOptions: {
-    // axios options
-    timeout: 30000
-  },
-  queryOptions: {
-    // vue-query options
-    onSuccess: function (data) {
-      router.push('/auth/login'),
-      console.log(data)
+const { mutate: verifyOtp, isLoading: isLoadingVerifyOtp } = useHttpMutation(
+  '/users/v1/member/auth/verify_otp',
+  {
+    method: 'POST',
+    httpOptions: {
+      timeout: 30000
     },
-    onError: function (data) {
-      message.warning('Silahkan isi terlebih dahulu')
+    queryOptions: {
+      // vue-query options
+      onSuccess: function (data) {
+        router.push('/auth/login'), console.log(data)
+      },
+      onError: function (data) {
+        message.error(data.data.message)
+      }
     }
   }
-})
+)
 
-const onSubmit = (data: FormData) => {
+const onSubmit = () => {
   mutate(formData.value)
 }
 
 const onSubmitOtp = () => {
   verifyOtp({
-    "access_key":formVerify.value.access_key,
-    "phone":formData.value.phone,
-    "otp":formVerify.value.otp
+    access_key: formVerify.value.access_key,
+    phone: formData.value.phone,
+    otp: formVerify.value.otp
   })
+}
+
+const rules: FormRules = {
+  phone: [
+    {
+      type: 'string',
+      required: true,
+      trigger: ['input', 'blur'],
+      message: () => {
+        return 'Harap masukan nomer handphone yang valid'
+      }
+    },
+    {
+      required: true,
+      message: () => {
+        return 'Wajib Di Isi'
+      }
+    }
+  ],
+  password: [
+    {
+      trigger: ['input', 'blur'],
+      required: true,
+      min: 8,
+      message: () => {
+        return 'Harap masukan password yang valid'
+      }
+    },
+    {
+      required: true,
+      validator: () => {
+        return formData.value.password === formData.value.passwordConfirm
+      },
+      message: () => {
+        return 'Wajib Di Isi'
+      }
+    }
+  ],
+  passwordConfirm: [
+    {
+      required: true,
+      message: 'Konfirmasi password diperlukan',
+      trigger: ['input', 'blur']
+    },
+    {
+      validator: validatePasswordStartWith,
+      message: 'Password tidak sama!',
+      trigger: 'input'
+    },
+    {
+      validator: validatePasswordSame,
+      message: 'Password tidak sama!',
+      trigger: ['blur', 'password-input']
+    }
+  ]
 }
 </script>
 
@@ -87,7 +155,7 @@ const onSubmitOtp = () => {
       Kembali
     </n-button>
     <n-space justify="center" align="center" :class="$style.container">
-      <div v-if="tab=='otp'">
+      <div v-if="tab == 'otp'">
         <otp v-model:value="formVerify.otp" :length="6"></otp>
         <n-button @click="onSubmitOtp">Submit</n-button>
       </div>
@@ -101,9 +169,9 @@ const onSubmitOtp = () => {
           <n-text> Dashboard YEC CO ID </n-text>
         </n-space>
         <n-h2 class="space-y-4">Register akun anda </n-h2>
-        <n-text>Silahkan masukkan No W hatsApp & kata sandi untuk masuk ke akun Anda </n-text>
+        <n-text>Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda </n-text>
         <div :class="$style.form__wrapper">
-          <n-form ref="formRef" @click="onSubmit">
+          <n-form ref="formRef" :model="formData" :rules="rules" @submit.prevent="onSubmit">
             <n-form-item path="phone" label="No Telepon">
               <n-input placeholder="Masukkan No Telepon" v-model:value="formData.phone" />
             </n-form-item>
@@ -115,12 +183,12 @@ const onSubmitOtp = () => {
                 v-model:value="formData.password"
               />
             </n-form-item>
-            <n-form-item path="konfirmasi password" label="Konfirmasi Password">
+            <n-form-item path="passwordConfirm" label="Konfirmasi Password">
               <n-input
                 show-password-on="click"
                 type="password"
                 placeholder="Min 8 karakter"
-                v-model:value="formData.password"
+                v-model:value="formData.passwordConfirm"
               />
             </n-form-item>
             <n-row :gutter="[0, 24]">

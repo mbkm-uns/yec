@@ -11,6 +11,9 @@ dependencies:
   '@types/js-cookie':
     specifier: ^3.0.4
     version: 3.0.4
+  '@types/luxon':
+    specifier: ^3.3.2
+    version: 3.3.2
   '@vicons/ionicons5':
     specifier: ^0.12.0
     version: 0.12.0
@@ -23,6 +26,9 @@ dependencies:
   js-cookie:
     specifier: ^3.0.5
     version: 3.0.5
+  luxon:
+    specifier: ^3.4.3
+    version: 3.4.3
   ofetch:
     specifier: ^1.3.3
     version: 1.3.3
@@ -37,6 +43,9 @@ dependencies:
     version: 4.2.2(vue@3.3.4)
 
 devDependencies:
+  '@iconify-json/bi':
+    specifier: ^1.1.20
+    version: 1.1.20
   '@iconify-json/ion':
     specifier: ^1.1.12
     version: 1.1.12
@@ -978,6 +987,12 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/bi@1.1.20:
+    resolution: {integrity: sha512-t3f7mRaCKIOeOIZUq8tNVTkw2nrgF2bzsOhOIm9wkoZbARcWgXmCiZTcqclL3++yxcbAqZqOa+Ky7oj/y5ySew==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/ion@1.1.12:
     resolution: {integrity: sha512-YvVxa9pVUJFEp7S5n97VIYZv1/qU/aX1RSehDBQRfI0YsZCZhBQY77SxYXGCb/Gc0fP4//b9wtx8UE4hfwr0eQ==}
     dependencies:
@@ -1183,6 +1198,10 @@ packages:
   /@types/lodash@4.14.198:
     resolution: {integrity: sha512-trNJ/vtMZYMLhfN45uLq4ShQSw0/S7xCTLLVM+WM1rmFpba/VS42jVUgaO3w/NOLiWR/09lnYk0yMaA/atdIsg==}
     dev: true
+
+  /@types/luxon@3.3.2:
+    resolution: {integrity: sha512-l5cpE57br4BIjK+9BSkFBOsWtwv6J9bJpC7gdXIzZyI0vuKvNTk0wZZrkQxMGsUAuGW9+WMNWF2IJMD7br2yeQ==}
+    dev: false
 
   /@types/ms@0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
@@ -3520,6 +3539,11 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /luxon@3.4.3:
+    resolution: {integrity: sha512-tFWBiv3h7z+T/tDaoxA8rqTxy1CHV6gHS//QdaH4pulbq/JuBSGgQspQQqcgnwdAx6pNI7cmvz5Sv/addzHmUg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /magic-string@0.30.0:
     resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}

@@ -308,6 +308,11 @@ const showModal = ref(!!route.query.loggedIn)
         </div>
       </div>
     </section>
+    <router-link to="/faq">
+    <div class="rounded-lg overflow-hidden flex justify-center items-center relative  w-full">
+      <img class="" src="@/assets/images/landingpage/faq1.png" />
+    </div>
+    </router-link>
   </div>
 </template>
 <style scoped>

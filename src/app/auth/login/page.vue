@@ -41,7 +41,7 @@ const { mutate: login, isLoading: isLoggingIn } = useHttpMutation('/users/v1/mem
       }
       message.success('Login berhasil')
       Cookies.set('token', data?.data.token)
-      router.push('/beranda?loggedIn=true') // Redirect to the dashboard after successful login
+      router.push('/?loggedIn=true') // Redirect to the dashboard after successful login
     },
     onError: function (data) {
     console.log(data)
