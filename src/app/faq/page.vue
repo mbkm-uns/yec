@@ -1,31 +1,18 @@
 <route lang="yaml">
   meta:
-    layout: blank.layout
-    requiresAuth: false
+    layout: authenticated.layout
   </route>
-  
+
 <script setup lang="ts"></script>
 
 <template>
-  
       <!-- Bagiann FAQ -->
-      <br />
-      <div>
-        <section class="bg-white">
-          <div class="lg:grid lg:min-h-screen lg:grid-cols-20S">
-            <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
-      <template #icon>
-        <n-icon>
-          <i-mdi-arrow-left />
-        </n-icon>
-      </template>
-      Kembali
-    </n-button>
-            <!-- <section
-              class="relative flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center w-403px h-404px"
+
+            <section
+              class="relative flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50"
             >
-              <img src="@/assets/images/landingpage/faq.jpg" />
-            </section> -->
+              <img src="@/assets/images/landingpage/faq1.png" />
+            </section>
 
             <main
               class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
@@ -1287,7 +1274,4 @@
                 </details>
               </div>
             </main>
-          </div>
-        </section>
-      </div>
 </template>
