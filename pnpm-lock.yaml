@@ -52,6 +52,9 @@ devDependencies:
   '@iconify-json/mdi':
     specifier: ^1.1.54
     version: 1.1.54
+  '@iconify-json/quill':
+    specifier: ^1.1.7
+    version: 1.1.7
   '@playwright/test':
     specifier: ^1.35.1
     version: 1.35.1
@@ -1001,6 +1004,12 @@ packages:
 
   /@iconify-json/mdi@1.1.54:
     resolution: {integrity: sha512-3QAsxte90EalbN2e8J30OqSSZz9qN2x+kmykQwsPahoW2dOtSvj+BR9YdiUd9A5XKk2nuU4UH5Gj/cq6WZ6CzQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/quill@1.1.7:
+    resolution: {integrity: sha512-qb4AQZEjGgS5zYPqUjmh7hvgt9c5p9yw5ukzOZAJLmwn/um9544xnz2ArOLmQPVimtCt6G+OnW/1viFQUyJegA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

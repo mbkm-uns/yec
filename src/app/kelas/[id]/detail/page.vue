@@ -18,7 +18,7 @@ const showFullText = ref(false)
       </div>
     </section>
 
-    <div class="flex justify-between">
+    <div class="flex">
       <section class="md:flex space-y-5 md:space-y-0">
         <n-card class="w-1/2" style="width: 856px">
           <div class="relative">
@@ -97,29 +97,456 @@ const showFullText = ref(false)
               </div>
             </n-tab-pane>
             <n-tab-pane name="Ulasan">
-              <n-icon>
+              <!-- <n-icon>
                 <i-mdi:comment-quote-outline class="text-7xl"/>
-              </n-icon>
-              <div>ss</div>
+              </n-icon> -->
+              <p class="text-center text-lg font-semibold">Belum ada ulasan untuk kelas ini</p>
             </n-tab-pane>
           </n-tabs>
         </n-card>
       </section>
+
       <section>
-        <div class="flex w-494 h-20">
-          <n-collapse display-directive="show">
-            <n-collapse-item title="right" name="1">
-              <n-collapse>
-                <n-collapse-item title="right" name="1">
-                  <div>good</div>
+        <div class="ml-5">
+          <n-collapse>
+            <n-collapse-item title="Sample Aktivitas" name="1">
+              <n-collapse arrow-placement="right">
+                <n-collapse-item title="Pertemuan 1" name="1">
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Live webinar</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Presensi Pertemuan 1</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Kuis Pertemuan 1</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Instruksi Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Pengumpulan Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
                 </n-collapse-item>
-                <n-collapse-item title="right" name="2">
-                  <div>good</div>
+                <n-collapse-item title="Pertemuan 2" name="2">
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Live webinar</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Presensi Pertemuan 2</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Kuis Pertemuan 2</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Instruksi Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Pengumpulan Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </n-collapse-item>
+                <n-collapse-item title="Pertemuan 3" name="3">
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Live webinar</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Presensi Pertemuan 3</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Kuis Pertemuan 3</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Instruksi Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Pengumpulan Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </n-collapse-item>
+                <n-collapse-item title="Pertemuan 4" name="4">
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Live webinar</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Presensi Pertemuan 4</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Kuis Pertemuan 4</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Instruksi Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Pengumpulan Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </n-collapse-item>
+                <n-collapse-item title="Pertemuan 5" name="5">
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Live webinar</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Presensi Pertemuan 5</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Kuis Pertemuan 5</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Instruksi Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-2 border-b border-gray-300 pb-2">
+                    <p class="font-semibold">Pengumpulan Tugas Praktik Mandiri</p>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-quill:paper />
+                        </n-icon>
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <n-icon>
+                          <i-mdi:clock-outline />
+                        </n-icon>
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
                 </n-collapse-item>
               </n-collapse>
-            </n-collapse-item>
-            <n-collapse-item title="right" name="2">
-              <div>good</div>
             </n-collapse-item>
           </n-collapse>
         </div>
