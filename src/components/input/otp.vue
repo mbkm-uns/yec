@@ -1,53 +1,55 @@
 <script setup lang="ts">
-  import type { InputInst } from 'naive-ui'
+import type { InputInst } from 'naive-ui'
 
-  const props = defineProps<{
-    length?: number
-    otp?: string
-  }>()
-  const emit = defineEmits(['update:value'])
+const props = defineProps<{
+  length?: number
+  otp?: string
+}>()
+const emit = defineEmits(['update:value'])
 
-  const otp = ref<string[]>(new Array(props.length).fill(0).map(() => '') as string[])
-  const otpRef = ref<InputInst[]>()
+const otp = ref<string[]>(new Array(props.length).fill(0).map(() => '') as string[])
+const otpRef = ref<InputInst[]>()
 
-  const handleKeyDown = function (event: KeyboardEvent, index: number) {
-    if (
-      event.key !== 'Tab' &&
-      event.key !== 'ArrowRight' &&
-      event.key !== 'ArrowLeft'
-    ) {
-      event.preventDefault()
-    }
-
-    if (event.key === 'Backspace') {
-      otp.value[index] = ''
-
-      if (otpRef.value && index != 0) {
-        otpRef.value[index - 1]?.focus()
-      }
-
-      return
-    }
-
-    if (new RegExp('^([0-9])$').test(event.key)) {
-      otp.value[index] = event.key
-
-      if (otpRef.value && index != length - 1) {
-        otpRef.value[index + 1]?.focus()
-      }
-    }
+const handleKeyDown = function (event: KeyboardEvent, index: number) {
+  if (event.key !== 'Tab' && event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+    event.preventDefault()
   }
 
-  watch(
-    otp,
-    () => {
-      emit('update:value', otp.value.join(''))
-    },
-    { deep: true },
-  )
+  if (event.key === 'Backspace') {
+    otp.value[index] = ''
+
+    if (otpRef.value && index != 0) {
+      otpRef.value[index - 1]?.focus()
+    }
+
+    return
+  }
+
+  if (new RegExp('^([0-9])$').test(event.key)) {
+    otp.value[index] = event.key
+
+    if (otpRef.value && index != length - 1) {
+      otpRef.value[index + 1]?.focus()
+    }
+  }
+}
+
+watch(
+  otp,
+  () => {
+    emit('update:value', otp.value.join(''))
+  },
+  { deep: true }
+)
 </script>
 
 <template>
+  <div class="flex flex-col items-center justify-center mb-4">
+    <n-icon size="80"><i-mdi:message-processing-outline /> </n-icon>
+
+    <p class="text-center text-lg font-bold mb-2">Masukkan Kode Verifikasi</p>
+    <p>Kode Verifikasi telah di kirimkan ke No Whatsapp</p>
+  </div>
   <div :class="$style.otp_wrapper">
     <n-input
       v-for="(item, index) in otp"
@@ -62,10 +64,10 @@
 </template>
 
 <style module lang="postcss">
-  .otp_wrapper {
-    @apply flex gap-5;
-  }
-  .otp_wrapper > * {
-    @apply text-center flex items-center justify-center;
-  }
+.otp_wrapper {
+  @apply flex gap-5;
+}
+.otp_wrapper > * {
+  @apply text-center flex items-center justify-center;
+}
 </style>

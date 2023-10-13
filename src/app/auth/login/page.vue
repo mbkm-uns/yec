@@ -34,8 +34,8 @@ const { mutate: login, isLoading: isLoggingIn } = useHttpMutation('/users/v1/mem
   },
   queryOptions: {
     onSuccess: function (data) {
-      const token = data?.data.token;
-      if (!token ){
+      const token = data?.data.token
+      if (!token) {
         message.warning('Akun anda belum di aktifkan')
         return token
       }
@@ -44,7 +44,7 @@ const { mutate: login, isLoading: isLoggingIn } = useHttpMutation('/users/v1/mem
       router.push('/?loggedIn=true') // Redirect to the dashboard after successful login
     },
     onError: function (data) {
-    console.log(data)
+      console.log(data)
       message.error(data?.data.message)
     }
   }
@@ -99,22 +99,31 @@ const rules: FormRules = {
 
 <template>
   <n-card :class="$style.container" :content-style="$style.container">
-    <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
-      <template #icon>
-        <n-icon>
-          <i-mdi-arrow-left />
-        </n-icon>
-      </template>
-      Kembali
-    </n-button>
     <n-space justify="center" align="center" :class="$style.container">
       <div :class="$style.card__wrapper">
-        <img src="@/assets/images/landingpage/logo-dash.png" width="200" class="mx-auto" />
-        <n-space justify="center">
-          <n-text> Dashboard YEC CO ID </n-text>
-        </n-space>
         <div style="position: relative; width: fit-content; margin-inline: auto">
           <n-card :class="$style.card" size="medium">
+            <n-button
+              icon-placement="left"
+              quaternary
+              class="text-orange-500"
+              @click="$router.push('/')"
+            >
+              <template #icon>
+                <n-icon>
+                  <i-mdi-arrow-left />
+                </n-icon>
+              </template>
+              Kembali
+            </n-button>
+            <img
+              src="@/assets/images/landingpage/logo-dash.png"
+              width="200"
+              class="mt-10 mx-auto"
+            />
+            <n-space justify="center">
+              <n-text> Dashboard YEC CO ID </n-text>
+            </n-space>
             <n-h2>Login ke Akun Anda </n-h2>
             <n-text>Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda </n-text>
             <div :class="$style.form__wrapper">
