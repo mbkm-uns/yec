@@ -146,7 +146,7 @@ const rules: FormRules = {
 
 <template>
   <n-card :class="$style.card" size="medium">
-    <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
+    <n-button icon-placement="left" quaternary class="text-orange-500" @click="$router.push('/')">
       <template #icon>
         <n-icon>
           <i-mdi-arrow-left />
@@ -157,7 +157,9 @@ const rules: FormRules = {
     <n-space justify="center" align="center" :class="$style.container">
       <div v-if="tab == 'otp'">
         <otp v-model:value="formVerify.otp" :length="6"></otp>
-        <n-button @click="onSubmitOtp">Submit</n-button>
+        <div class="mt-4 text-center">
+          <n-button type="primary" size="large" @click="onSubmitOtp">Submit</n-button>
+        </div>
       </div>
       <div v-else :class="$style.card__wrapper">
         <img

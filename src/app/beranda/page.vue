@@ -14,7 +14,7 @@ const showModal = ref(!!route.query.loggedIn)
 
 <template>
   <n-modal v-model:show="showModal">
-    <n-card style="width: 600px">
+    <n-card class="shadow-md" style="width: 600px">
       <p class="text-center text-2xl font-bold mb-6">PERHATIAN</p>
       <p class="text-center mb-4 text-xl">
         Bagi kamu pengguna Kartu Prakerja, pastikan data diri kamu terutama nama sesuai dengan akun
@@ -309,9 +309,9 @@ const showModal = ref(!!route.query.loggedIn)
       </div>
     </section>
     <router-link to="/faq">
-    <div class="rounded-lg overflow-hidden flex justify-center items-center relative  w-full">
-      <img class="" src="@/assets/images/landingpage/faq1.png" />
-    </div>
+      <div class="rounded-lg overflow-hidden flex justify-center items-center relative w-full">
+        <img class="" src="@/assets/images/landingpage/faq1.png" />
+      </div>
     </router-link>
   </div>
 </template>

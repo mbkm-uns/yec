@@ -8,26 +8,30 @@ import { ref } from 'vue'
 import { DateTime } from 'luxon'
 import { useRouter } from 'vue-router'
 import { useMessage, type FormRules, type FormInst } from 'naive-ui'
+import { useHttp } from '@/composables/http/http'
+import { useQueryClient } from '@tanstack/vue-query'
+const { data: profile } = useHttp('/users/v1/member/detail')
 
 const message = useMessage()
 const router = useRouter()
 const formRef = ref<FormInst>()
+const queryClient = useQueryClient()
 
 type Form = {
-  fullname?: string
+  fullName?: string
   date_of_birth?: number
   phone?: string
   email?: string
 }
 
 const settingData = ref<Form>({
-  fullname: '',
+  fullName: undefined,
   date_of_birth: undefined,
-  phone: '',
-  email: ''
+  phone: undefined,
+  email: undefined
 })
 
-const { mutate: userSetting, isLoading: isLoadinguserSetting } = useHttpMutation(
+const { mutate: userSetting, isLoading: isLoadingUser } = useHttpMutation(
   'users/v1/member/update',
   {
     method: 'PUT',
@@ -38,7 +42,9 @@ const { mutate: userSetting, isLoading: isLoadinguserSetting } = useHttpMutation
     queryOptions: {
       // vue-query options
       onSuccess: function (data) {
-        router.push('/beranda'), console.log(data)
+        message.success(data.data.message)
+        router.push('/beranda')
+        queryClient.invalidateQueries(['/users/v1/member/detail'])
       },
       onError: function (data) {
         // console.log(data)
@@ -48,26 +54,24 @@ const { mutate: userSetting, isLoading: isLoadinguserSetting } = useHttpMutation
   }
 )
 const onSubmitSetting = () => {
-  formRef.value?.validate(() => {
-    formRef.value?.validate((errors) => {
-      if (!errors) {
-        userSetting({
-          fullname: settingData.value.fullname,
-          date_of_birth: DateTime.fromMillis(settingData.value.date_of_birth as number).toISODate(),
-          phone: settingData.value.phone,
-          email: settingData.value.email,
-          meta: { code: '12345' }
-        })
-      } else {
-        console.log(errors)
-        message.error('Invalid')
-      }
-    })
+  formRef.value?.validate((errors) => {
+    if (!errors) {
+      userSetting({
+        fullname: settingData.value.fullName,
+        date_of_birth: DateTime.fromMillis(settingData.value.date_of_birth as number).toISODate(),
+        phone: settingData.value.phone,
+        email: settingData.value.email,
+        meta: { code: '12345' }
+      })
+    } else {
+      console.log(errors)
+      message.error('Invalid')
+    }
   })
 }
 
 const rules: FormRules = {
-  fullname: [
+  fullName: [
     {
       type: 'string',
       required: true,
@@ -132,7 +136,27 @@ const rules: FormRules = {
     }
   ]
 }
+// check
+const isAllowEdit = computed(() => {
+  const allowedKeys = ['fullname', 'phone', 'email', 'date_of_birth'] as const
+
+  return allowedKeys.every((key: string) => {
+    return !!profile.value.data[key]
+  })
+})
+
+const formatDate = (value: string) => {
+  if (!value) return undefined
+  return DateTime.fromISO(value).toMillis()
+} //
+watchEffect(() => {
+  settingData.value.fullName = profile.value.data.fullname
+  settingData.value.phone = profile.value.data.phone
+  settingData.value.email = profile.value.data.email
+  settingData.value.date_of_birth = formatDate(profile.value.data.date_of_birth)
+})
 </script>
+
 <template>
   <div class="p-2 mt-5 md:px-20 space-y-5">
     <nav class="flex items-center space-x-2">
@@ -160,12 +184,14 @@ const rules: FormRules = {
                 :model="settingData"
                 :rules="rules"
                 @submit.prevent="onSubmitSetting"
+                ref="formRef"
+                :disabled="isAllowEdit"
               >
-                <n-form-item path="fullname" type="text">
+                <n-form-item path="fullName" type="text">
                   <template v-slot:label>
                     <span class="text-lg font-semibold">Nama Lengkap</span>
                   </template>
-                  <n-input v-model:value="settingData.fullname" placeholder="Nama Lengkap">
+                  <n-input v-model:value="settingData.fullName" placeholder="Nama Lengkap">
                   </n-input>
                 </n-form-item>
                 <n-form-item path="phone" type="number">
@@ -192,7 +218,15 @@ const rules: FormRules = {
                   />
                 </n-form-item>
                 <div class="flex justify-center">
-                  <n-button block :loading="isLoadinguserSetting" type="primary">Submit</n-button>
+                  <n-button
+                    block
+                    :loading="isLoadingUser"
+                    attr-type="submit"
+                    type="primary"
+                    :disabled="isAllowEdit"
+                  >
+                    Submit
+                  </n-button>
                 </div>
               </n-form>
             </n-card>
