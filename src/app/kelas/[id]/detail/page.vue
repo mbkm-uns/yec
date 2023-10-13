@@ -18,7 +18,7 @@ const showFullText = ref(false)
       </div>
     </section>
 
-    <div class="flex justify-between">
+    <div class="flex">
       <section class="md:flex space-y-5 md:space-y-0">
         <n-card class="w-1/2" style="width: 856px">
           <div class="relative">
@@ -28,21 +28,38 @@ const showFullText = ref(false)
             <n-tab-pane name="Dekripsi">
               <div class="space-y-5">
                 <div :class="{ 'h-auto': showFullText }">
-                  <p class="text-sm">
-                    <b>Mengelola Kinerja Karyawan Untuk Menjadi Manajer Sumber Daya Manusia</b>
-                    adalah kelas yang disusun untuk peserta yang ingin belajar mengelola kinerja
-                    karyawan khususnya bagi yang berprofesi sebagai manajer sumber daya manusia.
-                    Pelatihan ini menggunakan metode ajar webinar. Kelas ini merujuk pada SKKNI
-                    Nomor 149 Tahun 2020 Tentang Manajemen Sumber Daya Manusia. <br /><br />
-                    Peserta akan mendapatkan pengetahuan tentang Memahami dasar-dasar manajemen
-                    kinerja karyawan, merancang indikator kinerja karyawan, merancang proses
-                    monitoring kinerja karyawan, merancang proses evaluasi kinerja karyawan,
-                    menyusun perencanaan peningkatan kinerja karyawan <br /><br />
-                    Kompetensi yang disasar dalam program ini adalah peserta mampu memahami
-                    dasar-dasar manajemen kinerja karyawan, merancang indikator kinerja karyawan,
-                    bersikap teliti dan cermat dalam menyusun indikator kinerja karyawan, mampu
-                    merancang proses monitoring kinerja karyawan, merancang proses evaluasi kinerja
-                    karyawan, menyusun perencanaan peningkatan kinerja karyawan ...
+                  <div class="space-y-3">
+                    <p class="text-sm">
+                      <b>Mengelola Kinerja Karyawan Untuk Menjadi Manajer Sumber Daya Manusia</b>
+                      adalah kelas yang disusun untuk peserta yang ingin belajar mengelola kinerja
+                      karyawan khususnya bagi yang berprofesi sebagai manajer sumber daya manusia.
+                      Pelatihan ini menggunakan metode ajar webinar. Kelas ini merujuk pada SKKNI
+                      Nomor 149 Tahun 2020 Tentang Manajemen Sumber Daya Manusia.
+                    </p>
+                    <p class="text-sm">
+                      Peserta akan mendapatkan pengetahuan tentang Memahami dasar-dasar manajemen
+                      kinerja karyawan, merancang indikator kinerja karyawan, merancang proses
+                      monitoring kinerja karyawan, merancang proses evaluasi kinerja karyawan,
+                      menyusun perencanaan peningkatan kinerja karyawan.
+                    </p>
+                    <p class="text-sm">
+                      Kompetensi yang disasar dalam program ini adalah peserta mampu memahami
+                      dasar-dasar manajemen kinerja karyawan, merancang indikator kinerja karyawan,
+                      bersikap teliti dan cermat dalam menyusun indikator kinerja karyawan, mampu
+                      merancang proses monitoring kinerja karyawan, merancang proses evaluasi
+                      kinerja karyawan, menyusun perencanaan peningkatan kinerja karyawan.
+                    </p>
+                    <p class="text-sm">Berikut rincian kompetensinya:</p>
+                    <p class="text-lg font-medium">Tujuan Umum</p>
+                    <p class="text-sm">
+                      Peserta pelatihan mampu merumuskan indikator kinerja karyawan hingga menyusun
+                      perencanaan peningkatan kinerja karyawan untuk menunjang pekerjaannya
+                      sehari-hari sebagai Manajer Sumber Daya Manusia dengan menunjukkan minimal
+                      enam puluh persen penguasaan materi pada saat unjuk keterampilan
+                    </p>
+                    <p>Di akhir pelatihan peserta mampu:</p>
+                    <p>Pengetahuan:</p>
+                    <li>Peserta mampu memahami dasar-dasar manajemen kinerja karyawan</li>
                     <button
                       v-if="!showFullText"
                       @click="showFullText = true"
@@ -50,7 +67,7 @@ const showFullText = ref(false)
                     >
                       Lihat Selengkapnya
                     </button>
-                  </p>
+                  </div>
                 </div>
                 <div>
                   <p class="text-lg font-semibold">Bidang Studi</p>
@@ -97,31 +114,865 @@ const showFullText = ref(false)
               </div>
             </n-tab-pane>
             <n-tab-pane name="Ulasan">
-              <n-icon>
-                <i-mdi:comment-quote-outline class="text-7xl"/>
-              </n-icon>
-              <div>ss</div>
+              <div class="flex justify-center items-center">
+                <i-mdi:comment-quote-outline class="text-7xl text-gray-400 text-center" />
+              </div>
+              <p class="text-center text-lg font-semibold">Belum ada ulasan untuk kelas ini</p>
             </n-tab-pane>
           </n-tabs>
         </n-card>
       </section>
+
       <section>
-        <div class="flex w-494 h-20">
-          <n-collapse display-directive="show">
-            <n-collapse-item title="right" name="1">
-              <n-collapse>
-                <n-collapse-item title="right" name="1">
-                  <div>good</div>
-                </n-collapse-item>
-                <n-collapse-item title="right" name="2">
-                  <div>good</div>
-                </n-collapse-item>
-              </n-collapse>
-            </n-collapse-item>
-            <n-collapse-item title="right" name="2">
-              <div>good</div>
-            </n-collapse-item>
-          </n-collapse>
+        <div class="ml-5">
+          <div class="space-y-2">
+            <details class="overflow-hidden rounded border border-gray-300 w-80">
+              <summary
+                class="flex items-center justify-between gap-2 bg-white p-4 text-gray-900 transition"
+              >
+                <span class="text-md font-medium"> Aktivitas </span>
+              </summary>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Pembuka </span> <br />
+                  <span class="text-xs font-small"> 4 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-y-1">
+                    <span class="text-sm font-semibold"> 1. Perkenalan Tenaga Pelatih </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Membaca E-Book</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. Perkenalan Lembaga Pelatihan </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Menonton Video</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:02:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 3. Aktivitas WIIFM </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Membaca E-Book</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:20:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 4. Pre Test </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Mengerjakan Soal</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:15:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Pertemuan 1 </span> <br />
+                  <span class="text-xs font-small"> 5 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Live Webinar </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. Kuis Pertemuan 1 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Mengerjakan Soal</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 3. Presensi Pertemuan 1 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 4. Intruksi Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 5. Pengumpulan Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>01:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Pertemuan 2 </span> <br />
+                  <span class="text-xs font-small"> 5 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Live Webinar </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. Kuis Pertemuan 2 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Mengerjakan Soal</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 3. Presensi Pertemuan 2 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 4. Intruksi Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 5. Pengumpulan Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>01:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Pertemuan 3 </span> <br />
+                  <span class="text-xs font-small"> 5 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Live Webinar </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. Kuis Pertemuan 3 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Mengerjakan Soal</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 3. Presensi Pertemuan 3 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 4. Intruksi Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 5. Pengumpulan Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>01:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Pertemuan 4 </span> <br />
+                  <span class="text-xs font-small"> 5 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Live Webinar </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. Kuis Pertemuan 4 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Mengerjakan Soal</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 3. Presensi Pertemuan 4 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 4. Intruksi Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 5. Pengumpulan Tugas Praktik Mandiri</span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>01:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Pertemuan 5 </span> <br />
+                  <span class="text-xs font-small"> 3 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Live Webinar </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>03:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. Kuis Pertemuan 5 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Mengerjakan Soal</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 3. Presensi Pertemuan 5 </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Post Test </span> <br />
+                  <span class="text-xs font-small"> 1 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Post Test </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Mengerjakan Soal</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:20:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Penutup </span> <br />
+                  <span class="text-xs font-small"> 2 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Feedback Form Program Prakerja </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Evaluasi</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:03:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. Penutupan Program Pelatihan </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Membaca E-book</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:01:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300">
+              <summary
+                class="flex cursor-pointer items-center justify-between bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-0">
+                  <span class="text-sm font-semibold"> Unjuk Keterampilan </span> <br />
+                  <span class="text-xs font-small"> 2 Aktivitas </span>
+                </div>
+
+                <span class="transition group-open:-rotate-180">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-4 w-4"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 1. Instruksi Unjuk Keterampilan </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Praktik Mandiri</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>00:05:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+
+              <div class="border-t border-gray-200 bg-white">
+                <header class="flex items-center justify-between p-4">
+                  <div class="space-x-1">
+                    <span class="text-sm font-semibold"> 2. [Pengumpulan] Unjuk Keterampilan </span>
+                    <div class="flex space-x-4 text-xs text-gray-500">
+                      <div class="flex space-x-1">
+                        <i-quill:paper />
+                        <p>Berdiskusi Daring</p>
+                      </div>
+                      <div class="flex space-x-1">
+                        <i-mdi:clock-outline />
+                        <p>02:00:00</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+              </div>
+            </details>
+
+            <details class="overflow-hidden rounded border border-gray-300 w-80">
+              <summary
+                class="flex items-center justify-center gap-2 bg-white p-4 text-gray-900 transition"
+              >
+                <div class="space-y-1 text-center">
+                  <span class="text-lg font-medium text-blue-500"> Rp 1.500.000 </span>
+                  <n-button strong round block type="primary"> Beli Kelas Online </n-button>
+                </div>
+              </summary>
+            </details>
+          </div>
         </div>
       </section>
     </div>
