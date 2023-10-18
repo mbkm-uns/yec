@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const props = defineProps<{}>()
 import type { UploadFileInfo } from 'naive-ui'
 
 const tab = ref('upload_file')
@@ -22,23 +21,16 @@ const onChange = (options: {
           Silakan unggah pengerjaan Tugas Praktik Mandiri Anda disini, setelah Anda membaca
           Instruksi Tugas Praktik Mandiri !
         </div>
-        <div
-          v-if="tab == 'upload_file'"
-          class="card flex-col p-50"
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          "
-        >
-          <div class="justify-center">
-            <n-upload multiple directory-dnd :max="5" @change="onChange">
-              <div style="margin-bottom: 12px">
-                <n-icon size="58" color="#8492A6"><i-ic:sharp-cloud-download /></n-icon>
-              </div>
-              <n-button type="primary" size="large">Pilih Berkas</n-button>
-            </n-upload>
+        <div v-if="tab == 'upload_file'" class="card justify-center items-center">
+          <div class="flex justify-center items-center">
+            <div>
+              <n-upload multiple directory-dnd :max="5" @change="onChange">
+                <div class="flex justify-center flex-col items-center gap-5">
+                  <n-icon size="58" color="#8492A6"><i-ic:sharp-cloud-download /></n-icon>
+                  <n-button type="primary" size="large">Pilih Berkas</n-button>
+                </div>
+              </n-upload>
+            </div>
           </div>
 
           <n-alert class="mt-4" title="Info Text" type="info"
@@ -46,16 +38,18 @@ const onChange = (options: {
             MB.</n-alert
           >
         </div>
-        <div v-if="tab == 'upload_success'">
-          <div
-            class="card flex-col p-50"
-            style="display: flex; flex-direction: column; align-items: center; justify-content: "
-          >
-            <div class="flex justify-center object-top">
-              <img src="@/assets/images/success.png" alt="" />
+        <div v-if="tab == 'upload_success'" class="card">
+          <div class="flex justify-center items-center">
+            <div class="justify-center items-center gap-5 flex-col">
+              <div class="flex justify-center">
+                <img src="@/assets/images/success.png" alt="" />
+              </div>
+              <div class="flex flex-col justify-center items-center gap-4">
+                <h2 class="mt-4 text-lg font-semibold">File berhasil diunggah</h2>
+                <p>File hasil pengerjaan tugas praktik mandiri telah berhasil diunggah</p>
+                <n-button type="primary">Klik Activity Selanjutnya</n-button>
+              </div>
             </div>
-            <h2 class="mt-4 text-lg font-semibold">File berhasil diunggah</h2>
-            <p>File hasil pengerjaan tugas praktik mandiri telah berhasil diunggah</p>
           </div>
         </div>
       </n-card>
