@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const props = defineProps<{}>()
 import type { UploadFileInfo } from 'naive-ui'
 
 const tab = ref('upload_file')
