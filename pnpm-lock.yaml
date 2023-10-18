@@ -46,6 +46,9 @@ devDependencies:
   '@iconify-json/bi':
     specifier: ^1.1.20
     version: 1.1.20
+  '@iconify-json/ic':
+    specifier: ^1.1.14
+    version: 1.1.14
   '@iconify-json/ion':
     specifier: ^1.1.12
     version: 1.1.12
@@ -992,6 +995,12 @@ packages:
 
   /@iconify-json/bi@1.1.20:
     resolution: {integrity: sha512-t3f7mRaCKIOeOIZUq8tNVTkw2nrgF2bzsOhOIm9wkoZbARcWgXmCiZTcqclL3++yxcbAqZqOa+Ky7oj/y5ySew==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ic@1.1.14:
+    resolution: {integrity: sha512-vbATa9uwb9pIsRWQ+iXObQCgLTePk/0vo4shBr3Td0GnTjsAU/7VUGTkrZFVf5vpgiG6OsXkcKMPzBPvt966sg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

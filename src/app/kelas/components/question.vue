@@ -25,7 +25,7 @@ watch(
 </script>
 <template>
   <div class="space-y-3">
-    <div class="flex gap-5">
+    <div class="flex gap-5 justify-between">
       <slot />
       <n-countdown
         ref="countdownRef"
@@ -37,6 +37,9 @@ watch(
           }
         "
       />
+      <div class="flex justify-evenly">
+      <n-button>submit</n-button>
+    </div>
     </div>
     <div>
       <p>
