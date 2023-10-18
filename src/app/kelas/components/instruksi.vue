@@ -9,7 +9,7 @@
         </div>
         <div class="flex justify-center items-center flex-col ">
           <n-icon size="60" color="#8492A6"><i-ic:sharp-cloud-download/></n-icon>
-          <n-button round type="primary" size="large">Donwload</n-button>
+          <n-button type="primary" size="large">Donwload</n-button>
         </div>
       </n-card>    
   </div>
