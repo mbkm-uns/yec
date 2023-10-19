@@ -10,12 +10,16 @@ meta:
       <span class="text-gray-400 text-lg">/</span>
       <span class="text-gray-600 text-lg">Subkripsi</span>
     </nav>
-    <div class="flex justify-center items-center">
-      <img size="100" src="@/assets/images/stationary.png" alt="" />
-    </div>
-    <div class="text-center text-2xl font-bold">
-      <n-text>Anda belum memiliki paket berlangganan</n-text>
-    </div>
+    <section>
+      <div class="flex justify-center">
+        <n-card class="drop-shadow-sm" style="display: flex; width: 60%">
+          <div class="flex justify-center items-center flex-col gap-5">
+            <img size="100" src="@/assets/images/stationary.png" alt="" />
+            <div class="text-2xl font-semibold">Anda belum memiliki paket berlangganan</div>
+          </div>
+        </n-card>
+      </div>
+    </section>
   </div>
 </template>
 
