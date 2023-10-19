@@ -164,76 +164,74 @@ watchEffect(() => {
       <span class="text-gray-400 text-lg">/</span>
       <span class="text-gray-600 text-lg">Setting</span>
     </nav>
+  </div>
 
-    <div class="md:flex md:px-10 lg:px-40 sm:px-5 flex-auto">
-      <n-tabs size="large" :tabs-padding="20" pane-style="padding: 20px;">
-        <n-tab-pane name="Data Diri" class="ml-auto">
-          <section class="flex flex-col">
-            <n-card class="justify-center text-left px-2 md:px-20">
-              <n-alert type="info">
-                <div class="text-blue">
-                  <h2 class="text-sm font-bold">PERHATIAN!</h2>
-                  Akun ini hanya dapat digunakan untuk 1 peserta pelatihan, pastikan nama Anda
-                  sesuai dengan nama yang terdaftar pada akun prakerja.go.id (perhatikan penggunaan
-                  huruf dan tanda baca, wajib sama dengan nama akun di prakerja.go.id). Hal ini akan
-                  berpengaruh pada sertifikat Kartu Prakerja Anda
-                </div>
-              </n-alert>
-              <n-form
-                class="mt-5"
-                :model="settingData"
-                :rules="rules"
-                @submit.prevent="onSubmitSetting"
-                ref="formRef"
-                :disabled="isAllowEdit"
-              >
-                <n-form-item path="fullName" type="text">
-                  <template v-slot:label>
-                    <span class="text-lg font-semibold">Nama Lengkap</span>
-                  </template>
-                  <n-input v-model:value="settingData.fullName" placeholder="Nama Lengkap">
-                  </n-input>
-                </n-form-item>
-                <n-form-item path="phone" type="number">
-                  <template v-slot:label>
-                    <span class="text-lg font-semibold">No. Telephone</span>
-                  </template>
-                  <n-input v-model:value="settingData.phone" placeholder="Nomer telephone">
-                  </n-input>
-                </n-form-item>
-                <n-form-item path="email" type="email">
-                  <template v-slot:label>
-                    <span class="text-lg font-semibold">Email</span>
-                  </template>
-                  <n-input v-model:value="settingData.email" placeholder="Email"> </n-input>
-                </n-form-item>
-                <n-form-item path="tanggallahir" type="date">
-                  <template v-slot:label>
-                    <span class="text-lg font-semibold">Tanggal Lahir</span>
-                  </template>
-                  <n-date-picker
-                    v-model:value="settingData.date_of_birth"
-                    class="w-full"
-                    type="date"
-                  />
-                </n-form-item>
-                <div class="flex justify-center">
-                  <n-button
-                    block
-                    :loading="isLoadingUser"
-                    attr-type="submit"
-                    type="primary"
-                    :disabled="isAllowEdit"
-                  >
-                    Submit
-                  </n-button>
-                </div>
-              </n-form>
-            </n-card>
-          </section>
-        </n-tab-pane>
-      </n-tabs>
-    </div>
+  <div class="md:flex md:px-10 lg:px-40 sm:px-5 flex-auto">
+    <n-tabs size="large" :tabs-padding="20" pane-style="padding: 20px;">
+      <n-tab-pane name="Data Diri" class="ml-auto">
+        <section class="flex flex-col">
+          <n-card class="justify-center text-left px-2 md:px-20">
+            <n-alert type="info">
+              <div class="text-blue">
+                <h2 class="text-sm font-bold">PERHATIAN!</h2>
+                Akun ini hanya dapat digunakan untuk 1 peserta pelatihan, pastikan nama Anda sesuai
+                dengan nama yang terdaftar pada akun prakerja.go.id (perhatikan penggunaan huruf dan
+                tanda baca, wajib sama dengan nama akun di prakerja.go.id). Hal ini akan berpengaruh
+                pada sertifikat Kartu Prakerja Anda
+              </div>
+            </n-alert>
+            <n-form
+              class="mt-5"
+              :model="settingData"
+              :rules="rules"
+              @submit.prevent="onSubmitSetting"
+              ref="formRef"
+              :disabled="isAllowEdit"
+            >
+              <n-form-item path="fullName" type="text">
+                <template v-slot:label>
+                  <span class="text-lg font-semibold">Nama Lengkap</span>
+                </template>
+                <n-input v-model:value="settingData.fullName" placeholder="Nama Lengkap"> </n-input>
+              </n-form-item>
+              <n-form-item path="phone" type="number">
+                <template v-slot:label>
+                  <span class="text-lg font-semibold">No. Telephone</span>
+                </template>
+                <n-input v-model:value="settingData.phone" placeholder="Nomer telephone"> </n-input>
+              </n-form-item>
+              <n-form-item path="email" type="email">
+                <template v-slot:label>
+                  <span class="text-lg font-semibold">Email</span>
+                </template>
+                <n-input v-model:value="settingData.email" placeholder="Email"> </n-input>
+              </n-form-item>
+              <n-form-item path="tanggallahir" type="date">
+                <template v-slot:label>
+                  <span class="text-lg font-semibold">Tanggal Lahir</span>
+                </template>
+                <n-date-picker
+                  v-model:value="settingData.date_of_birth"
+                  class="w-full"
+                  type="date"
+                />
+              </n-form-item>
+              <div class="flex justify-center">
+                <n-button
+                  block
+                  :loading="isLoadingUser"
+                  attr-type="submit"
+                  type="primary"
+                  :disabled="isAllowEdit"
+                >
+                  Submit
+                </n-button>
+              </div>
+            </n-form>
+          </n-card>
+        </section>
+      </n-tab-pane>
+    </n-tabs>
   </div>
 </template>
 
