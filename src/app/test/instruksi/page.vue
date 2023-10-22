@@ -2,5 +2,5 @@
 import { Instruksi } from '../../kelas/components'
 </script>
 <template>
-  <Instruksi></Instruksi>
+  <instruksi activity-id="string" program-id="string" topic-id="string"></instruksi>
 </template>
