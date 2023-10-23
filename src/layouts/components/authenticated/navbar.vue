@@ -172,16 +172,8 @@ const auth = computed(() => {
               <li>
                 <n-space>
                   <n-dropdown trigger="hover" :options="options" @select="handleSelect">
-                    <n-space>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="21"
-                        viewBox="0 0 20 21"
-                        fill="none"
-                      >
-                        <circle cx="10" cy="10.5" r="10" fill="#3771C8" />
-                      </svg>
+                    <div class="flex justify-center items-center gap-3">
+                      <y-avatar src="" :name="props.fullName || ''"></y-avatar>
                       <n-text>{{ props.fullName }}</n-text>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +201,7 @@ const auth = computed(() => {
                           </clipPath>
                         </defs>
                       </svg>
-                    </n-space>
+                    </div>
                   </n-dropdown>
                 </n-space>
               </li>
