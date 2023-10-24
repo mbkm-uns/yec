@@ -2,6 +2,7 @@
 import { Question } from '@/app/kelas/components'
 const page = ref(1)
 
+const answer = ref([])
 const questions = [
   {
     duration: 300000, // in ms
@@ -99,11 +100,12 @@ const currentQuestion = computed(() => {
 </script>
 
 <template>
-  <Question
+  <Question v-model:value="answer[page-1]"
     :number="page"
     :question="currentQuestion.question"
     :choices="currentQuestion.choices"
     :duration="currentQuestion.duration"
+    :total-question="questions.length"
   >
     <n-pagination v-model:page="page" :page-count="questions.length" simple />
   </Question>
