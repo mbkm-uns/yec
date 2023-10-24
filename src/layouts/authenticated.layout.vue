@@ -58,12 +58,15 @@ watch(data, () => {
         </n-space>
         &nbsp;
         <n-spin :show="isLoading">
+          <n-empty v-if="notification?.data.list?.length==0"></n-empty>
+          <div class="space-y-3">
           <n-card v-for="item in notification?.data.list" :key="item.id">
             <h8 class="font-bold"> {{ item.notification.title }} </h8>
             <div v-html="item.notification.description"></div>
             &nbsp;
             <p>{{ item.created_at }}</p>
           </n-card>
+        </div>
         </n-spin>
         &nbsp; &nbsp;
         <template #footer>
