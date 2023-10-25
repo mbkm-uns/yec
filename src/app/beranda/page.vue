@@ -105,7 +105,7 @@ const showModal = ref(!!route.query.loggedIn);
             Review Customer
           </h2>
           <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8 drop-shadow-md">
               <div class="flex items-center gap-4">
                 <div class="flex justify-center gap-0.5 text-orange-500">
                   <svg
@@ -173,7 +173,7 @@ const showModal = ref(!!route.query.loggedIn);
                 <p class="ml-2 text-lg font-medium text-gray-900">Yoga Erno</p>
               </div>
             </blockquote>
-            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8 drop-shadow-md">
               <div class="flex items-center gap-4">
                 <div class="flex justify-center gap-0.5 text-orange-500">
                   <svg
@@ -243,7 +243,7 @@ const showModal = ref(!!route.query.loggedIn);
               </div>
             </blockquote>
 
-            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
+            <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8 drop-shadow-md">
               <div class="flex items-center gap-4">
                 <div class="flex justify-center gap-0.5 text-orange-500">
                   <svg

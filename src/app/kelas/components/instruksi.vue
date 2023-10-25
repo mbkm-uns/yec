@@ -38,7 +38,7 @@ const onDownload = () => {
       <div class="flex flex-col items-center justify-center" style="height: 100%">
         <div
           class="text-lg font-semibold"
-          style="text-align: center; font-family: 'Poppins', sans-serif"
+          style="text-align: center"
         >
           Silahkan unduh file Instruksi berikut untuk mengerjakan tugas praktik mandiri!
         </div>
