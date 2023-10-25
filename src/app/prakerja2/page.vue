@@ -674,7 +674,7 @@ meta:
         </div>
       </n-list>
       <div
-        class="max-w-full flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50"
+        class="max-w-full flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50 mt-4"
       >
         <router-link to="/faq">
           <div class="rounded-lg overflow-hidden flex justify-center items-center relative w-full">
