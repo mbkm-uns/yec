@@ -46,7 +46,11 @@ export default defineConfig({
         /\.vue\?vue/, // .vue
         /\.md$/ // .md
       ],
-      imports: ['vue', 'vue-router', 'vue-i18n', 'vue/macros', '@vueuse/head', '@vueuse/core'],
+      imports: ['vue', 'vue-router', 'vue-i18n', 'vue/macros', '@vueuse/head', '@vueuse/core', 
+      {
+        from: "luxon",
+        imports: ['DateTime']
+      }],
       dirs: ['src/composables', 'src/store', 'src/core'],
       vueTemplate: true,
       eslintrc: {
