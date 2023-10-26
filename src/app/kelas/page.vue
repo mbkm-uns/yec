@@ -9,18 +9,21 @@ import { refThrottled } from '@vueuse/core'
 import { Env } from '@/config'
 import type { CategoryResponse } from './types/category'
 
-const filter = ref({ q: '', study: null })
+const filter = ref<{ study: string[] | null; q: string }>({ q: '', study: null })
 const search = ref('')
-const params = computed(() => ({
-  status: undefined,
-  page: undefined,
-  limit: undefined,
-  sort: undefined,
-  dir: undefined,
-  study: filter.value.study,
-  q: refThrottled(search, 500).value,
-  is_free: undefined
-}))
+const params = computed(function () {
+  console.log(filter.value)
+  return {
+    status: undefined,
+    page: undefined,
+    limit: undefined,
+    sort: undefined,
+    dir: undefined,
+    study: filter.value.study?.at(0),
+    q: refThrottled(search, 500).value,
+    is_free: undefined
+  }
+})
 const url = computed(() => {
   return `/study/v1/public/list/${Env().API_ACCESS_KEY}`
 })
