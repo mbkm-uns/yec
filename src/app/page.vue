@@ -88,7 +88,7 @@ const auth = computed(() => !!Cookies.get('token'))
       <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
         <header>
           <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-            Kelas Pra Kerja 2023 Yang Tersedia
+            Kelas PraKerja 2023 Yang Tersedia
           </h2>
         </header>
 
@@ -105,19 +105,22 @@ const auth = computed(() => !!Cookies.get('token'))
       </div>
     </section>
     
-    <section class="bg-white">
-      <div class="max-w-full lg:col-span-5 xl:col-span-6 bg-orange-50">
-        <div class="flex flex-col items-center justify-center h-40 lg:h-full">
-          <div
-            class="rounded-lg overflow-hidden relative w-full flex items-center justify-center"
-          >
-            <img src="@/assets/images/landingpage/faq.png" alt="FAQ Image" />
-          </div>
+    <div class="max-w-full lg:col-span-5 xl:col-span-6 bg-orange-50 mb-4">
+      <div class="flex flex-col items-center justify-center h-40 lg:h-full">
+        <div
+          class="rounded-lg overflow-hidden relative w-full flex items-center justify-center"
+        >
+          <img src="@/assets/images/landingpage/faq.png" alt="FAQ Image" />
+        </div>
+        <div class="mb-4">
           <router-link to="/faq">
-            <n-button class="mt-4" style="font-size: medium">Klik disini</n-button>
+            <n-button style="font-size: medium">Klik disini</n-button>
           </router-link>
         </div>
       </div>
+    </div>
+    
+    <section class="bg-white">
       <div
         class="max-w-full flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50"
       >
