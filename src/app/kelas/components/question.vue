@@ -23,10 +23,9 @@ watch(
   computed(() => props.number),
   () => {
     isDisabled.value = false
-    countdownRef.value?.reset()
   }
 )
-const divideDuration = computed(() => props.duration / props.totalQuestion)
+const divideDuration = computed(() => props.duration)
 </script>
 <template>
   <div class="space-y-3">
