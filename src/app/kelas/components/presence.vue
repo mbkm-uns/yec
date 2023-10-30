@@ -1,18 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { ActivityResponse } from '@/app/kelas/types/activity'
+import { useHttp } from '@/composables/http/http'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
+const { data } = useHttp<ActivityResponse>(
+  computed(
+    () =>
+      `/users/v1/myprogram/detail_activity/${route.params.id}/${route.params.topicId}/${route.query.id}`
+  )
+)
+</script>
 
 <template>
   <div class="space-y-3">
-    <div>
-      Live Webinar Mengelola Kinerja Karyawan Untuk Menjadi Manajer Sumber Daya Manusia: "Aktivitas
-      1"
-    </div>
-    <div>
-      silahkan untuk mengisi presensi pertemuan 1 dan pastikan data yang Anda isi sudah sesuai
-    </div>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeEKFNQerdnkQJpYwYOaR3Ig0OO7fz-QLUSS6rqm-VQrlX-Jg/viewform"
-      class="w-full"
-    >
-    </iframe>
+    <div v-html="data?.data.theory.description" />
+    <iframe :src="data?.data.theory.link_embed.url" class="w-full" style="height: 100vh"> </iframe>
   </div>
 </template>
