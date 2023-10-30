@@ -11,9 +11,6 @@ dependencies:
   '@types/js-cookie':
     specifier: ^3.0.4
     version: 3.0.4
-  '@types/luxon':
-    specifier: ^3.3.2
-    version: 3.3.2
   '@vicons/ionicons5':
     specifier: ^0.12.0
     version: 0.12.0
@@ -79,6 +76,9 @@ devDependencies:
   '@types/jsdom':
     specifier: ^21.1.1
     version: 21.1.1
+  '@types/luxon':
+    specifier: ^3.3.2
+    version: 3.3.2
   '@types/node':
     specifier: ^20.3.1
     version: 20.3.1
@@ -1251,7 +1251,7 @@ packages:
 
   /@types/luxon@3.3.2:
     resolution: {integrity: sha512-l5cpE57br4BIjK+9BSkFBOsWtwv6J9bJpC7gdXIzZyI0vuKvNTk0wZZrkQxMGsUAuGW9+WMNWF2IJMD7br2yeQ==}
-    dev: false
+    dev: true
 
   /@types/ms@0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
