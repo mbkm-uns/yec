@@ -28,6 +28,7 @@
       | 'evaluasi'
       | 'praktek_mandiri'
       | 'evaluasi_praktek_mandiri'
+      | 'post_test'
   ) => {
     const text = {
       'membaca-e-book': 'Membaca E-Book',
