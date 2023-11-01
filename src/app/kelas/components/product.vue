@@ -24,7 +24,14 @@ const priceCurrency = computed(() => {
         <n-gradient-text type="info"> {{ priceCurrency }}</n-gradient-text>
       </p>
       <div>
-        <n-button strong round block type="primary" @click="$router.push(`/kelas/${id}/detail`)">
+        <n-button
+          strong
+          round
+          block
+          type="primary"
+          ghost
+          @click="$router.push(`/kelas/${id}/detail`)"
+        >
           Beli Kelas Online
         </n-button>
       </div>
