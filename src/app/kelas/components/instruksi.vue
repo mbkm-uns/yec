@@ -2,7 +2,7 @@
 import { useHttpMutation } from "@/composables/http/http";
 import { useMessage } from "naive-ui";
 
-const props = defineProps<{ programId: string; topicId: string; activityId: string }>();
+const props = defineProps<{ programId: string; topicId: string; activityId: string; url:string }>();
 const message = useMessage();
 const { mutate: getUnlock, isLoading } = useHttpMutation(
   `/users/v1/member/activity/unlock`,
@@ -29,6 +29,7 @@ const onDownload = () => {
     activity_id: props.activityId,
     topic_id: props.topicId,
   });
+  window.open(props.url)
 };
 </script>
 <template>
