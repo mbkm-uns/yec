@@ -203,7 +203,7 @@ const rules: FormRules = {
               <n-space vertical :size="20" :class="$style.form__action">
                 <n-button :loading="isLoading" attr-type="submit" type="primary" block>
                   Register
-                </n-button
+                </n-button>
                 <div class="text-center text-decoration-none">
                   Sudah mempunyai akun?
                   <a
