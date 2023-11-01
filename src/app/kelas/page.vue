@@ -70,7 +70,12 @@ const programTypes = [
         <div>Menampilkan 9 program</div>
       </div>
       <div>
-        <n-input v-model:value="search" placeholder="Cari program yang anda inginkan" size="large">
+        <n-input
+          class="input drop-shadow-md"
+          v-model:value="search"
+          placeholder="Cari program yang anda inginkan"
+          size="large"
+        >
           <template #suffix>
             <n-icon>
               <i-ion-search />
@@ -166,5 +171,8 @@ div.h1 {
   display: contents;
   position: relative;
   left: 20px;
+}
+.input {
+  width: 400px;
 }
 </style>
