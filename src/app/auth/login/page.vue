@@ -147,7 +147,6 @@ const rules: FormRules = {
                 </n-row>
                 <n-form-item>
                   <n-space vertical :size="20" :class="$style.form__action">
-                    <n-checkbox> Ingat Saya </n-checkbox>
                     <n-button
                       :loading="isLoggingIn"
                       attr-type="submit"
