@@ -17,6 +17,12 @@ env:
   VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
   VITE_API_ACCESS_KEY: ${{ secrets.VITE_API_ACCESS_KEY }}
 
+  SSH_HOST: '${{ secrets.SSH_HOST }}'
+  SSH_USER: '${{ secrets.SSH_USER }}'
+  SSH_PORT: '${{ secrets.SSH_PORT }}'
+  SSH_PASSWORD: '${{ secrets.SSH_PASSWORD }}'
+  SSH_KEY: ${{ secrets.SSH_KEY }}
+
 jobs:
   build:
     name: Build
