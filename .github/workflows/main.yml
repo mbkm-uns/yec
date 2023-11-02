@@ -14,7 +14,7 @@ env:
   GITHUB_ACTIONS_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
   IMAGE_NAME_RAW: 'ghcr.io/${{ github.repository }}:${{ github.head_ref || github.ref_name }}'
   APP_NAME: ${{ github.event.repository.name }}
-  VITE_API_BASE_URL: ${{ secrets.VITE_API_ACCESS_KEY }}
+  VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
   VITE_API_ACCESS_KEY: ${{ secrets.VITE_API_ACCESS_KEY }}
 
 jobs:
