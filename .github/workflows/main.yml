@@ -148,7 +148,7 @@ jobs:
             podman rm -f ${{ env.APP_NAME }}
 
             # Run the Podman container
-            podman run --name ${{ env.APP_NAME }} -d --network shared ${{ env.IMAGE_NAME }} # Modify this command as needed
+            podman run --name ${{ env.APP_NAME }} -d -p 3000:80 ${{ env.IMAGE_NAME }} # Modify this command as needed
 
       - name: logout from CR
         run: |-
