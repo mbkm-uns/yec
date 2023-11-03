@@ -51,8 +51,8 @@ const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', 
     onSuccess: function () {
       tab.value = 'otp'
     },
-    onError: function (data) {
-      message.warning(data.data.message)
+    onError: function (error) {
+      message.error(error.data.message)
     }
   }
 })
@@ -155,11 +155,13 @@ const rules: FormRules = {
       Kembali
     </n-button>
     <n-space justify="center" align="center" :class="$style.container">
-      <div v-if="tab == 'otp'">
-        <otp v-model:value="formVerify.otp" :length="6"></otp>
-        <div class="mt-4 text-center">
-          <n-button type="primary" size="large" @click="onSubmitOtp">Submit</n-button>
+      <div v-if="tab == 'otp'" class="my-2 flex flex-col gap-5">
+        <div class="text-center my-2">
+          <div class="text-xl font-bold">Masukan Kode Verifikasi</div>
+          <div>Kode verifikasi telah dikirim melalui WA ke {{ formData.phone }}</div>
         </div>
+        <otp v-model:value="formVerify.otp" :length="6"></otp>
+        <n-button :loading="isLoadingVerifyOtp" @click="onSubmitOtp">Submit</n-button>
       </div>
       <div v-else :class="$style.card__wrapper">
         <img
