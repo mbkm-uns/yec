@@ -7,7 +7,7 @@ import { useHttpMutation } from '@/composables/http/http'
 import { ref } from 'vue'
 import { Env } from '@/config'
 import { useRouter } from 'vue-router'
-import { useMessage } from 'naive-ui'
+import { useMessage, type FormRules, type FormItemRule, type FormInst } from 'naive-ui'
 
 const message = useMessage()
 const router = useRouter()
@@ -27,6 +27,18 @@ const formVerify = ref({
   access_key: Env().API_ACCESS_KEY,
   otp: ''
 })
+const formRef = ref<FormInst>()
+
+function validatePasswordStartWith(rule: FormItemRule, value: string): boolean {
+  return (
+    !!formData.value.password &&
+    formData.value.password.startsWith(value) &&
+    formData.value.password.length >= value.length
+  )
+}
+function validatePasswordSame(rule: FormItemRule, value: string): boolean {
+  return value === formData.value.password
+}
 
 const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', {
   method: 'POST',
@@ -40,7 +52,6 @@ const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', 
       tab.value = 'otp'
     },
     onError: function (error) {
-      console.log(error.data.message)
       message.error(error.data.message)
     }
   }
@@ -51,7 +62,6 @@ const { mutate: verifyOtp, isLoading: isLoadingVerifyOtp } = useHttpMutation(
   {
     method: 'POST',
     httpOptions: {
-      // axios options
       timeout: 30000
     },
     queryOptions: {
@@ -60,13 +70,13 @@ const { mutate: verifyOtp, isLoading: isLoadingVerifyOtp } = useHttpMutation(
         router.push('/auth/login'), console.log(data)
       },
       onError: function (data) {
-        message.warning('Silahkan isi terlebih dahulu')
+        message.error(data.data.message)
       }
     }
   }
 )
 
-const onSubmit = (data: FormData) => {
+const onSubmit = () => {
   mutate(formData.value)
 }
 
@@ -77,11 +87,66 @@ const onSubmitOtp = () => {
     otp: formVerify.value.otp
   })
 }
+
+const rules: FormRules = {
+  phone: [
+    {
+      type: 'string',
+      required: true,
+      trigger: ['input', 'blur'],
+      message: () => {
+        return 'Harap masukan nomer handphone yang valid'
+      }
+    },
+    {
+      required: true,
+      message: () => {
+        return 'Wajib Di Isi'
+      }
+    }
+  ],
+  password: [
+    {
+      trigger: ['input', 'blur'],
+      required: true,
+      min: 8,
+      message: () => {
+        return 'Harap masukan password yang valid'
+      }
+    },
+    {
+      required: true,
+      validator: () => {
+        return formData.value.password === formData.value.passwordConfirm
+      },
+      message: () => {
+        return 'Wajib Di Isi'
+      }
+    }
+  ],
+  passwordConfirm: [
+    {
+      required: true,
+      message: 'Konfirmasi password diperlukan',
+      trigger: ['input', 'blur']
+    },
+    {
+      validator: validatePasswordStartWith,
+      message: 'Password tidak sama!',
+      trigger: 'input'
+    },
+    {
+      validator: validatePasswordSame,
+      message: 'Password tidak sama!',
+      trigger: ['blur', 'password-input']
+    }
+  ]
+}
 </script>
 
 <template>
   <n-card :class="$style.card" size="medium">
-    <n-button icon-placement="left" class="text-orange-500" @click="$router.push('/')">
+    <n-button icon-placement="left" quaternary class="text-orange-500" @click="$router.push('/')">
       <template #icon>
         <n-icon>
           <i-mdi-arrow-left />
@@ -108,9 +173,9 @@ const onSubmitOtp = () => {
           <n-text> Dashboard YEC CO ID </n-text>
         </n-space>
         <n-h2 class="space-y-4">Register akun anda </n-h2>
-        <n-text>Silahkan masukkan No W hatsApp & kata sandi untuk masuk ke akun Anda </n-text>
+        <n-text>Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda </n-text>
         <div :class="$style.form__wrapper">
-          <n-form ref="formRef" @click="onSubmit">
+          <n-form ref="formRef" :model="formData" :rules="rules" @submit.prevent="onSubmit">
             <n-form-item path="phone" label="No Telepon">
               <n-input placeholder="Masukkan No Telepon" v-model:value="formData.phone" />
             </n-form-item>
@@ -138,7 +203,6 @@ const onSubmitOtp = () => {
             </n-row>
             <n-form-item>
               <n-space vertical :size="20" :class="$style.form__action">
-                <n-checkbox> Ingat Saya </n-checkbox>
                 <n-button :loading="isLoading" attr-type="submit" type="primary" block>
                   Register
                 </n-button>

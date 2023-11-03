@@ -4,10 +4,10 @@ meta:
 </route>
 
 <script setup lang="ts">
-import layout from './layout.vue'
+import { Upload } from '../../kelas/components'
 </script>
-<template>
-  <layout></layout>
-</template>
 
+<template>
+  <Upload />
+</template>
 <style scoped></style>

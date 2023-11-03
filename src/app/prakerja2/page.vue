@@ -673,7 +673,15 @@ meta:
           </details>
         </div>
       </n-list>
-      <!-- Bagiann FAQ -->
+      <div
+        class="max-w-full flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50 mt-4"
+      >
+        <router-link to="/faq">
+          <div class="rounded-lg overflow-hidden flex justify-center items-center relative w-full">
+            <img class="" src="@/assets/images/landingpage/faq.png" />
+          </div>
+        </router-link>
+      </div>
     </n-card>
   </div>
 </template>

@@ -1,23 +1,54 @@
 <route lang="yaml">
-  meta:
-    layout: authenticated.layout
-  </route>
+meta:
+  layout: authenticated.layout
+</route>
 <script setup lang="ts">
 import { useHttp } from '@/composables/http/http'
 import { ProductCard } from './components'
+import { refThrottled } from '@vueuse/core'
+import { Env } from '@/config'
+import type { CategoryResponse } from './types/category'
 
-const { data } = useHttp('/users/v1/public/program/list')
+const filter = ref<{ study: string[] | null; q: string; page: number }>({
+  q: '',
+  study: null,
+  page: 1
+})
+const min = ref(10)
+const search = ref('')
+const params = computed(function () {
+  console.log(filter.value)
+  return {
+    status: undefined,
+    page: filter.value.page,
+    limit: undefined,
+    sort: undefined,
+    dir: undefined,
+    study: filter.value.study?.at(0),
+    q: refThrottled(search, 500).value,
+    is_free: undefined
+  }
+})
+const url = computed(() => {
+  return `/study/v1/public/list/${Env().API_ACCESS_KEY}`
+})
 
-const fieldOfStudies = [
-  'Bahasa Asing / Inggris',
-  'Kuliner',
-  'Pengembangan Diri',
-  'Persiapan Kerja',
-  'Strategi Marketing',
-  'Teknologi Informasi',
-  'Pertanian dan Peternakan',
-  'Lainnya'
-]
+const { data } = useHttp('/users/v1/public/program/list', {
+  params
+})
+const { data: category } = useHttp<CategoryResponse>(url, {
+  params: computed(() => {
+    return {
+      limit: min.value
+    }
+  })
+})
+
+const fieldOfStudies = computed(() => {
+  return category.value?.data.list.map((item) => {
+    return { label: item.title, value: item.id }
+  })
+})
 
 const programTypes = [
   {
@@ -39,7 +70,12 @@ const programTypes = [
         <div>Menampilkan 9 program</div>
       </div>
       <div>
-        <n-input placeholder="Cari program yang anda inginkan" size="large">
+        <n-input
+          class="input drop-shadow-md"
+          v-model:value="search"
+          placeholder="Cari program yang anda inginkan"
+          size="large"
+        >
           <template #suffix>
             <n-icon>
               <i-ion-search />
@@ -53,12 +89,21 @@ const programTypes = [
         <div class="space-y-5">
           <div class="space-y-4 flex flex-col">
             <h5 class="font-bold text-lg">Bidang Studi</h5>
-            <template v-for="item in fieldOfStudies" :key="item">
-              <n-checkbox>{{ item }}</n-checkbox>
-            </template>
-            <n-button strong text>
+            <div class="flex">
+              <n-checkbox-group v-model:value="filter.study" class="grid grid-cols-1">
+                <template v-for="item in fieldOfStudies" :key="item">
+                  <n-checkbox :value="item.value">{{ item.label }}</n-checkbox>
+                </template></n-checkbox-group
+              >
+            </div>
+
+            <n-button v-if="min == 10" strong text @click="min = 100">
               Tampilkan Semua
               <i-ion-arrow-down-b />
+            </n-button>
+            <n-button v-else strong text @click="min = 10">
+              Sembunyikan
+              <i-ion-arrow-up-b />
             </n-button>
           </div>
           <div class="space-y-4">
@@ -108,6 +153,13 @@ const programTypes = [
             />
           </template>
         </div>
+        <div class="flex mt-10 justify-center">
+          <n-pagination
+            v-model:page="filter.page"
+            :page-count="data?.data?.total_page"
+            size="large"
+          />
+        </div>
       </div>
     </section>
   </div>
@@ -119,5 +171,8 @@ div.h1 {
   display: contents;
   position: relative;
   left: 20px;
+}
+.input {
+  width: 400px;
 }
 </style>

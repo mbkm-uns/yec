@@ -8,7 +8,7 @@ import {
   Newspaper as Subskripsi,
   LogOutOutline as LogoutIcon
 } from '@vicons/ionicons5'
-import Cookies from 'js-cookie';
+import Cookies from 'js-cookie'
 defineEmits(['click:notification'])
 const props = defineProps<{
   fullName: string
@@ -35,13 +35,22 @@ const options = [
     icon: renderIcon(SettingProfile)
   },
   {
-    label: 'Bimbingan Prakerja',
+    label: () =>
+      h(
+        'a',
+        {
+          href: 'https://chat.whatsapp.com/087700537898',
+          target: '_blank',
+          rel: 'noopenner noreferrer'
+        },
+        'Bimbingan Prakerja'
+      ),
     key: 'Bimbingan Prakerja',
     icon: renderIcon(BimbinganPrakerja)
   },
   {
     label: 'Subskripsi',
-    key: 'Subskripsi',
+    key: '/kelas_subkripsi',
     icon: renderIcon(Subskripsi)
   },
   {
@@ -56,7 +65,7 @@ const auth = computed(() => {
 })
 </script>
 <template>
-  <header class="bg-white sticky z-10 w-full top-0">
+  <header class="bg-white sticky z-[99999] w-full top-0 ">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <div class="flex-1 md:flex md:items-center md:gap-16">
@@ -225,8 +234,8 @@ const auth = computed(() => {
               <li>
                 <n-button
                   class="text-orange-500 transition hover:text-orange-500/75"
-                 @click="$router.push('/auth/register')"
-                 type="primary"
+                  @click="$router.push('/auth/register')"
+                  type="primary"
                 >
                   Daftar
                 </n-button>
