@@ -11,7 +11,7 @@ export interface Data {
   id: string
   title: string
   repeat_test: number
-  type: 'membaca-e-book' | 'menonton_video' | 'pre_test' | 'berdiskusi_daring' | 'quiz' | 'evaluasi' | 'praktek_mandiri' | 'evaluasi_praktek_mandiri'
+  type: 'membaca-e-book' | 'menonton_video' | 'pre_test' | 'berdiskusi_daring' | 'quiz' | 'evaluasi' | 'praktek_mandiri' | 'evaluasi_praktek_mandiri' | 'post_test'
   settings: Settings
   theory: Theory
   upload: Upload
