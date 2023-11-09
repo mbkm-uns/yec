@@ -80,7 +80,7 @@ const activityType = (
                       <div
                         class="space-y-3 prose max-w-full w-full prose-td:w-fit prose-td:max-w-fit"
                       >
-                        <div class="" v-html="detail?.data.program_benefits" />
+                        <div class="prose min-w-full w-full max-w-full" v-html="detail?.data.program_benefits" />
                       </div>
 
                       <div>

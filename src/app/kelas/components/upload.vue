@@ -25,7 +25,7 @@ const onChange = (options: {
   <div class="pt-20 p-3 space-y-5">
     <section class="md:flex space-y-5 md:space-y-0">
       <n-card class="drop-shadow-md" style="width: 856px">
-        <div v-html="data?.data.theory.description" />
+        <div class="prose min-w-full w-full max-w-full" v-html="data?.data.theory.description" />
         <div v-if="tab == 'upload_file'" class="justify-center items-center">
           <div class="flex justify-center items-center">
             <div>

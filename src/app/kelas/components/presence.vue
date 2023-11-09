@@ -14,7 +14,7 @@ const { data } = useHttp<ActivityResponse>(
 
 <template>
   <div class="space-y-3">
-    <div v-html="data?.data.theory.description" />
+    <div class="prose min-w-full w-full max-w-full" v-html="data?.data.theory.description" />
     <iframe :src="data?.data.theory.link_embed.url" class="w-full" style="height: 100vh"> </iframe>
   </div>
 </template>

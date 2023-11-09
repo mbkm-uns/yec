@@ -92,7 +92,7 @@ const onReadNotification = (id: string) => {
               @click="onReadNotification(item.id)"
             >
               <h8 class="font-bold"> {{ item.notification.title }} </h8>
-              <div v-html="item.notification.description"></div>
+              <div class="prose min-w-full w-full max-w-full" v-html="item.notification.description"></div>
               &nbsp;
               <p>{{ item.created_at }}</p>
             </n-card>
