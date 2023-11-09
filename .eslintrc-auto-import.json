@@ -294,6 +294,11 @@
     "watchTriggerable": true,
     "watchWithFilter": true,
     "whenever": true,
-    "DateTime": true
+    "DateTime": true,
+    "vueQuery": true,
+    "vueRouter": true,
+    "http": true,
+    "useHttp": true,
+    "useHttpMutation": true
   }
 }

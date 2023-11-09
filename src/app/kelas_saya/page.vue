@@ -3,7 +3,15 @@ meta:
   layout: authenticated.layout
 </route>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { MyClassListResponse } from './types/list.type'
+import type { UserType } from '../auth/types/auth.type'
+import { ProductCard } from '../kelas/components'
+
+const { data } = useHttp<MyClassListResponse>('users/v1/myprogram/list')
+
+const auth = inject<UserType>('auth')
+</script>
 <template>
   <div class="px-4 max-w-screen-xl mx-auto">
     <div class="space-y-10">
@@ -12,11 +20,15 @@ meta:
           <p class="text-black font-poppins text-md font-medium leading-normal">
             Redeem Voucher Kelas yang Sudah Anda Beli
           </p>
-          <p class="text-sm">Dengan akun <b>Doni (62881080140000)</b></p>
+          <p class="text-sm">
+            Dengan akun <b>{{ auth?.fullname }} ({{ auth?.phone }})</b>
+          </p>
 
           <n-alert type="warning" closable class="mt-5">
             <div class="space-y-3 text-sm font-poppins text-gray-700">
-              <p class="font-bold">Kebijakan Menukar Kode Redeem dan Kode Voucher Khusus Prakerja:</p>
+              <p class="font-bold">
+                Kebijakan Menukar Kode Redeem dan Kode Voucher Khusus Prakerja:
+              </p>
               <p>
                 Kamu hanya bisa menukarkan kode redeem dan kode voucher pada jadwal hari pertama
                 pelatihanmu,
@@ -60,7 +72,17 @@ meta:
       <div>
         <n-tabs type="line" animated>
           <n-tab-pane name="satuan" tab="Kelas Satuan">
-            <div class="space-y-2">
+            <div class="grid md:grid-cols-4 gap-3">
+              <ProductCard
+                v-for="item in data?.data.list"
+                :id="item.program.id"
+                :key="item.id"
+                :image="item.program.program_information.cover.url"
+                :price="item.program.program_information.selling_price"
+                :title="item.program.title"
+              />
+            </div>
+            <div v-if="data?.data.total == 0" class="space-y-2">
               <div class="flex justify-center items-center">
                 <img src="@/assets/images/stationary.png" alt="" />
               </div>

@@ -24,7 +24,7 @@ const params = computed(function () {
     limit: undefined,
     sort: undefined,
     dir: undefined,
-    study: filter.value.study?.at(0),
+    study: filter.value.study?.[0] || undefined,
     q: refThrottled(search, 500).value,
     is_free: undefined
   }

@@ -15,6 +15,9 @@ const { data } = useHttp('/users/v1/member/detail')
 const showNotification = ref(false)
 const page = ref(1)
 const router = useRouter()
+
+provide('auth', computed(() =>  data.value.data))
+
 const options = [
   {
     label: 'Terbaru',
@@ -57,8 +60,8 @@ const {
 watch(data, () => {
   if (!data.value?.data.fullname) router.push('/setting')
 })
-const onReadNotification=(id:string)=>{
-  selectedID.value=id
+const onReadNotification = (id: string) => {
+  selectedID.value = id
   readNotification({})
 }
 </script>
@@ -77,14 +80,13 @@ const onReadNotification=(id:string)=>{
         <n-space vertical>
           <n-select v-model:value="filterNotification.direction" :options="options" />
         </n-space>
-        &nbsp;
         <n-spin :show="isLoading">
           <n-empty v-if="notification?.data.list?.length == 0"></n-empty>
           <div class="space-y-3">
             <n-card
               v-for="item in notification?.data.list"
               :key="item.id"
-              :class="{ '!bg-orange-100/50': !item.read}"
+              :class="{ '!bg-orange-100/50': !item.read }"
               hoverable
               role="button"
               @click="onReadNotification(item.id)"
