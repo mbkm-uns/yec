@@ -13,7 +13,7 @@ const route = useRoute()
 const { data } = useHttp<ActivityResponse>(
   computed(
     () =>
-      `/users/v1/myprogram/detail_activity/${route.params.id}/${route.params.topicId}/${route.query.id}`
+      `/users/v1/myprogram/detail_activity/${route.query.c}/${route.params.topicId}/${route.query.id}`
   )
 )
 </script>

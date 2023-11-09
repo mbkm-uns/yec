@@ -16,6 +16,7 @@ const filter = ref<{ study: string[] | null; q: string; page: number }>({
 })
 const min = ref(10)
 const search = ref('')
+
 const params = computed(function () {
   console.log(filter.value)
   return {

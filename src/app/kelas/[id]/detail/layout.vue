@@ -8,11 +8,11 @@ meta:
 import { useHttp } from '@/composables/http/http'
 import { useRoute } from 'vue-router'
 import type { DetailResponse } from '../../types/detail.type'
-import { DateTime, Duration } from 'luxon'
+import { Duration } from 'luxon'
 import type { ClassDetailResponse } from '../../types/class-detail.type'
 
 const route = useRoute()
-const { data } = useHttp<DetailResponse>(`/users/v1/myprogram/detail/${route.params.id}`)
+const { data } = useHttp<DetailResponse>(`/users/v1/myprogram/detail/${route.query.c}`)
 const { data: detail } = useHttp<ClassDetailResponse>(
   `/users/v1/public/program/detail/${route.params.id}`
 )
@@ -129,7 +129,7 @@ const activityType = (
           </section>
         </div>
       </div>
-      <n-card  segmented embedded title="Aktifitas" class="w-1/5">
+      <n-card segmented embedded title="Aktifitas" class="w-1/5">
         <n-collapse>
           <n-collapse-item
             v-for="topic in detail?.data?.topic"
@@ -141,7 +141,7 @@ const activityType = (
               <n-list-item
                 v-for="act in topic.activities"
                 :key="act.id"
-                @click="$router.push(`/kelas/${route.params.id}/detail/${topic.id}?id=${act.id}`)"
+                @click="$router.push(`/kelas/${route.params.id}/detail/${topic.id}?id=${act.id}&c=${route.query.c}`)"
               >
                 {{ act.title }}
                 <div class="flex space-x-4 text-xs text-gray-500">

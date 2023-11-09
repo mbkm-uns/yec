@@ -4,6 +4,7 @@ const props = defineProps<{
   title: string
   price: number
   image: string
+  redeemId?: string
 }>()
 
 const priceCurrency = computed(() => {
@@ -15,7 +16,7 @@ const priceCurrency = computed(() => {
 </script>
 
 <template>
-  <router-link :to="`/kelas/${id}/detail`">
+  <router-link :to="`/kelas/${id}/detail?c=${redeemId}`">
     <div class="block overflow-hidden group">
       <n-image class="h-40 object-cover" object-fit="cover" :src="image" :alt="`${title} image`" />
 

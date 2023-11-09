@@ -76,6 +76,7 @@ const auth = inject<UserType>('auth')
               <ProductCard
                 v-for="item in data?.data.list"
                 :id="item.program.id"
+                :redeem-id="item.id"
                 :key="item.id"
                 :image="item.program.program_information.cover.url"
                 :price="item.program.program_information.selling_price"
