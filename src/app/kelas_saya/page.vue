@@ -7,9 +7,29 @@ meta:
 import type { MyClassListResponse } from './types/list.type'
 import type { UserType } from '../auth/types/auth.type'
 import { ProductCard } from '../kelas/components'
-
+import { useMessage } from 'naive-ui'
+const formData = ref({ redeemCode: '', voucherCode: '' })
 const { data } = useHttp<MyClassListResponse>('users/v1/myprogram/list')
-
+const message = useMessage()
+const { mutate: redeem, isLoading } = useHttpMutation('/users/v1/myprogram/redeem', {
+  method: 'POST',
+  queryOptions: {
+    // vue-query options
+    onSuccess: function (data) {
+      message.success(data?.message || 'Berhasil Redeem')
+    },
+    onError: function (error) {
+      message.error(error.data.message)
+    }
+  }
+})
+const onRedeem = () => {
+  redeem({
+    meta: { pmo_voucher: formData.value.redeemCode },
+    code: formData.value.voucherCode,
+    referral: ''
+  })
+}
 const auth = inject<UserType>('auth')
 </script>
 <template>
@@ -51,18 +71,25 @@ const auth = inject<UserType>('auth')
 
         <div>
           <div class="flex flex-col gap-4">
-            <n-form>
+            <n-form @submit.prevent="onRedeem">
               <n-form-item label="Kode Redeem">
                 <n-input
+                  v-model:value="formData.redeemCode"
                   type="text"
                   placeholder="Masukkan kode redeem (khusus user Kartu Prakerja)"
                 />
               </n-form-item>
               <n-form-item label="Kode Voucher">
-                <n-input type="text" placeholder="Masukkan kode voucher" />
+                <n-input
+                  v-model:value="formData.voucherCode"
+                  type="text"
+                  placeholder="Masukkan kode voucher"
+                />
               </n-form-item>
               <div class="flex gap-4">
-                <n-button color="#F05326"> Redeem </n-button>
+                <n-button :loading="isLoading" color="#F05326" attr-type="submit">
+                  Redeem
+                </n-button>
               </div>
             </n-form>
           </div>
