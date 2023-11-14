@@ -29,3 +29,13 @@ onMounted(() => {
     /> -->
   </video>
 </template>
+<style scoped>
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+    display: none;
+}
+</style>
