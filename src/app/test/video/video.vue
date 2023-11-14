@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Plyr from 'plyr'
+import 'plyr/dist/plyr.css'
 
 defineProps<{
   srcs: { src: string; type: string }[]
