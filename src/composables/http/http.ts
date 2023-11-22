@@ -13,7 +13,6 @@ import Cookie from 'js-cookie'
 export const http = axios.create({
   baseURL: Env().API_BASE_URL,
   headers: {
-    'Access-Key': Env().API_ACCESS_KEY,
     Accept: 'application/json',
     'Content-Type': 'application/json'
   }
