@@ -50,6 +50,7 @@ const auth = computed(() => !!Cookies.get('token'))
         <img
           class="carousel-img mx-auto w-full rounded-lg"
           src="@/assets/images/landingpage/super-admin.jpg"
+          onclick="window.location='https://jadiadmin.id/'"
         />
         <img
           class="carousel-img mx-auto w-full rounded-lg"
