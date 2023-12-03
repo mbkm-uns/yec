@@ -41,17 +41,18 @@ const auth = computed(() => !!Cookies.get('token'))
   <div class="space-y-10 px-20">
     <div class="flex justify-center">
       <n-carousel autoplay mx-auto>
+        <a target="_blank" href="https://www.youtube.com/watch?v=1rp8royyiQ8&feature=youtu.be">
         <img
           class="carousel-img mx-auto w-full rounded-lg"
           src="@/assets/images/landingpage/tutor_redeem.png"
-          onclick="window.location='https://www.youtube.com/watch?v=1rp8royyiQ8&feature=youtu.be'"
-
         />
+      </a>
+      <a target="_blank" href="https://jadiadmin.id/">
         <img
           class="carousel-img mx-auto w-full rounded-lg"
           src="@/assets/images/landingpage/super-admin.jpg"
-          onclick="window.location='https://jadiadmin.id/'"
         />
+      </a>
         <img
           class="carousel-img mx-auto w-full rounded-lg"
           src="@/assets/images/landingpage/Desktop-1.png"
