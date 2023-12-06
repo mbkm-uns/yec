@@ -40,7 +40,7 @@ function validatePasswordSame(rule: FormItemRule, value: string): boolean {
   return value === formData.value.password
 }
 
-const { mutate, isLoading } = useHttpMutation('/users/v1/member/auth/register', {
+const { mutate: register, isLoading } = useHttpMutation('/users/v1/member/auth/register', {
   method: 'POST',
   httpOptions: {
     // axios options
@@ -75,9 +75,18 @@ const { mutate: verifyOtp, isLoading: isLoadingVerifyOtp } = useHttpMutation(
     }
   }
 )
-
-const onSubmit = () => {
-  mutate(formData.value)
+const onSubmit = async () => {
+  // Validate the form.
+  const isValid = await formRef.value?.validate(() => {
+    formRef.value?.validate((errors) => {
+      if (!errors) {
+        register(formData.value)
+      } else {
+        console.log(errors)
+        message.error('Wajib diisi')
+      }
+    })
+  })
 }
 
 const onSubmitOtp = () => {
@@ -95,7 +104,7 @@ const rules: FormRules = {
       required: true,
       trigger: ['input', 'blur'],
       message: () => {
-        return 'Harap masukan nomer handphone yang valid'
+        return 'Harap masukan nomer WhatsApp yang valid'
       }
     },
     {
@@ -176,8 +185,8 @@ const rules: FormRules = {
         <n-text>Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda </n-text>
         <div :class="$style.form__wrapper">
           <n-form ref="formRef" :model="formData" :rules="rules" @submit.prevent="onSubmit">
-            <n-form-item path="phone" label="No Telepon">
-              <n-input placeholder="Masukkan No Telepon" v-model:value="formData.phone" />
+            <n-form-item path="phone" label="No WhatsApp">
+              <n-input placeholder="Masukkan No WhatsApp" v-model:value="formData.phone" />
             </n-form-item>
             <n-form-item path="password" label="Password">
               <n-input

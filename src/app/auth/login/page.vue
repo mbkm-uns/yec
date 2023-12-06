@@ -58,7 +58,7 @@ const onSubmit = async () => {
         login(formData.value)
       } else {
         console.log(errors)
-        message.error('Invalid')
+        message.error('Wajib diisi')
       }
     })
   })
@@ -70,13 +70,13 @@ const rules: FormRules = {
       type: 'string',
       trigger: ['input', 'blur'],
       message: () => {
-        return 'Harap masukan nomer phone yang valid'
+        return 'Harap masukan nomer WhatsApp yang valid'
       }
     },
     {
       required: true,
       message: () => {
-        return 'Wajib Di Isi'
+        return 'Nomor WhatsApp tidak boleh kosong'
       }
     }
   ],
@@ -128,8 +128,8 @@ const rules: FormRules = {
             <n-text>Silahkan masukkan No WhatsApp & kata sandi untuk masuk ke akun Anda </n-text>
             <div :class="$style.form__wrapper">
               <n-form :model="formData" ref="formRef" :rules="rules">
-                <n-form-item path="phone" label="No Telepon">
-                  <n-input v-model:value="formData.phone" placeholder="Masukkan No Telepon" />
+                <n-form-item path="phone" label="No WhatsApp">
+                  <n-input v-model:value="formData.phone" placeholder="Masukkan No WhatsApp" />
                 </n-form-item>
                 <n-form-item path="password" label="Password">
                   <n-input
