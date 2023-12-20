@@ -3,12 +3,8 @@ meta:
   layout: authenticated.layout
 </route>
 <script setup lang="ts">
-import layout from '../layout.vue'
-<<<<<<< HEAD
+// import layout from '../layout.vue'
 import { PDF, Meet, Presence, Instruksi, Upload, Question2 } from '@/app/kelas/components'
-=======
-import { PDF, Meet, Presence, Instruksi, Upload, Question } from '@/app/kelas/components'
->>>>>>> 7dced142ccc89a8a9149a4ccfa07b8317c524c70
 import type { ActivityResponse } from '@/app/kelas/types/activity'
 import { useHttp } from '@/composables/http/http'
 import { computed } from 'vue'
@@ -36,17 +32,9 @@ const { data } = useHttp<ActivityResponse>(
     <PDF v-if="data?.data.type === 'membaca-e-book'" :src="data?.data.theory.file.url" />
     <Meet v-if="data?.data.type === 'berdiskusi_daring'" />
     <Presence v-if="data?.data.type === 'evaluasi'" />
-<<<<<<< HEAD
     <Instruksi v-if="data?.data.type === 'praktek_mandiri'" :url="data?.data.theory.file.url"  :activity-id="activityId" :topic-id="topicId" :program-id="programId" />
     <Upload v-if="data?.data.type === 'evaluasi_praktek_mandiri'" />
     <Question2 v-if="data?.data.type === 'pre_test'" />
-=======
-    <!-- <Instruksi v-if="data?.data.type === 'praktek_mandiri'" /> -->
-    <Upload v-if="data?.data.type === 'evaluasi_praktek_mandiri'" />
-    <!-- <Question v-if="data?.data.type === 'pre_test'" /> -->
-    <!-- <Question v-if="data?.data.type === 'quiz'" /> -->
-    <!-- <Question v-if="data?.data.type === 'post_test'" /> -->
->>>>>>> 7dced142ccc89a8a9149a4ccfa07b8317c524c70
     <!-- <Video v-if="data?.data.type === 'menonton_video'" /> -->
   </layout>
 </template>
