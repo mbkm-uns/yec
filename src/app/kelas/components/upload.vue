@@ -1,16 +1,7 @@
 <script setup lang="ts">
 import type { UploadFileInfo } from 'naive-ui'
-import type { ActivityResponse } from '@/app/kelas/types/activity'
-import { useHttp } from '@/composables/http/http'
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-const route = useRoute()
-const { data } = useHttp<ActivityResponse>(
-  computed(
-    () =>
-      `/users/v1/myprogram/detail_activity/${route.params.id}/${route.params.topicId}/${route.query.id}`
-  )
-)
+
+
 const tab = ref('upload_file')
 
 const onChange = (options: {
@@ -22,10 +13,14 @@ const onChange = (options: {
 }
 </script>
 <template>
-  <div class="pt-20 p-3 space-y-5">
+  <div class="pt-20 p-3 md:px-20 space-y-5">
+
     <section class="md:flex space-y-5 md:space-y-0">
-      <n-card class="drop-shadow-md" style="width: 856px">
-        <div v-html="data?.data.theory.description" />
+      <n-card class="w-1/2 drop-shadow-md" style="width: 856px">
+        <div class="text-md font-semibold">
+          Silakan unggah pengerjaan Tugas Praktik Mandiri Anda disini, setelah Anda membaca
+          Instruksi Tugas Praktik Mandiri !
+        </div>
         <div v-if="tab == 'upload_file'" class="justify-center items-center">
           <div class="flex justify-center items-center">
             <div>

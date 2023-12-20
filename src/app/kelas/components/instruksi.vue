@@ -2,7 +2,7 @@
 import { useHttpMutation } from "@/composables/http/http";
 import { useMessage } from "naive-ui";
 
-const props = defineProps<{ programId: string; topicId: string; activityId: string; url:string }>();
+const props = defineProps<{ programId: string; topicId: string; activityId?: string; url?:string }>();
 const message = useMessage();
 const { mutate: getUnlock, isLoading } = useHttpMutation(
   `/users/v1/member/activity/unlock`,
@@ -34,13 +34,11 @@ const onDownload = () => {
 </script>
 <template>
   <div class="pt-20 p-3 md:px-20 space-y-5">
-    <div class="text-2xl font-semibold">Instruksi Tugas Praktik Mandiri</div>
-    <n-card class="drop-shadow-md" style="width: max-content; height: 500px">
+    <n-card class="drop-shadow-md">
       <div class="flex flex-col items-center justify-center" style="height: 100%">
         <div
           class="text-lg font-semibold"
-          style="text-align: center"
-        >
+          style="text-align: center">
           Silahkan unduh file Instruksi berikut untuk mengerjakan tugas praktik mandiri!
         </div>
 

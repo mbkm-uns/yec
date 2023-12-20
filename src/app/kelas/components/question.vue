@@ -4,12 +4,12 @@ import { ref } from 'vue'
 
 const emit = defineEmits(['update:value'])
 const props = defineProps<{
-  question: string
-  choices: { label: string; value: string }[]
-  duration: number
-  number: number
+  question?: string
+  choices?: { label: string; value: string }[]
+  duration?: number
+  number?: number
   value?: string | null
-  totalQuestion: number
+  totalQuestion?: number
 }>()
 
 const onUpdate = (value: any) => {
