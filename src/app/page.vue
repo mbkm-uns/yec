@@ -41,14 +41,18 @@ const auth = computed(() => !!Cookies.get('token'))
   <div class="space-y-10 px-20">
     <div class="flex justify-center">
       <n-carousel autoplay mx-auto>
+        <a target="_blank" href="https://www.youtube.com/watch?v=1rp8royyiQ8&feature=youtu.be">
         <img
           class="carousel-img mx-auto w-full rounded-lg"
           src="@/assets/images/landingpage/tutor_redeem.png"
         />
+      </a>
+      <a target="_blank" href="https://jadiadmin.id/">
         <img
           class="carousel-img mx-auto w-full rounded-lg"
           src="@/assets/images/landingpage/super-admin.jpg"
         />
+      </a>
         <img
           class="carousel-img mx-auto w-full rounded-lg"
           src="@/assets/images/landingpage/Desktop-1.png"
@@ -87,6 +91,13 @@ const auth = computed(() => !!Cookies.get('token'))
     <section>
       <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
         <header>
+          <n-button
+            quaternary
+            type="primary"
+            class="button float-right"
+            @click="$router.push('/kelas')"
+            >Lihat Semua</n-button
+          >
           <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
             Kelas PraKerja 2023 Yang Tersedia
           </h2>
@@ -104,30 +115,26 @@ const auth = computed(() => !!Cookies.get('token'))
         </div>
       </div>
     </section>
-    
+
     <div class="max-w-full lg:col-span-5 xl:col-span-6 bg-orange-50 mb-4">
       <div class="flex flex-col items-center justify-center h-40 lg:h-full">
-        <div
-          class="rounded-lg overflow-hidden relative w-full flex items-center justify-center"
-        >
+        <div class="rounded-lg overflow-hidden relative w-full flex items-center justify-center">
           <img src="@/assets/images/landingpage/faq.png" alt="FAQ Image" />
         </div>
         <div class="mb-4">
           <router-link to="/faq">
-            <n-button style="font-size: medium">Klik disini</n-button>
+            <n-button quaternary style="font-size: medium">Klik disini</n-button>
           </router-link>
         </div>
       </div>
     </div>
-    
+
     <section class="bg-white">
       <div
         class="max-w-full flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50"
       >
         <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-          <h2
-            class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
-          >
+          <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Review Customer
           </h2>
           <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
@@ -187,8 +194,8 @@ const auth = computed(() => !!Cookies.get('token'))
                 </div>
               </div>
               <p class="mt-4 text-gray-700">
-                Sangat menyenangkan,materinya yang diberikan sangat menarik. Saking
-                serunya,pengen nambah waktu pelatihannya biar lebih lama belajarnya
+                Sangat menyenangkan,materinya yang diberikan sangat menarik. Saking serunya,pengen
+                nambah waktu pelatihannya biar lebih lama belajarnya
               </p>
               <div class="flex items-center mt-4">
                 <img
@@ -256,9 +263,9 @@ const auth = computed(() => !!Cookies.get('token'))
                 </div>
               </div>
               <p class="mt-4 text-gray-700">
-                Materinya lengkap dan membantu aku banget buat belajar tentang menggunakan
-                Bahasa Inggris,mentornya juga super asik jadi suasana belajarnya ga
-                ngebosenin dan nyenengin
+                Materinya lengkap dan membantu aku banget buat belajar tentang menggunakan Bahasa
+                Inggris,mentornya juga super asik jadi suasana belajarnya ga ngebosenin dan
+                nyenengin
               </p>
               <div class="flex items-center mt-4">
                 <img
@@ -326,9 +333,9 @@ const auth = computed(() => !!Cookies.get('token'))
                 </div>
               </div>
               <p class="mt-4 text-gray-700">
-                Alhamdullilah,menyenang sekali kegiatan pelatihannya selain materi yang
-                bervariatif dan pematerinya juga menyampaikan materi dengan sangat
-                komunikatif sehingga mudah diterima oleh peserta.
+                Alhamdullilah,menyenang sekali kegiatan pelatihannya selain materi yang bervariatif
+                dan pematerinya juga menyampaikan materi dengan sangat komunikatif sehingga mudah
+                diterima oleh peserta.
               </p>
               <div class="flex items-center mt-4">
                 <img
@@ -349,5 +356,8 @@ const auth = computed(() => !!Cookies.get('token'))
 .carousel-img {
   height: auto;
   object-fit: cover;
+}
+.button {
+  font-size: large;
 }
 </style>

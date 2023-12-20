@@ -51,7 +51,7 @@ export default defineConfig({
         from: "luxon",
         imports: ['DateTime']
       }],
-      dirs: ['src/composables', 'src/store', 'src/core'],
+      dirs: ['src/composables/**/*', 'src/store', 'src/core', 'src/plugins'],
       vueTemplate: true,
       eslintrc: {
         enabled: true

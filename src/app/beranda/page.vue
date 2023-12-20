@@ -4,12 +4,12 @@ meta:
 </route>
 
 <script setup lang="ts">
-import { useHttp } from "@/composables/http/http";
-import { ProductCard } from "../kelas/components";
-const { data: classes } = useHttp("users/v1/public/program/study_group");
+import { useHttp } from '@/composables/http/http'
+import { ProductCard } from '../kelas/components'
+const { data: classes } = useHttp('users/v1/public/program/study_group')
 
-const route = useRoute();
-const showModal = ref(!!route.query.loggedIn);
+const route = useRoute()
+const showModal = ref(!!route.query.loggedIn)
 </script>
 
 <template>
@@ -17,17 +17,16 @@ const showModal = ref(!!route.query.loggedIn);
     <n-card class="shadow-md" style="width: 600px">
       <p class="text-center text-2xl font-bold mb-6">PERHATIAN</p>
       <p class="text-center mb-4 text-xl">
-        Bagi kamu pengguna Kartu Prakerja, pastikan data diri kamu terutama nama sesuai
-        dengan akun Kartu Prakerja. Perbedaan identitas dapat menyebabkan sertifikat tidak
-        keluar.
+        Bagi kamu pengguna Kartu Prakerja, pastikan data diri kamu terutama nama sesuai dengan akun
+        Kartu Prakerja. Perbedaan identitas dapat menyebabkan sertifikat tidak keluar.
       </p>
       <div class="text-center flex justify-center items-center">
         <p class="text-center text-xl mb-4 inline">
           <n-icon class="inline" size="25">
             <i-ion:alert-circle-outline />
           </n-icon>
-          Untuk akses pelatihan lebih mudah, kami sarankan menggunakan perangkat Android,
-          Laptop, atau PC. Apabila ada kendala silahkan hubungi CS kami.
+          Untuk akses pelatihan lebih mudah, kami sarankan menggunakan perangkat Android, Laptop,
+          atau PC. Apabila ada kendala silahkan hubungi CS kami.
         </p>
       </div>
 
@@ -65,6 +64,13 @@ const showModal = ref(!!route.query.loggedIn);
     <section>
       <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
         <header>
+          <n-button
+            quaternary
+            type="primary"
+            class="button float-right"
+            @click="$router.push('/kelas')"
+            >Lihat Semua</n-button
+          >
           <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
             Kelas PraKerja 2023 Yang Tersedia
           </h2>
@@ -82,30 +88,26 @@ const showModal = ref(!!route.query.loggedIn);
         </div>
       </div>
     </section>
-    
+
     <div class="max-w-full lg:col-span-5 xl:col-span-6 bg-orange-50 mb-4">
       <div class="flex flex-col items-center justify-center h-40 lg:h-full">
-        <div
-          class="rounded-lg overflow-hidden relative w-full flex items-center justify-center"
-        >
+        <div class="rounded-lg overflow-hidden relative w-full flex items-center justify-center">
           <img src="@/assets/images/landingpage/faq.png" alt="FAQ Image" />
         </div>
         <div class="mb-4">
           <router-link to="/faq">
-            <n-button style="font-size: medium">Klik disini</n-button>
+            <n-button quaternary style="font-size: medium">Klik disini</n-button>
           </router-link>
         </div>
       </div>
     </div>
-    
+
     <section class="bg-white">
       <div
         class="max-w-full flex h-40 lg:col-span-5 lg:h-full xl:col-span-6 justify-center items-center bg-orange-50"
       >
         <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-          <h2
-            class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
-          >
+          <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Review Customer
           </h2>
           <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
@@ -165,8 +167,8 @@ const showModal = ref(!!route.query.loggedIn);
                 </div>
               </div>
               <p class="mt-4 text-gray-700">
-                Sangat menyenangkan,materinya yang diberikan sangat menarik. Saking
-                serunya,pengen nambah waktu pelatihannya biar lebih lama belajarnya
+                Sangat menyenangkan,materinya yang diberikan sangat menarik. Saking serunya,pengen
+                nambah waktu pelatihannya biar lebih lama belajarnya
               </p>
               <div class="flex items-center mt-4">
                 <img
@@ -233,9 +235,9 @@ const showModal = ref(!!route.query.loggedIn);
                 </div>
               </div>
               <p class="mt-4 text-gray-700">
-                Materinya lengkap dan membantu aku banget buat belajar tentang menggunakan
-                Bahasa Inggris,mentornya juga super asik jadi suasana belajarnya ga
-                ngebosenin dan nyenengin
+                Materinya lengkap dan membantu aku banget buat belajar tentang menggunakan Bahasa
+                Inggris,mentornya juga super asik jadi suasana belajarnya ga ngebosenin dan
+                nyenengin
               </p>
               <div class="flex items-center mt-4">
                 <img
@@ -303,9 +305,9 @@ const showModal = ref(!!route.query.loggedIn);
                 </div>
               </div>
               <p class="mt-4 text-gray-700">
-                Alhamdullilah,menyenang sekali kegiatan pelatihannya selain materi yang
-                bervariatif dan pematerinya juga menyampaikan materi dengan sangat
-                komunikatif sehingga mudah diterima oleh peserta.
+                Alhamdullilah,menyenang sekali kegiatan pelatihannya selain materi yang bervariatif
+                dan pematerinya juga menyampaikan materi dengan sangat komunikatif sehingga mudah
+                diterima oleh peserta.
               </p>
               <div class="flex items-center mt-4">
                 <img
@@ -326,5 +328,8 @@ const showModal = ref(!!route.query.loggedIn);
 .carousel-img {
   height: auto;
   object-fit: cover;
+}
+.button {
+  font-size: large;
 }
 </style>

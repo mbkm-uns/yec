@@ -13,9 +13,9 @@ import Cookie from 'js-cookie'
 export const http = axios.create({
   baseURL: Env().API_BASE_URL,
   headers: {
-    'Access-Key': Env().API_ACCESS_KEY,
     Accept: 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Access-Key': Env().API_ACCESS_KEY,
   }
 })
 
@@ -127,7 +127,7 @@ type HttpMutationOptions<TData = any, TError = any, TVariables = any, TContext =
  * @param options HTTP Mutation Options
  */
 export function useHttpMutation<TData = any, TError = any, TVariables = any>(
-  url: string,
+  url: ComputedRef<string> | string,
   options: HttpMutationOptions<TData, TError>
 ) {
   return useMutation(
@@ -135,7 +135,7 @@ export function useHttpMutation<TData = any, TError = any, TVariables = any>(
       return new Promise((resolve, reject) => {
         return http
           .request<TData>({
-            url,
+            url:unref(url),
             method: options.method,
             ...options.httpOptions,
             data: value

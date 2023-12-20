@@ -4,6 +4,7 @@ const props = defineProps<{
   title: string
   price: number
   image: string
+  redeemId?: string
 }>()
 
 const priceCurrency = computed(() => {
@@ -15,19 +16,28 @@ const priceCurrency = computed(() => {
 </script>
 
 <template>
-  <div class="block overflow-hidden group">
-    <n-image class="h-40 object-cover" object-fit="cover" :src="image" :alt="`${title} image`" />
+  <router-link :to="`/kelas/${id}/detail?c=${redeemId}`">
+    <div class="block overflow-hidden group">
+      <n-image class="h-40 object-cover" object-fit="cover" :src="image" :alt="`${title} image`" />
 
-    <div class="relative pt-3 bg-white space-y-3">
-      <p class="h-10 w-full truncate">{{ title }}</p>
-      <p class="mt-2">
-        <n-gradient-text type="info"> {{ priceCurrency }}</n-gradient-text>
-      </p>
-      <div>
-        <n-button strong round block type="primary" @click="$router.push(`/kelas/${id}/detail`)">
-          Beli Kelas Online
-        </n-button>
+      <div class="relative pt-3 bg-white space-y-3">
+        <p class="h-10 w-full truncate">{{ title }}</p>
+        <p class="mt-2">
+          <n-gradient-text type="info"> {{ priceCurrency }}</n-gradient-text>
+        </p>
+        <div>
+          <n-button
+            strong
+            round
+            block
+            type="primary"
+            ghost
+            @click="$router.push(`/kelas/${id}/detail`)"
+          >
+            Beli Kelas Online
+          </n-button>
+        </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>

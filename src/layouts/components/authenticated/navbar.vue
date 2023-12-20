@@ -65,7 +65,7 @@ const auth = computed(() => {
 })
 </script>
 <template>
-  <header class="bg-white sticky z-[99999] w-full top-0 ">
+  <header class="bg-white sticky w-full top-0 z-50 ">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-between">
         <div class="flex-1 md:flex md:items-center md:gap-16">
@@ -148,7 +148,7 @@ const auth = computed(() => {
 
               <li>
                 <n-button
-                  tertiary
+                quaternary
                   round
                   class="text-orange-500 transition hover:text-orange-500/75"
                   @click="$emit('click:notification')"

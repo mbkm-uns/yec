@@ -10,6 +10,7 @@
     "Component": true,
     "ComponentPublicInstance": true,
     "ComputedRef": true,
+    "DateTime": true,
     "EffectScope": true,
     "InjectionKey": true,
     "PropType": true,
@@ -294,6 +295,10 @@
     "watchTriggerable": true,
     "watchWithFilter": true,
     "whenever": true,
-    "DateTime": true
+    "http": true,
+    "useHttp": true,
+    "useHttpMutation": true,
+    "vueQuery": true,
+    "vueRouter": true
   }
 }
