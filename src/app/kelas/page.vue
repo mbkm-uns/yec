@@ -125,10 +125,10 @@ const programTypes = [
           <div class="space-y-4">
             <h5 class="font-bold text-lg">Harga</h5>
             <div class="flex flex-col gap-4">
-              <n-input placeholder="Harga terendah">
+              <n-input placeholder="Harga terendah" v-model:value="filter.q">
                 <template #prefix> Rp </template>
               </n-input>
-              <n-input placeholder="Harga tertinggi">
+              <n-input placeholder="Harga tertinggi" v-model:value="filter.q">
                 <template #prefix> Rp </template>
               </n-input>
             </div>
