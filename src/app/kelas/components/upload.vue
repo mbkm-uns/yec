@@ -1,21 +1,7 @@
 <script setup lang="ts">
 import type { UploadFileInfo } from 'naive-ui'
-<<<<<<< HEAD
 
 
-=======
-import type { ActivityResponse } from '@/app/kelas/types/activity'
-import { useHttp } from '@/composables/http/http'
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-const route = useRoute()
-const { data } = useHttp<ActivityResponse>(
-  computed(
-    () =>
-      `/users/v1/myprogram/detail_activity/${route.params.id}/${route.params.topicId}/${route.query.id}`
-  )
-)
->>>>>>> 7dced142ccc89a8a9149a4ccfa07b8317c524c70
 const tab = ref('upload_file')
 
 const onChange = (options: {
@@ -27,7 +13,6 @@ const onChange = (options: {
 }
 </script>
 <template>
-<<<<<<< HEAD
   <div class="pt-20 p-3 md:px-20 space-y-5">
 
     <section class="md:flex space-y-5 md:space-y-0">
@@ -36,12 +21,6 @@ const onChange = (options: {
           Silakan unggah pengerjaan Tugas Praktik Mandiri Anda disini, setelah Anda membaca
           Instruksi Tugas Praktik Mandiri !
         </div>
-=======
-  <div class="pt-20 p-3 space-y-5">
-    <section class="md:flex space-y-5 md:space-y-0">
-      <n-card class="drop-shadow-md" style="width: 856px">
-        <div class="prose min-w-full w-full max-w-full" v-html="data?.data.theory.description" />
->>>>>>> 7dced142ccc89a8a9149a4ccfa07b8317c524c70
         <div v-if="tab == 'upload_file'" class="justify-center items-center">
           <div class="flex justify-center items-center">
             <div>
