@@ -93,7 +93,7 @@ export interface Theory {
 export interface File {
   id: string
   type: string
-  url: string
+  url?: string
 }
 
 export interface LinkEmbed {
